@@ -1,0 +1,83 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "synthetic_gan",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Example only",
+    "part_number": "GaN",
+    "family_id": null,
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "GaN",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [],
+  "package": {
+    "name": null,
+    "components": [],
+    "parasitics": [],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "synthetic-fixture",
+      "kind": "AIPE",
+      "name": "Synthetic schema example; no measured claims",
+      "artifact": null,
+      "url": null,
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "unknown",
+        "owner": null,
+        "category": "unknown"
+      }
+    }
+  ],
+  "quality": {
+    "flags": [],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "switching": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

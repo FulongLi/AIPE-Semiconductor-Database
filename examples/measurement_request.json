@@ -1,0 +1,51 @@
+{
+  "schema_version": "3.0.0",
+  "id": "request:example",
+  "device_id": "synthetic_dpt_device",
+  "physical_sample_id": "synthetic_sample_1",
+  "protocols": [
+    {
+      "id": "AIPE-DPT",
+      "version": "1.0",
+      "category": "dpt",
+      "definition": null
+    }
+  ],
+  "conditions": [
+    {
+      "junction_temperature": {
+        "value": 298.15,
+        "unit": "K"
+      },
+      "case_temperature": null,
+      "ambient_temperature": null,
+      "dc_bus_voltage": {
+        "value": 800.0,
+        "unit": "V"
+      },
+      "drain_current": null,
+      "collector_current": null,
+      "gate_voltage_on": null,
+      "gate_voltage_off": null,
+      "gate_resistance_on": null,
+      "gate_resistance_off": null,
+      "switching_frequency": null,
+      "pulse_width": null,
+      "duty_cycle": null,
+      "gate_state": "unknown",
+      "extensions": []
+    }
+  ],
+  "requested_metrics": [
+    "Eon"
+  ],
+  "repetitions": 1,
+  "access": {
+    "license": null,
+    "redistribution_allowed": null,
+    "commercial_use_allowed": null,
+    "visibility": "unknown",
+    "owner": null,
+    "category": "unknown"
+  }
+}

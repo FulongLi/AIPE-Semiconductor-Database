@@ -1,0 +1,1470 @@
+{
+  "$defs": {
+    "AccessMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License"
+        },
+        "redistribution_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redistribution Allowed"
+        },
+        "commercial_use_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Commercial Use Allowed"
+        },
+        "visibility": {
+          "default": "unknown",
+          "enum": [
+            "public",
+            "partner",
+            "private",
+            "unknown"
+          ],
+          "title": "Visibility",
+          "type": "string"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "category": {
+          "default": "unknown",
+          "enum": [
+            "manufacturer",
+            "aipe",
+            "partner",
+            "licensed",
+            "customer",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        }
+      },
+      "title": "AccessMetadata",
+      "type": "object"
+    },
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "uri": {
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        },
+        "checksum": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Checksum",
+          "type": "string"
+        },
+        "format": {
+          "minLength": 1,
+          "title": "Format",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "uri",
+        "checksum",
+        "format",
+        "size"
+      ],
+      "title": "ArtifactRef",
+      "type": "object"
+    },
+    "ConditionParameter": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "name",
+        "quantity"
+      ],
+      "title": "ConditionParameter",
+      "type": "object"
+    },
+    "Dependency": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "checksum": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checksum"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "Dependency",
+      "type": "object"
+    },
+    "DynamicMetrics": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "test_run_id": {
+          "title": "Test Run Id",
+          "type": "string"
+        },
+        "waveform_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Waveform Ids",
+          "type": "array"
+        },
+        "recipe": {
+          "$ref": "#/$defs/Dependency"
+        },
+        "metrics": {
+          "items": {
+            "$ref": "#/$defs/ScalarRecord"
+          },
+          "minItems": 1,
+          "title": "Metrics",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "test_run_id",
+        "waveform_ids",
+        "recipe",
+        "metrics"
+      ],
+      "title": "DynamicMetrics",
+      "type": "object"
+    },
+    "DynamicWaveformRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "default": "1",
+          "title": "Version",
+          "type": "string"
+        },
+        "test_run_id": {
+          "title": "Test Run Id",
+          "type": "string"
+        },
+        "artifact": {
+          "$ref": "#/$defs/ArtifactRef"
+        },
+        "stage": {
+          "enum": [
+            "raw",
+            "normalized",
+            "processed"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "channels": {
+          "items": {
+            "$ref": "#/$defs/WaveformChannel"
+          },
+          "minItems": 1,
+          "title": "Channels",
+          "type": "array"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "events": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/WaveformEvent"
+          },
+          "title": "Events",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "test_run_id",
+        "artifact",
+        "stage",
+        "channels",
+        "provenance"
+      ],
+      "title": "DynamicWaveformRef",
+      "type": "object"
+    },
+    "Freshness": {
+      "enum": [
+        "current",
+        "stale"
+      ],
+      "title": "Freshness",
+      "type": "string"
+    },
+    "Instrument": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "manufacturer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Manufacturer"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model"
+        },
+        "serial_number": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Serial Number"
+        },
+        "calibration_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Calibration Reference"
+        },
+        "settings": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Settings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "Instrument",
+      "type": "object"
+    },
+    "InstrumentSetup": {
+      "additionalProperties": false,
+      "properties": {
+        "instruments": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Instrument"
+          },
+          "title": "Instruments",
+          "type": "array"
+        },
+        "sampling_rate": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "bandwidth": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "record_length": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Length"
+        },
+        "voltage_probe": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Instrument"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "current_probe": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Instrument"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_probe": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Instrument"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "deskew": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dc_bus_capacitance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "load_inductance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_driver": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Gate Driver"
+        },
+        "corrections": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Corrections",
+          "type": "array"
+        }
+      },
+      "title": "InstrumentSetup",
+      "type": "object"
+    },
+    "Lifecycle": {
+      "enum": [
+        "raw",
+        "normalized",
+        "validated",
+        "canonical",
+        "derived",
+        "application_view"
+      ],
+      "title": "Lifecycle",
+      "type": "string"
+    },
+    "MeasurementProtocol": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "static_conduction",
+            "dpt",
+            "capacitance",
+            "gate_charge",
+            "reverse_conduction",
+            "thermal",
+            "soa",
+            "reliability"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "definition": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "category"
+      ],
+      "title": "MeasurementProtocol",
+      "type": "object"
+    },
+    "OperatingCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "junction_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "case_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ambient_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dc_bus_voltage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "drain_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "collector_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "switching_frequency": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "pulse_width": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "duty_cycle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_state": {
+          "default": "unknown",
+          "enum": [
+            "on",
+            "off",
+            "unknown"
+          ],
+          "title": "Gate State",
+          "type": "string"
+        },
+        "extensions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Extensions",
+          "type": "array"
+        }
+      },
+      "title": "OperatingCondition",
+      "type": "object"
+    },
+    "Origin": {
+      "enum": [
+        "measured",
+        "manufacturer_datasheet",
+        "manufacturer_model",
+        "digitized",
+        "interpolated",
+        "extrapolated",
+        "fitted",
+        "physics_derived",
+        "inferred",
+        "synthetic"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "ProcessingRecipe": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "algorithm": {
+          "minLength": 1,
+          "title": "Algorithm",
+          "type": "string"
+        },
+        "parameters": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "integration_start_rule": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Integration Start Rule"
+        },
+        "integration_end_rule": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Integration End Rule"
+        },
+        "code_artifact": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "algorithm"
+      ],
+      "title": "ProcessingRecipe",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/Lifecycle",
+          "default": "canonical"
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Dependency"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "recipe_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipe Id"
+        },
+        "recipe_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipe Version"
+        },
+        "freshness": {
+          "$ref": "#/$defs/Freshness",
+          "default": "current"
+        }
+      },
+      "required": [
+        "origin",
+        "source_ids"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Quality": {
+      "additionalProperties": false,
+      "properties": {
+        "flags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "review_status": {
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "title": "Quality",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    },
+    "ScalarRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "condition": {
+          "$ref": "#/$defs/OperatingCondition",
+          "default": {
+            "junction_temperature": null,
+            "case_temperature": null,
+            "ambient_temperature": null,
+            "dc_bus_voltage": null,
+            "drain_current": null,
+            "collector_current": null,
+            "gate_voltage_on": null,
+            "gate_voltage_off": null,
+            "gate_resistance_on": null,
+            "gate_resistance_off": null,
+            "switching_frequency": null,
+            "pulse_width": null,
+            "duty_cycle": null,
+            "gate_state": "unknown",
+            "extensions": []
+          }
+        },
+        "statistic": {
+          "$ref": "#/$defs/Statistic",
+          "default": "unspecified"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "quality": {
+          "$ref": "#/$defs/Quality",
+          "default": {
+            "flags": [],
+            "review_status": "unreviewed"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "quantity",
+        "provenance"
+      ],
+      "title": "ScalarRecord",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "manufacturer",
+            "laboratory",
+            "test_partner",
+            "paper",
+            "AIPE",
+            "simulation_model",
+            "distributor"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "access": {
+          "$ref": "#/$defs/AccessMetadata",
+          "default": {
+            "license": null,
+            "redistribution_allowed": null,
+            "commercial_use_allowed": null,
+            "visibility": "unknown",
+            "owner": null,
+            "category": "unknown"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Statistic": {
+      "enum": [
+        "unspecified",
+        "typical",
+        "minimum",
+        "maximum",
+        "measured_mean",
+        "median",
+        "standard_deviation"
+      ],
+      "title": "Statistic",
+      "type": "string"
+    },
+    "TestCampaign": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "test_run_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Test Run Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source"
+      ],
+      "title": "TestCampaign",
+      "type": "object"
+    },
+    "TestRun": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "device_id": {
+          "minLength": 1,
+          "title": "Device Id",
+          "type": "string"
+        },
+        "physical_sample_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Physical Sample Id"
+        },
+        "production_lot_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Production Lot Id"
+        },
+        "condition": {
+          "$ref": "#/$defs/OperatingCondition"
+        },
+        "protocol": {
+          "$ref": "#/$defs/MeasurementProtocol"
+        },
+        "instrument_setup": {
+          "$ref": "#/$defs/InstrumentSetup",
+          "default": {
+            "instruments": [],
+            "sampling_rate": null,
+            "bandwidth": null,
+            "record_length": null,
+            "voltage_probe": null,
+            "current_probe": null,
+            "gate_probe": null,
+            "deskew": null,
+            "dc_bus_capacitance": null,
+            "load_inductance": null,
+            "gate_driver": null,
+            "corrections": []
+          }
+        },
+        "waveform_refs": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DynamicWaveformRef"
+          },
+          "title": "Waveform Refs",
+          "type": "array"
+        },
+        "processing_recipes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ProcessingRecipe"
+          },
+          "title": "Processing Recipes",
+          "type": "array"
+        },
+        "derived_metrics": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DynamicMetrics"
+          },
+          "title": "Derived Metrics",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "device_id",
+        "condition",
+        "protocol"
+      ],
+      "title": "TestRun",
+      "type": "object"
+    },
+    "Uncertainty": {
+      "additionalProperties": false,
+      "description": "Absolute uncertainty uses the same unit as its associated value.",
+      "properties": {
+        "standard": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Standard"
+        },
+        "repetitions": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Repetitions"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "maximum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "confidence_interval": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence Interval"
+        },
+        "confidence_level": {
+          "anyOf": [
+            {
+              "exclusiveMaximum": 1,
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence Level"
+        },
+        "sample_variation": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Variation"
+        }
+      },
+      "title": "Uncertainty",
+      "type": "object"
+    },
+    "WaveformChannel": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "time",
+            "voltage",
+            "current",
+            "gate_voltage",
+            "gate_current",
+            "other"
+          ],
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "unit",
+        "role"
+      ],
+      "title": "WaveformChannel",
+      "type": "object"
+    },
+    "WaveformEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "turn_on",
+            "turn_off",
+            "reverse_recovery"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "start_seconds": {
+          "title": "Start Seconds",
+          "type": "number"
+        },
+        "end_seconds": {
+          "title": "End Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "start_seconds",
+        "end_seconds"
+      ],
+      "title": "WaveformEvent",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0",
+      "default": "3.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "device_id": {
+      "minLength": 1,
+      "title": "Device Id",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "minItems": 1,
+      "title": "Sources",
+      "type": "array"
+    },
+    "campaigns": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/TestCampaign"
+      },
+      "title": "Campaigns",
+      "type": "array"
+    },
+    "runs": {
+      "items": {
+        "$ref": "#/$defs/TestRun"
+      },
+      "minItems": 1,
+      "title": "Runs",
+      "type": "array"
+    },
+    "artifacts": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ArtifactRef"
+      },
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "external_dependencies": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Dependency"
+      },
+      "title": "External Dependencies",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "request_id",
+    "device_id",
+    "sources",
+    "runs"
+  ],
+  "title": "MeasurementPackage",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,866 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "wolfspeed_c2m0080120d",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Wolfspeed",
+    "part_number": "C2M0080120D",
+    "family_id": null,
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [],
+  "package": {
+    "name": null,
+    "components": [],
+    "parasitics": [],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+      "kind": "manufacturer",
+      "name": "Wolfspeed",
+      "artifact": {
+        "id": "sha256:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+        "uri": "raw:wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0080120D.xml",
+        "checksum": "a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+        "format": "application/xml",
+        "size": 7806
+      },
+      "url": null,
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Wolfspeed",
+        "category": "manufacturer"
+      }
+    }
+  ],
+  "quality": {
+    "flags": [
+      "manufacturer_model_not_measurement"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "available",
+    "scalars": [],
+    "curves": [
+      {
+        "id": "wolfspeed_c2m0080120d:voltage_drop:2",
+        "name": "voltage_drop",
+        "axes": [
+          {
+            "name": "junction_temperature",
+            "unit": "K",
+            "values": [
+              218.14999999999998,
+              298.15,
+              423.15,
+              1173.15
+            ]
+          },
+          {
+            "name": "current",
+            "unit": "A",
+            "values": [
+              -70.0,
+              -50.0,
+              -30.0,
+              -20.0,
+              -10.0,
+              -5.0,
+              -3.0,
+              -1.0,
+              0.0,
+              1.0,
+              3.0,
+              5.0,
+              10.0,
+              20.0,
+              30.0,
+              40.0,
+              50.0,
+              52.0
+            ]
+          }
+        ],
+        "values": [
+          -3.8,
+          -2.8,
+          -1.8,
+          -1.25,
+          -0.68,
+          -0.35,
+          -0.215,
+          -0.07,
+          0.0,
+          0.05406,
+          0.21,
+          0.38,
+          0.78,
+          1.6,
+          2.42,
+          3.47,
+          4.66,
+          4.96,
+          -5.0,
+          -3.49,
+          -2.12,
+          -1.43,
+          -0.746,
+          -0.376,
+          -0.225,
+          -0.074,
+          0.0,
+          0.075,
+          0.153,
+          0.386,
+          0.785,
+          1.66,
+          2.65,
+          3.85,
+          5.34,
+          5.7,
+          -5.3,
+          -4.56,
+          -3.66,
+          -2.61,
+          -1.344,
+          -0.68,
+          -0.41,
+          -0.15,
+          0.0,
+          0.152,
+          0.31,
+          0.74,
+          1.44,
+          3.0,
+          4.97,
+          7.58,
+          11.32,
+          12.44,
+          -6.36,
+          -5.472,
+          -4.392,
+          -3.132,
+          -1.6128,
+          -0.816,
+          -0.492,
+          -0.18,
+          0.0,
+          0.1824,
+          0.372,
+          0.888,
+          1.728,
+          3.6,
+          5.964,
+          9.096,
+          13.584,
+          14.928
+        ],
+        "unit": "V",
+        "provenance": {
+          "origin": "manufacturer_model",
+          "source_ids": [
+            "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+          ],
+          "lifecycle": "canonical",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current"
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "on",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      }
+    ]
+  },
+  "switching": {
+    "availability": "available",
+    "scalars": [],
+    "curves": [
+      {
+        "id": "wolfspeed_c2m0080120d:Eon:0",
+        "name": "Eon",
+        "axes": [
+          {
+            "name": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              398.15,
+              1173.15,
+              1273.15
+            ]
+          },
+          {
+            "name": "dc_bus_voltage",
+            "unit": "V",
+            "values": [
+              -10.0,
+              0.0,
+              800.0
+            ]
+          },
+          {
+            "name": "current",
+            "unit": "A",
+            "values": [
+              -10.0,
+              0.0,
+              5.0,
+              10.0,
+              15.0,
+              20.0,
+              25.0,
+              30.0
+            ]
+          }
+        ],
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00010499999999999999,
+          0.00015199999999999998,
+          0.000227,
+          0.000336,
+          0.00042899999999999997,
+          0.000692,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.000159,
+          0.000256,
+          0.000361,
+          0.000473,
+          0.0005989999999999999,
+          0.000743,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0002385,
+          0.000384,
+          0.0005415,
+          0.0007095,
+          0.0008985,
+          0.0011149999999999999,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0002385,
+          0.000384,
+          0.0005415,
+          0.0007095,
+          0.0008985,
+          0.0011145
+        ],
+        "unit": "J",
+        "provenance": {
+          "origin": "manufacturer_model",
+          "source_ids": [
+            "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+          ],
+          "lifecycle": "canonical",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current"
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c2m0080120d:Eoff:1",
+        "name": "Eoff",
+        "axes": [
+          {
+            "name": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              398.15,
+              1173.15,
+              1273.15
+            ]
+          },
+          {
+            "name": "dc_bus_voltage",
+            "unit": "V",
+            "values": [
+              -10.0,
+              0.0,
+              800.0
+            ]
+          },
+          {
+            "name": "current",
+            "unit": "A",
+            "values": [
+              -10.0,
+              0.0,
+              5.0,
+              10.0,
+              15.0,
+              20.0,
+              25.0,
+              30.0
+            ]
+          }
+        ],
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.000028329999999999998,
+          0.00002834,
+          0.00003154,
+          0.00005263,
+          0.00008070999999999999,
+          0.00019209999999999998,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.000029999999999999997,
+          0.000042999999999999995,
+          0.000069,
+          0.000102,
+          0.000168,
+          0.000234,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.000044999999999999996,
+          0.0000645,
+          0.0001035,
+          0.000153,
+          0.000252,
+          0.00035099999999999997,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.000044999999999999996,
+          0.0000645,
+          0.0001035,
+          0.000153,
+          0.000252,
+          0.00035099999999999997
+        ],
+        "unit": "J",
+        "provenance": {
+          "origin": "manufacturer_model",
+          "source_ids": [
+            "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+          ],
+          "lifecycle": "canonical",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current"
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      }
+    ]
+  },
+  "capacitance": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "available",
+    "scalars": [],
+    "curves": [
+      {
+        "id": "wolfspeed_c2m0080120d:voltage_drop:3",
+        "name": "voltage_drop",
+        "axes": [
+          {
+            "name": "junction_temperature",
+            "unit": "K",
+            "values": [
+              218.14999999999998,
+              298.15,
+              423.15,
+              1173.15
+            ]
+          },
+          {
+            "name": "current",
+            "unit": "A",
+            "values": [
+              -70.0,
+              -50.0,
+              -30.0,
+              -20.0,
+              -10.0,
+              -5.0,
+              -2.0,
+              -1.0,
+              -0.3,
+              0.0,
+              1.0
+            ]
+          }
+        ],
+        "values": [
+          -7.62,
+          -7.0,
+          -6.25,
+          -5.7,
+          -4.95,
+          -4.4,
+          -3.85,
+          -3.6,
+          -3.27,
+          0.0,
+          0.0,
+          -6.6,
+          -6.0,
+          -5.3,
+          -4.85,
+          -4.25,
+          -3.8,
+          -3.4,
+          -3.16,
+          -2.8,
+          0.0,
+          0.0,
+          -6.1,
+          -5.5,
+          -4.8,
+          -4.35,
+          -3.78,
+          -3.36,
+          -2.97,
+          -2.76,
+          -2.52,
+          0.0,
+          0.0,
+          -4.88,
+          -4.4,
+          -3.84,
+          -3.48,
+          -3.024,
+          -2.688,
+          -2.376,
+          -2.208,
+          -2.016,
+          0.0,
+          0.0
+        ],
+        "unit": "V",
+        "provenance": {
+          "origin": "manufacturer_model",
+          "source_ids": [
+            "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+          ],
+          "lifecycle": "canonical",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current"
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "off",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      }
+    ]
+  },
+  "thermal": [
+    {
+      "id": "wolfspeed_c2m0080120d:thermal:0",
+      "topology": "Cauer",
+      "elements": [
+        {
+          "resistance": {
+            "value": 0.00956,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.00156,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.242,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.00604,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.167,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.0619,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.228,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.358,
+            "unit": "J/K"
+          }
+        }
+      ],
+      "provenance": {
+        "origin": "manufacturer_model",
+        "source_ids": [
+          "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+        ],
+        "lifecycle": "canonical",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current"
+      },
+      "from_node": "junction",
+      "to_node": "case"
+    }
+  ],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "wolfspeed_c2m0080120d:plecs",
+      "format": "plecs",
+      "provenance": {
+        "origin": "manufacturer_model",
+        "source_ids": [
+          "source:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c"
+        ],
+        "lifecycle": "canonical",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current"
+      },
+      "artifact": {
+        "id": "sha256:a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+        "uri": "raw:wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0080120D.xml",
+        "checksum": "a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+        "format": "application/xml",
+        "size": 7806
+      },
+      "adapter_metadata": {
+        "version": "1.4",
+        "namespace": "http://www.plexim.com/xml/semiconductors/",
+        "package_class": "MOSFET with Diode",
+        "semiconductor_type": "MOSFET with Diode",
+        "variables": [
+          {
+            "Name": "Rgon",
+            "Description": "External gate resistance (turn-on)",
+            "DefaultValue": "2.5",
+            "MinValue": "0",
+            "MaxValue": "20"
+          },
+          {
+            "Name": "Rgoff",
+            "Description": "External gate resistance (turn-off)",
+            "DefaultValue": "2.5",
+            "MinValue": "0",
+            "MaxValue": "20"
+          }
+        ],
+        "bindings": [
+          {
+            "curve_id": "wolfspeed_c2m0080120d:Eon:0",
+            "section": "TurnOnLoss",
+            "method": "Table and formula",
+            "formula": "E/(18.933*5+642.6668)*(18.933*Rgon+642.6668)",
+            "scale": 1e-6
+          },
+          {
+            "curve_id": "wolfspeed_c2m0080120d:Eoff:1",
+            "section": "TurnOffLoss",
+            "method": "Table and formula",
+            "formula": "E/(18.8*5+642.102)*(18.8*Rgoff+642.102)",
+            "scale": 1e-6
+          },
+          {
+            "curve_id": "wolfspeed_c2m0080120d:voltage_drop:2",
+            "section": "ConductionLoss",
+            "method": "Table only",
+            "formula": null,
+            "scale": 1.0
+          },
+          {
+            "curve_id": "wolfspeed_c2m0080120d:voltage_drop:3",
+            "section": "ConductionLoss",
+            "method": "Table only",
+            "formula": null,
+            "scale": 1.0
+          }
+        ],
+        "custom_tables": [],
+        "unresolved_tables": false,
+        "comments": [
+          "-------------------------------------------------------------------------------------------------",
+          "DISCLAIMER",
+          "This model is provided as is, where is, and with no warranty of any kind either",
+          "expressed or implied, including but not limited to any implied warranties of",
+          "merchantability and fitness for a particular purpose.",
+          "-------------------------------------------------------------------------------------------------",
+          "",
+          "",
+          "-------------------------------------------------------------------------------------------------",
+          "Wolfspeed SiC MOSFET PLECS Library",
+          "",
+          "       C2M0080120D",
+          "       MOSFET",
+          "       Datasheet Rev.1, 2025-09-18",
+          "       ",
+          "       Electrical Parameters (nominal)",
+          "       Ron = 0.123 Ω",
+          "       Vf = 3.158 V",
+          "       ",
+          "-------------------------------------------------------------------------------------------------",
+          "",
+          "",
+          "-------------------------------------------------------------------------------------------------",
+          "To find other WOLFSPEED SiC models, please visit:",
+          "https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/",
+          "-------------------------------------------------------------------------------------------------"
+        ]
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

@@ -1,0 +1,988 @@
+{
+  "files": [
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0025120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0025120D.xml",
+      "sha256": "efdec3d43acc95cb8259c002137411002c22208aa8a45c3c28f918f6ea2169c0",
+      "size": 7911
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0040120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0040120D.xml",
+      "sha256": "a7f4cb5b6cc9b54b74668f17f527df3affd4ff733446acb2ac4eedc2e12d9a07",
+      "size": 7835
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0045170D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0045170D.xml",
+      "sha256": "12e28272be6bfd836b20b13489b5df138ab36ce8063ed846df22a10f9d86eef7",
+      "size": 8403
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0045170P.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0045170P.xml",
+      "sha256": "f5c2157474147603024998e1f7bb39ea990f4acc088209ab720361c2ca5fdc0c",
+      "size": 8392
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0080120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0080120D.xml",
+      "sha256": "a3377aeb9181ec8908046fa1dfeff77cfe7c44afe326064e488adfc66c37ee3c",
+      "size": 7806
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M1000170D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M1000170D.xml",
+      "sha256": "887156e837fc38d6536b179396370142cd86c9e07b02f3e86b21f063d6c978ff",
+      "size": 8849
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M1000170J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M1000170J.xml",
+      "sha256": "782b6f4102bf8a4b6f2833e99c2f4aa007c8cefb1e9bc5ad917559b5f33c5e1f",
+      "size": 9667
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0015065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0015065D.xml",
+      "sha256": "d7baa06850839ff7ae1925e7d26f9b5aaf8119534f9217b073da525e910ea868",
+      "size": 9277
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0015065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0015065K.xml",
+      "sha256": "03ef11549e968208d443e297ec30d50ecae15e33bc9d8cc6aefd79615c198666",
+      "size": 8968
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120D.xml",
+      "sha256": "1fb6cbd6828f320a235e0e273be9384c63a4fb01941c384ccafb2e507ef49441",
+      "size": 10017
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120K.xml",
+      "sha256": "6a9da55632c62c394902fa8bca8161db7e274ce67ad4940c6548204f15eb8ecd",
+      "size": 11360
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0016120K1.xml",
+      "sha256": "90e89e270e75fe2ee9e9cca8d6e2c60e2d03ba552b7ee362d1a92a0d31ca4fb3",
+      "size": 11149
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120D.xml",
+      "sha256": "3da309dfa0fce34edb7ba4ae59f31eafcd33feff505f429339ae90c945226bc3",
+      "size": 9405
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120J2.xml",
+      "sha256": "2d2491de774df0088542bb19c7f6313f19cff8b271bcbf87d10166196c0ebcb0",
+      "size": 11338
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120K.xml",
+      "sha256": "c4d70ad76e25ee4f7e246c4bb4fd5164ac80a4e4277601e1582fdc7aa22d5b50",
+      "size": 10984
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0021120K1.xml",
+      "sha256": "522a49bbaa8586672364c850363db273fd14f007daf5461c6bd30492204fc444",
+      "size": 11308
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065D.xml",
+      "sha256": "d3c1b00a93cd914de2f97901c395b812951ef88a5639b0ec49d4bddcf514a184",
+      "size": 9212
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065J1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065J1.xml",
+      "sha256": "01b4ba5c64ccd30e203561788820f8b32532e9d66c3607708bea3cb756e160bd",
+      "size": 9165
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065K.xml",
+      "sha256": "1ca8759a5a7d04ddf9623fe4042f6503ac59fcf607628cd941d9230adf04de18",
+      "size": 9221
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065L.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025065L.xml",
+      "sha256": "7875f228efc51f1afe3dba1950667398b5dafa9f1c6e7b0a29dc1760d49584ba",
+      "size": 9922
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0025075K1.xml",
+      "sha256": "0ff4f11c552b28cab6f6491f333ef29efbd050933e6971c49dfb3bde65bd1ac5",
+      "size": 10090
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0030090K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0030090K.xml",
+      "sha256": "390e8fb6187b69a17debf03a96e13a3c9e80756f51bfd44c9d7665c74d6e7698",
+      "size": 11234
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120D.xml",
+      "sha256": "3c0569977eb0eadff183517e7595e3926b1c0a3bef238b0c35d3d289bfd66fd7",
+      "size": 9341
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120J1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120J1.xml",
+      "sha256": "6c89111c683d97cfcc21d4ce1e41b1bb2f2e0f1351fbccf53399c92b7166f7f7",
+      "size": 10729
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120J2.xml",
+      "sha256": "37aedd4901ce99c9f29d977bd10352043c745188aaf7fadc5359d1ebbe0a954c",
+      "size": 11017
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120K.xml",
+      "sha256": "23d213cb955b354d09648e143ef1b93105ff1c8be22c8c3f89f15fe680356509",
+      "size": 10387
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0032120K1.xml",
+      "sha256": "0365a0f6dbdca6738669a3dd5d5f22843786dd2cf6f360b8baf94331b4b87ea4",
+      "size": 10395
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120D.xml",
+      "sha256": "256831b967be0fa73982f03f5e2d88faa0bd8ec835c8afeea6a68028c6566b56",
+      "size": 10709
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120J1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120J1.xml",
+      "sha256": "0a3e4df81101c848a49e8d19c4a03c5bda01da9f87991c9e12189ad6f34c4198",
+      "size": 9376
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120K.xml",
+      "sha256": "cd4a770643c0c386c57775a463755a8fbbad2352e22b81e6a614638d44e27b29",
+      "size": 10705
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0040120K1.xml",
+      "sha256": "40ade60d975b0dc253f73cbfcf5c00c2e9f3bef025370f3d3eed647da2a34642",
+      "size": 10769
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065D.xml",
+      "sha256": "d44ee5ac48590f6dec30b47e894cbab1fd2b75cbcc53eb82fc98ba70d2ea9a1a",
+      "size": 9038
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065J1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065J1.xml",
+      "sha256": "ac0b5b42d71f4905a7c5d60bacece83a6f34c9074904b29b94da9cc5e63714be",
+      "size": 8826
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065K.xml",
+      "sha256": "9de29b4df4d2a5104eee43c6a0714632ca0000292efdaeeca318b9f274de1b1e",
+      "size": 9038
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065L.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045065L.xml",
+      "sha256": "f9bdb330bdd50835f44c76e150fc64a802fbca6fa727b06589946685d7f4e490",
+      "size": 9075
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0045075K1.xml",
+      "sha256": "69990d2abb6578b41b6a95149bc49e6277d4b731eaf70652720fcc1c7085edd0",
+      "size": 9395
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065D.xml",
+      "sha256": "5e5111277165959d11c3b85f13a1c49b6e6a905edfc5ec8e04ad0b879387d1b8",
+      "size": 9195
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065J.xml",
+      "sha256": "113afcd45aa70ff886308c5b8a071f5ad0d345a6b2c50bc4a8fa6fc56adfc24f",
+      "size": 10642
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065K.xml",
+      "sha256": "4312d963c64a0df41c86e60b9a330d81824e6783a890f974d8cf350bb4b34eec",
+      "size": 9136
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065L.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060065L.xml",
+      "sha256": "4640c1fef5c2b3547249dfa5152ee32edab58ad3c0f956893ecb4678241d7626",
+      "size": 9166
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0060075K1.xml",
+      "sha256": "7d6cd0f27834d284cc8fde31a73c2f0bed2fead8be54fe862a2a5fe466ed0d63",
+      "size": 9272
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065090D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065090D.xml",
+      "sha256": "031648b0ae794cad0e0ec832a571587e64a8716e1232c828c07561d18bcc41c4",
+      "size": 10847
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065090J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065090J.xml",
+      "sha256": "c4b5e474c8a8c08c5001b4d6440f8a0c7759250d46959e62645d0769de37aaa6",
+      "size": 9882
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065100J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065100J.xml",
+      "sha256": "4f29bb2f54a7839d45789aaf3d27eb65ce9fb252dd5f742a218ff07de9834532",
+      "size": 11407
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065100K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0065100K.xml",
+      "sha256": "3a01d179bbc549f496f60e8762d884c2ea05713626d7705c10882beaf30c17fa",
+      "size": 10976
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120D.xml",
+      "sha256": "3fea29a4b2e893596c167602f77703e977c9042b7cfc81777dbe7b11656d5930",
+      "size": 9095
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120J.xml",
+      "sha256": "7c32447e7f75b72f5c7d70d329eb49be3af2d6d3fb5c55eabd9d2af2fe7c8efb",
+      "size": 10669
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120J2.xml",
+      "sha256": "1e35c1521c60c0ace28334cd1843d76e67d633e0a74c1f3c2b195dea00407cf5",
+      "size": 10361
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120K.xml",
+      "sha256": "9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84",
+      "size": 10401
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0075120K1.xml",
+      "sha256": "d297d306ec0bddcc6f9bb0bf7ee46a78a95d2409ebd7a068d2b28a784c2cfad3",
+      "size": 10499
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065D.xml",
+      "sha256": "67fbe330a7079bf3492e8e6892005203ac1f7a971a2a8cb539ddf744db16d58a",
+      "size": 11237
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065J.xml",
+      "sha256": "12f6aef07f639f2912a58d331ace62c1aeb8df6ece50ed2d33b05b89183fccb8",
+      "size": 11197
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065K.xml",
+      "sha256": "d764060759a26daebd923e789d5dfd873a3a6f44f0c7feb3b956ebbfb628472a",
+      "size": 11193
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065L.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120065L.xml",
+      "sha256": "dd2d8d82f083d6813f480a7246fba5f09599e01f282b58e74b47d99faa017f8d",
+      "size": 9852
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120090D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120090D.xml",
+      "sha256": "e8592a305d4cddc43c1805365f4acc112242e27cde0f5e8fa956b174c2fcb79e",
+      "size": 9852
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120090J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120090J.xml",
+      "sha256": "e9fbb08fff09c0d035f9aafaa712510acffb8f784960f767729d94d0cb59bd4a",
+      "size": 10179
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120100J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120100J.xml",
+      "sha256": "10021020467bf8da0ac2e56dc2d6f6b044dec43d572f37ecb5d2975b2bdd6c2e",
+      "size": 9827
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120100K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0120100K.xml",
+      "sha256": "b891569d59d6cbd9755b1e2ddf3a54d20bc3fde400961b373c0d76980c871733",
+      "size": 9787
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120D.xml",
+      "sha256": "3248793e1f590a8a066f43e9aaaf0b0dae7e8e8f42cddef7dff5ea577010593c",
+      "size": 10494
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120J.xml",
+      "sha256": "3fde009623ac3ceda06f75e57b9c272997a21b8d88be7523e7f0400b8ea9f5ff",
+      "size": 10087
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0160120K1.xml",
+      "sha256": "3bc8a0ad418380671aa2aaca044354aa8d0b2a3920c86d35be7cc510f712b613",
+      "size": 10177
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0280090D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0280090D.xml",
+      "sha256": "e2a55d14442de17fc80549c944f1e56c0d2e2ef397a52a3b9f28265279ed63a7",
+      "size": 9689
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0280090J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0280090J.xml",
+      "sha256": "b044035cf13b41619efda819cb251c71132f39a7f09fe7026d5e65e19cc9674e",
+      "size": 9717
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0350120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0350120D.xml",
+      "sha256": "6695bf8f862d24b58c0a83b0214753f709f40618ee0e38ee4d58f590a00f9615",
+      "size": 10205
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0350120J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C3M0350120J.xml",
+      "sha256": "4b6c1d41849a813d9fd4619da87d546cb167b644a633e55277aca5c15ccdf2ee",
+      "size": 10281
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120J2.xml",
+      "sha256": "c2bb61c620781bf74d92da1dae603a616fecfc4649d5e993d6a3ef0953ef1056",
+      "size": 40116
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120K.xml",
+      "sha256": "9b0a8b1faacc160d96a1457ab8ea6dbbb701293a617f152c76a74fddcaccd22f",
+      "size": 40114
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120K1.xml",
+      "sha256": "f6db7fffe2a9cb1013624492b64f5802cbe8a6f01b886f0adc60c08746596de6",
+      "size": 40116
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS025120U2.xml",
+      "sha256": "06501631b655b5aefc84b50630d13f1a5ccf532be43f9499a6ebdf23c97db0ef",
+      "size": 40117
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120J2.xml",
+      "sha256": "4455a6194d2e673937266cf9228cb8a2839383d71ddba68c7f39004a6186e021",
+      "size": 55762
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120K.xml",
+      "sha256": "48ad50df26becc7c11a724cc9f9eb72243d57b8e3b5f8a17921045823790f909",
+      "size": 55758
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120K1.xml",
+      "sha256": "cda7864361da453dc0502e084e22953f0654afae4427b32ce38cefe12ef0e80a",
+      "size": 55760
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS036120U2.xml",
+      "sha256": "7adc0223c85c308147ebd130ca02bd767107a59981b34a42c6e05ffb02671f2a",
+      "size": 55761
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120J2.xml",
+      "sha256": "ffd97461c30085136e38261aa1de960a7cf7e1cb528ca7aab2b95b624d6a1143",
+      "size": 38810
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120K.xml",
+      "sha256": "58779e7a1d6f4c5ec1fc6085085cce0d44c553e670a5adb2969cb186fa11098e",
+      "size": 38809
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120K1.xml",
+      "sha256": "4262b04c25603ce80d54d513047bbfb41f04d879ccb950caa92f505d732f03c3",
+      "size": 38811
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS047120U2.xml",
+      "sha256": "ca3b16768fcfd8258eafa0b9f2dd9c99f48dab9f63f2c32092ea69bc70d49570",
+      "size": 38810
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120J2.xml",
+      "sha256": "ab4a3bc88a9d39c2bdd1f5d818468799bbe8a5015e5ad6b31fedfc1b2c9c1e62",
+      "size": 46428
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120K.xml",
+      "sha256": "a6e4f5c17ed7cbae9581defbaa73438d0068633dd39d48297eeae33188368325",
+      "size": 46427
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120K1.xml",
+      "sha256": "0b7006f0e0fca4b27bf63cfd521bdbbb5f79a0bb186bb1cc717595dad5f1528a",
+      "size": 46429
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C4MS065120U2.xml",
+      "sha256": "61f691b4c5ae56c1511092afef785e08fcb673cbb0c62f8278f86049312a8424",
+      "size": 46443
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0016120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0016120K.xml",
+      "sha256": "f9bb1121c4da2f4fe0f8f155d1890868965233524ddc9a601f0b8192c7563889",
+      "size": 11410
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0021120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0021120J2.xml",
+      "sha256": "14068d7cad8a3fbb26554623e38d5b16c39b1d5837ce2aa1469ac7c7f95b86d0",
+      "size": 12094
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0021120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0021120K.xml",
+      "sha256": "07eb1887b1d38bfecfb167e06abac11d8ad51bb6895eb5af173dea0af6f46c41",
+      "size": 10804
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0032120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0032120J2.xml",
+      "sha256": "7c9ceee6209266f31ff7bb766bca3c8780b3807101412b7a28573a33edea3efd",
+      "size": 11527
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0032120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0032120K.xml",
+      "sha256": "865d4eb91dc0550ecf541392fb10c1260fbdbbd79231151b892e715b9d777589",
+      "size": 10354
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0040120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0040120J2.xml",
+      "sha256": "72faa12055bcf8025340722a80b0662ff91b0d8d8606e313f7d7dca7480db9ef",
+      "size": 11033
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0040120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0040120K.xml",
+      "sha256": "f378f8fb4894f4876587468ebd5dd179ee7b52214583930f94a2d1c4647dd1e5",
+      "size": 10767
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0045065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0045065K.xml",
+      "sha256": "eab796bbee2a74eebfcae58b4b078e713e7d556c2791ba8d956cf675c0d3a9ff",
+      "size": 9019
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0060065D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0060065D.xml",
+      "sha256": "840027017fc3ddf111d5a28f5456058111bdf6b5ccfffc0970b8f63b50eebec9",
+      "size": 9195
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0060065K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0060065K.xml",
+      "sha256": "2393691cc91200b9bd3435c97296f95259814679e089f4df11f8a463bda2c97f",
+      "size": 9094
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120D.xml",
+      "sha256": "b0f9283ae98b408317389fa227be1fd8d76bcca417c830fe7e9eb0d46cc2ce17",
+      "size": 9069
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120J2.xml",
+      "sha256": "c51a1aaac2c0db68ab38517dee4500c4bea89494ccc0b37cdfe5eebe32b66465",
+      "size": 11724
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0075120K.xml",
+      "sha256": "611a037611d6368d747f7cc52ef408205e851f33ea776c9a82b1f7b566649d26",
+      "size": 8993
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0120090J.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0120090J.xml",
+      "sha256": "214463b85a6e25eb62fe27605c87b951715903cc3c2217657be6cbfd11434bed",
+      "size": 10107
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120D.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120D.xml",
+      "sha256": "109608b222a84a42e639e5b42225f5cc71b1af9ecdcc67de8d7d465148b92b06",
+      "size": 10130
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120J2.xml",
+      "sha256": "cfbd9b11d709304a03a8bf9217e540ce3086591ec94c0b778bdeb5ab9a96913c",
+      "size": 11013
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E3M0160120K.xml",
+      "sha256": "f0e7223954577f57b5ac7a55f37a4af46ff96fde25261be446fa0bc6b0eba52e",
+      "size": 10175
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0013120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0013120K.xml",
+      "sha256": "76962428d2973ea137cbeba998e06eaa38d5710af9ab60396046580922456f89",
+      "size": 11221
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0015075J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0015075J2.xml",
+      "sha256": "54cf13fc88faa08d989764de76248f9b2e2f51edc2776cbe8f751f1d17a989fc",
+      "size": 9832
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0015075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0015075K1.xml",
+      "sha256": "442c8a30e6978ed2b601d4efeba36298389de1933fc5af756035e4835ab8b2e5",
+      "size": 9830
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0025075J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0025075J2.xml",
+      "sha256": "f4efdddcb8ad68d4905c123c7b8a8b05a4ef5f6e7ca115129b80d35870d2ae71",
+      "size": 10079
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0025075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0025075K1.xml",
+      "sha256": "53b8ba2f7086d835e3099e95e921e758e837bf7e89d7697654eb8ababc0d2aba",
+      "size": 10080
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0045075J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0045075J2.xml",
+      "sha256": "9863318a5afe00287a1c7b90bb135ceaccce3a089de4a8a5cde3351eba14cce0",
+      "size": 9392
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0045075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0045075K1.xml",
+      "sha256": "a857f96e7f79a0f606c40e053c97b8f1ef682b6ab78c64f4757829f59c23329b",
+      "size": 9387
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0060075J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0060075J2.xml",
+      "sha256": "8e14166ab1ed9fabafe8bbed1dfb12bebb3ccc9247fc88088a6e093297ff5794",
+      "size": 9258
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0060075K1.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4M0060075K1.xml",
+      "sha256": "5e7a1dfa7eaa5cfe0aa55804153e1e24874b8cc6d8e60cdb09db42e061a9a4dc",
+      "size": 9263
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120J2.xml",
+      "sha256": "df3127b29fc372f0b90c80c703502b3e13354b7878737d7ffe1bc7b5aca886e4",
+      "size": 40116
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120K.xml",
+      "sha256": "cc17b38d17da644fdd1dcd3176ea2567ae14aa885a121224c748bc26e79a62cb",
+      "size": 40114
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS025120U2.xml",
+      "sha256": "11e4b6a5531f6a3e7ed549236b356984120df78719e36f2c7e025393771c760c",
+      "size": 40117
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120J2.xml",
+      "sha256": "6d4fff05dccad3491c0bffefb37c7d0835b59b63dd255da52375c23022201189",
+      "size": 55762
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120K.xml",
+      "sha256": "85efe45af2466ea983dcd757678d09956adcdf6066a31d8b86b87c3f542af8b6",
+      "size": 55758
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS036120U2.xml",
+      "sha256": "d45b87b796696f7d1c34ea206b47a1c665b5f1d51dba4a55dc5f11ec747dae50",
+      "size": 55761
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120J2.xml",
+      "sha256": "06574346462a36cd97fa52624b97b002c184738e2e7c399fff2ed2bb3b31fc44",
+      "size": 38810
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120K.xml",
+      "sha256": "6f50cf0ba8884b6ce4b4f264b17e98dafb9337d76dc2e9d9972387649af219b3",
+      "size": 38809
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS047120U2.xml",
+      "sha256": "cb83bdf766c35c748df0040ec735fae0e6f60e98b564c814d8d3b980d94a61ae",
+      "size": 38810
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120J2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120J2.xml",
+      "sha256": "db029465337d50f30905aa868b1e5f9989fed0870a9e97c2899ed61ac6fd6a94",
+      "size": 46428
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120K.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120K.xml",
+      "sha256": "d8ce63e676187b292c7fd754747824464f8d3a51e338c38cf7f7975d35fd0a6e",
+      "size": 46427
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120U2.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/E4MS065120U2.xml",
+      "sha256": "a00e1730c26cd84cb4a2cd5c81b0bdc0b2e34ed7cebe423ce976287a35f7e66a",
+      "size": 46443
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB004M12DM3P.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB004M12DM3P.xml",
+      "sha256": "7891d18c030e84ce12e0581e8b3bc4435fccbcb6d90a7ee4976590e1d885ccae",
+      "size": 15731
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB004M12GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB004M12GM4.xml",
+      "sha256": "7fe9112d5a34b4046f61cd6f0ef38b29aa092fda62a63fa21dec2435b7667beb",
+      "size": 16706
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB006A12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB006A12GM3.xml",
+      "sha256": "dd3d5f53d71623b1b7d20d48b7c583437d5e5d36e1ba1f0d161622bc4e4be5e2",
+      "size": 16781
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB006M12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB006M12GM3.xml",
+      "sha256": "6bd82c769924ee934753d9e0ad9899d1dfa60829ec5bf4d12cf312e492819feb",
+      "size": 16781
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB008A12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB008A12GM3.xml",
+      "sha256": "d3f46f2ff6850ed1404db30c5e62d396a54b21da178ededeb42aeb2f9ef523ef",
+      "size": 14935
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB008M12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB008M12GM3.xml",
+      "sha256": "7bcaf3ca2b1d7831b0523128fb4fb7fceecce51f1435ad139594b851873b460d",
+      "size": 14935
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB011A12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB011A12GM3.xml",
+      "sha256": "b3ccca540f7edc63fc9410f72e59e5bff2a8bead33c49402595d377b764ad092",
+      "size": 14936
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB011M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB011M12FM3.xml",
+      "sha256": "cd93712d97b4f62c75973b9909be345111f24cc4da77c15bff0ba8af52186dce",
+      "size": 13088
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB016M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB016M12FM3.xml",
+      "sha256": "84fad6747911cf77f1cfaeb5b57f20d1c36fc4b726e30b368d63363f99751d94",
+      "size": 13678
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB320M17XM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB320M17XM3.xml",
+      "sha256": "84014f0197ecc3a92a710eb71fe873de424b0856d7d0c5a7fb590f8ec2b26a47",
+      "size": 15993
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB3R5M12DM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB3R5M12DM4.xml",
+      "sha256": "a860a8cfe9dd3add8f6acefe0cfd929ce7289d537a043dc41ba3dc81b3d90210",
+      "size": 75002
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB400M12XM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB400M12XM3.xml",
+      "sha256": "b1af05e7a75b3b0da4f9b0044552e82438c75616454374213b66a6b2b7fbca3a",
+      "size": 17701
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB425M12XM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB425M12XM3.xml",
+      "sha256": "1b8a1d2010fec81f3a49da7491bdfc4cc3329722a07a847ddb553f30d6477562",
+      "size": 18163
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB450M12XM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB450M12XM3.xml",
+      "sha256": "42172f13eabdb170d13bd46dac5de9d694f2b5fe8a1e304a7e2bb43d0e22f8e9",
+      "size": 17876
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB500M17HM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB500M17HM3.xml",
+      "sha256": "1b2bfbf56dfa8882cdb87e1e13bdcdc0e66d20a8ef59e9feb1ed74def6433883",
+      "size": 15402
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB525F12XM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB525F12XM3.xml",
+      "sha256": "b91b783add98dc229eb2ccaf899fe4463ec7280b81fa10ef3f762d75c8f9d03e",
+      "size": 15087
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB530M12BM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB530M12BM3.xml",
+      "sha256": "946f74034cc462e59959d2fc6397aa4067533e6f59072cc496a14a001a0ab346",
+      "size": 15356
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB5R0A23GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB5R0A23GM4.xml",
+      "sha256": "7e72b63535247fe884976bd3b3744add5b258d86c9302dce82a7583223b76d69",
+      "size": 80200
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB650M17HM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB650M17HM3.xml",
+      "sha256": "0af5dee431e9361e82014ef57b5040e1e0394c3c35555aabf7ca6b798a0a0258",
+      "size": 16806
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB6R0A23GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB6R0A23GM4.xml",
+      "sha256": "565882679b21cc7a5624d1df442125a465efff429590415f86d7267e5675f54f",
+      "size": 79640
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB760M12HM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB760M12HM3.xml",
+      "sha256": "c6b579bee7b1d73852fd118f7c95a1924e2d435506c8e6e8a0868b1b589d299e",
+      "size": 17644
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB7R5A23GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CAB7R5A23GM4.xml",
+      "sha256": "4372427368151233d55875c4bdf61b95ed1711c9a530e59887e6a6048665d3ac",
+      "size": 79484
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB011M12GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB011M12GM4.xml",
+      "sha256": "ef8507467da4cb1521fe3e0a384d9e12fefd373e52e9fd4acc78f478a6a4b617",
+      "size": 60662
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB021M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB021M12FM3.xml",
+      "sha256": "88e2a61fa6d807bb31329a287e5129d646e36c9aa57f927927830a9a33ab2c2f",
+      "size": 13982
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB032M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CBB032M12FM3.xml",
+      "sha256": "d61fc5b4bd61c55615f1355307cfc0caabbadbb79d8642db6d2343215b95515e",
+      "size": 13839
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB016M12GM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB016M12GM3.xml",
+      "sha256": "ab52580681d3a48c21a71a438384151e2a577380b4543b4d1f30ffedfc904fb3",
+      "size": 13978
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB021M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB021M12FM3.xml",
+      "sha256": "2b07d0bad3b4a03bdc64ed3a32ac6251cda25987add1691968bfa5dfc928a772",
+      "size": 13985
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB032M12FM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CCB032M12FM3.xml",
+      "sha256": "61bedb0291482f2466c17650a5deda70e111661691e38e3e6cd43629ab872c90",
+      "size": 13832
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CHB011M12GM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CHB011M12GM4.xml",
+      "sha256": "eca5de95e7a6875bfe560fd9f35aa1a2ee138254b3f32192f87e05fbc39409e6",
+      "size": 13091
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CLB650M17HM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CLB650M17HM3.xml",
+      "sha256": "a1fc5c9a2e7d13e906ddf43dad1024a196b331ea86d0e284defcd4d335cdd4a9",
+      "size": 16808
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/CLB800M12HM3P.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/CLB800M12HM3P.xml",
+      "sha256": "3e4083c78661551a48a68339620ed217fedae1969dcd3c4530537d2c3361a623",
+      "size": 70159
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB1R6M12YM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB1R6M12YM4.xml",
+      "sha256": "1bb075e5a91714db9954c20121cb032b0ae592efbe39a92e17fb4e2fb9bf6931",
+      "size": 102015
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R1M12YM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R1M12YM3.xml",
+      "sha256": "71364712e459adce75de21486c4ab3e8c910506beeb6e019620c3e42d496269d",
+      "size": 77200
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R1M12YM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R1M12YM4.xml",
+      "sha256": "49081ce454be47aeeee427160db47105489cbf00b4a07d8a2229c40681ee036f",
+      "size": 58072
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R8M12YM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB2R8M12YM3.xml",
+      "sha256": "457f01c9b12417bb788fe1800a0a11bf6565e16e9f624135ef52622c2a96ed42",
+      "size": 89106
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB4R3M12YM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/ECB4R3M12YM3.xml",
+      "sha256": "dab5964aa44de208b54c3dda9284e2c640d282dc4ee28a3e8513a22e73da6730",
+      "size": 79507
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB003M06TM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB003M06TM3.xml",
+      "sha256": "6339b2b392b54e7d4b3c5216ee10d8b29e8e895d8bccb8ca000cc3da719f9112",
+      "size": 86001
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB004M06TM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB004M06TM3.xml",
+      "sha256": "bba16dbc3692ac42e1a0050d698e9f7099980532bd0c54bf6a7c25efca3cfd7f",
+      "size": 115222
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB005M12TM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB005M12TM4.xml",
+      "sha256": "49026b575df58682d1dcb4bf0e3254a2bae0edce176f8ca69a91b777c3e3131c",
+      "size": 71401
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB007M06TM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB007M06TM3.xml",
+      "sha256": "95ae07455ff3e900896740a669328915a761e606e7a254423f77b071b0cceac9",
+      "size": 42400
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB007M12TM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB007M12TM4.xml",
+      "sha256": "e2b4aa31f237d34facc0dfa64624f81f31004f595bdb5a7a963a70ac0fe8578f",
+      "size": 57282
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB010M12TM4.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/EDB010M12TM4.xml",
+      "sha256": "62f71233f32870a71cf7ecaa99c3a231b004f3cef3ac2d20ad39c6d580c5d240",
+      "size": 54400
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/WAB300M12BM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/WAB300M12BM3.xml",
+      "sha256": "613080fb746be89044e369ddb4a0d475afb6c63091aa23dca78871ec3f36382a",
+      "size": 10097
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/MOSFET with Diode/Modules/WAB400M12BM3.xml",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/Modules/WAB400M12BM3.xml",
+      "sha256": "dcd23fdb12d12ec4932d63f711827b3de86533988c74380abf68d1d9f84282e3",
+      "size": 11004
+    },
+    {
+      "original_path": "DUTs/SiC/Wolfspeed/PLECS Model User Guide Rev1.pdf",
+      "path": "data/raw/wolfspeed/SiC/Wolfspeed/PLECS Model User Guide Rev1.pdf",
+      "sha256": "0d86e96d2325dd94821c87b33796cc59aba5eca3fe982561ec77f04ca7d5af25",
+      "size": 1275040
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": "3.0.0",
+  "id": "package:example",
+  "request_id": "request:example",
+  "device_id": "synthetic_dpt_device",
+  "sources": [
+    {
+      "id": "source:example",
+      "kind": "AIPE",
+      "name": "Synthetic demonstration; not Wolfspeed measurements",
+      "artifact": null,
+      "url": null,
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "AIPE example",
+        "category": "aipe"
+      }
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "campaign:example",
+      "name": "Synthetic DPT example",
+      "source": {
+        "id": "source:example",
+        "kind": "AIPE",
+        "name": "Synthetic demonstration; not Wolfspeed measurements",
+        "artifact": null,
+        "url": null,
+        "access": {
+          "license": null,
+          "redistribution_allowed": null,
+          "commercial_use_allowed": null,
+          "visibility": "public",
+          "owner": "AIPE example",
+          "category": "aipe"
+        }
+      },
+      "test_run_ids": [
+        "run:example"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "run:example",
+      "device_id": "synthetic_dpt_device",
+      "physical_sample_id": "synthetic_sample_1",
+      "production_lot_id": null,
+      "condition": {
+        "junction_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": {
+          "value": 800.0,
+          "unit": "V"
+        },
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "instrument_setup": {
+        "instruments": [],
+        "sampling_rate": null,
+        "bandwidth": null,
+        "record_length": null,
+        "voltage_probe": null,
+        "current_probe": null,
+        "gate_probe": null,
+        "deskew": null,
+        "dc_bus_capacitance": null,
+        "load_inductance": null,
+        "gate_driver": null,
+        "corrections": []
+      },
+      "waveform_refs": [
+        {
+          "id": "waveform:synthetic",
+          "version": "1",
+          "test_run_id": "run:example",
+          "artifact": {
+            "id": "artifact:synthetic",
+            "uri": "waveforms/synthetic.csv",
+            "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1",
+            "format": "text/csv",
+            "size": 58
+          },
+          "stage": "raw",
+          "channels": [
+            {
+              "name": "time_s",
+              "unit": "s",
+              "role": "time"
+            },
+            {
+              "name": "vds_V",
+              "unit": "V",
+              "role": "voltage"
+            },
+            {
+              "name": "id_A",
+              "unit": "A",
+              "role": "current"
+            }
+          ],
+          "provenance": {
+            "origin": "synthetic",
+            "source_ids": [
+              "source:example"
+            ],
+            "lifecycle": "derived",
+            "dependencies": [
+              {
+                "id": "example-generator",
+                "version": "1.0",
+                "checksum": null
+              }
+            ],
+            "recipe_id": null,
+            "recipe_version": null,
+            "freshness": "current"
+          },
+          "events": [
+            {
+              "id": "event:turn-on",
+              "kind": "turn_on",
+              "start_seconds": 0.0,
+              "end_seconds": 3e-8
+            }
+          ]
+        }
+      ],
+      "processing_recipes": [
+        {
+          "id": "illustrative-integration",
+          "version": "1.0",
+          "algorithm": "Synthetic demonstration only; metric is not a validated DPT result",
+          "parameters": [],
+          "integration_start_rule": "first sample",
+          "integration_end_rule": "last sample",
+          "code_artifact": null
+        }
+      ],
+      "derived_metrics": [
+        {
+          "id": "metrics:example",
+          "test_run_id": "run:example",
+          "waveform_ids": [
+            "waveform:synthetic"
+          ],
+          "recipe": {
+            "id": "illustrative-integration",
+            "version": "1.0",
+            "checksum": null
+          },
+          "metrics": [
+            {
+              "id": "metric:eon",
+              "name": "Eon",
+              "quantity": {
+                "value": 0.00002105,
+                "unit": "J"
+              },
+              "provenance": {
+                "origin": "synthetic",
+                "source_ids": [
+                  "source:example"
+                ],
+                "lifecycle": "derived",
+                "dependencies": [
+                  {
+                    "id": "waveform:synthetic",
+                    "version": "1",
+                    "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1"
+                  },
+                  {
+                    "id": "illustrative-integration",
+                    "version": "1.0",
+                    "checksum": null
+                  }
+                ],
+                "recipe_id": "illustrative-integration",
+                "recipe_version": "1.0",
+                "freshness": "current"
+              },
+              "condition": {
+                "junction_temperature": {
+                  "value": 298.15,
+                  "unit": "K"
+                },
+                "case_temperature": null,
+                "ambient_temperature": null,
+                "dc_bus_voltage": {
+                  "value": 800.0,
+                  "unit": "V"
+                },
+                "drain_current": null,
+                "collector_current": null,
+                "gate_voltage_on": null,
+                "gate_voltage_off": null,
+                "gate_resistance_on": null,
+                "gate_resistance_off": null,
+                "switching_frequency": null,
+                "pulse_width": null,
+                "duty_cycle": null,
+                "gate_state": "unknown",
+                "extensions": []
+              },
+              "statistic": "unspecified",
+              "uncertainty": null,
+              "quality": {
+                "flags": [],
+                "review_status": "unreviewed"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact:synthetic",
+      "uri": "waveforms/synthetic.csv",
+      "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1",
+      "format": "text/csv",
+      "size": 58
+    }
+  ],
+  "external_dependencies": [
+    {
+      "id": "example-generator",
+      "version": "1.0",
+      "checksum": null
+    }
+  ]
+}

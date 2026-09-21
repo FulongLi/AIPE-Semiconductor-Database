@@ -1,0 +1,474 @@
+{
+  "$defs": {
+    "AccessMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License"
+        },
+        "redistribution_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redistribution Allowed"
+        },
+        "commercial_use_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Commercial Use Allowed"
+        },
+        "visibility": {
+          "default": "unknown",
+          "enum": [
+            "public",
+            "partner",
+            "private",
+            "unknown"
+          ],
+          "title": "Visibility",
+          "type": "string"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "category": {
+          "default": "unknown",
+          "enum": [
+            "manufacturer",
+            "aipe",
+            "partner",
+            "licensed",
+            "customer",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        }
+      },
+      "title": "AccessMetadata",
+      "type": "object"
+    },
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "uri": {
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        },
+        "checksum": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Checksum",
+          "type": "string"
+        },
+        "format": {
+          "minLength": 1,
+          "title": "Format",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "uri",
+        "checksum",
+        "format",
+        "size"
+      ],
+      "title": "ArtifactRef",
+      "type": "object"
+    },
+    "ConditionParameter": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "name",
+        "quantity"
+      ],
+      "title": "ConditionParameter",
+      "type": "object"
+    },
+    "MeasurementProtocol": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "static_conduction",
+            "dpt",
+            "capacitance",
+            "gate_charge",
+            "reverse_conduction",
+            "thermal",
+            "soa",
+            "reliability"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "definition": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "category"
+      ],
+      "title": "MeasurementProtocol",
+      "type": "object"
+    },
+    "OperatingCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "junction_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "case_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ambient_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dc_bus_voltage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "drain_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "collector_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "switching_frequency": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "pulse_width": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "duty_cycle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_state": {
+          "default": "unknown",
+          "enum": [
+            "on",
+            "off",
+            "unknown"
+          ],
+          "title": "Gate State",
+          "type": "string"
+        },
+        "extensions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Extensions",
+          "type": "array"
+        }
+      },
+      "title": "OperatingCondition",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0",
+      "default": "3.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "device_id": {
+      "minLength": 1,
+      "title": "Device Id",
+      "type": "string"
+    },
+    "physical_sample_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Physical Sample Id"
+    },
+    "protocols": {
+      "items": {
+        "$ref": "#/$defs/MeasurementProtocol"
+      },
+      "minItems": 1,
+      "title": "Protocols",
+      "type": "array"
+    },
+    "conditions": {
+      "items": {
+        "$ref": "#/$defs/OperatingCondition"
+      },
+      "minItems": 1,
+      "title": "Conditions",
+      "type": "array"
+    },
+    "requested_metrics": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Requested Metrics",
+      "type": "array"
+    },
+    "repetitions": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Repetitions",
+      "type": "integer"
+    },
+    "access": {
+      "$ref": "#/$defs/AccessMetadata",
+      "default": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "unknown",
+        "owner": null,
+        "category": "unknown"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "device_id",
+    "protocols",
+    "conditions"
+  ],
+  "title": "MeasurementRequest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
