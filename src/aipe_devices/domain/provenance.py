@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Literal
 
 from pydantic import Field, model_validator
@@ -26,6 +27,24 @@ class ArtifactRef(Model):
     size: int = Field(ge=0)
 
 
+class ImportMetadata(Model):
+    source_type: Literal["xlsx", "csv", "json"]
+    original_filename: str
+    source_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    import_timestamp: datetime
+    importer_version: str
+
+
+class SourceLocator(Model):
+    sheet: str
+    column: str
+    row: int = Field(ge=1)
+    original_value: str | float | int
+    original_unit: str
+    canonical_value: float
+    canonical_unit: str
+
+
 class Source(Model):
     id: str = Field(min_length=1)
     kind: Literal[
@@ -36,11 +55,13 @@ class Source(Model):
         "AIPE",
         "simulation_model",
         "distributor",
+        "user_upload",
     ]
     name: str = Field(min_length=1)
     artifact: ArtifactRef | None = None
     url: str | None = None
     access: AccessMetadata = AccessMetadata()
+    import_metadata: ImportMetadata | None = None
 
 
 class Dependency(Model):
@@ -57,6 +78,7 @@ class Provenance(Model):
     recipe_id: str | None = None
     recipe_version: str | None = None
     freshness: Freshness = Freshness.CURRENT
+    source_locators: tuple[SourceLocator, ...] = ()
 
     @model_validator(mode="after")
     def lineage_required(self):

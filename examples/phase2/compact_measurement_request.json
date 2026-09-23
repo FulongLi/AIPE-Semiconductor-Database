@@ -1,0 +1,161 @@
+{
+  "schema_version": "3.0.0",
+  "id": "synthetic-compact",
+  "device_id": "synthetic_demo_001",
+  "physical_sample_id": null,
+  "test_plan_items": [
+    {
+      "id": "dpt",
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [
+        {
+          "parameter": "junction_temperature",
+          "unit": "K",
+          "values": [
+            298.15,
+            398.15,
+            423.15
+          ],
+          "range": null
+        },
+        {
+          "parameter": "dc_bus_voltage",
+          "unit": "V",
+          "values": [
+            400.0,
+            600.0,
+            800.0
+          ],
+          "range": null
+        },
+        {
+          "parameter": "drain_current",
+          "unit": "A",
+          "values": [
+            10.0,
+            20.0,
+            40.0,
+            60.0
+          ],
+          "range": null
+        },
+        {
+          "parameter": "gate_resistance_on",
+          "unit": "Ohm",
+          "values": [
+            2.0,
+            5.0,
+            10.0
+          ],
+          "range": null
+        },
+        {
+          "parameter": "gate_resistance_off",
+          "unit": "Ohm",
+          "values": [
+            2.0,
+            5.0,
+            10.0
+          ],
+          "range": null
+        }
+      ],
+      "requested_metrics": [
+        "Eon",
+        "Eoff",
+        "dv_dt",
+        "di_dt"
+      ],
+      "repetitions": 3,
+      "notes": null,
+      "requirements": [],
+      "draft": false
+    },
+    {
+      "id": "cap",
+      "protocol": {
+        "id": "AIPE-CAP",
+        "version": "1.0",
+        "category": "capacitance",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [
+        {
+          "parameter": "drain_source_voltage",
+          "unit": "V",
+          "values": null,
+          "range": {
+            "start": 0.0,
+            "stop": 800.0,
+            "step": 10.0
+          }
+        },
+        {
+          "parameter": "junction_temperature",
+          "unit": "K",
+          "values": [
+            298.15,
+            398.15
+          ],
+          "range": null
+        }
+      ],
+      "requested_metrics": [
+        "ciss",
+        "coss",
+        "crss"
+      ],
+      "repetitions": 1,
+      "notes": null,
+      "requirements": [],
+      "draft": false
+    }
+  ],
+  "access": {
+    "license": null,
+    "redistribution_allowed": null,
+    "commercial_use_allowed": null,
+    "visibility": "unknown",
+    "owner": null,
+    "category": "unknown"
+  }
+}

@@ -1,0 +1,4 @@
+# Evidence checksums must survive Windows checkouts unchanged.
+data/raw/** -text
+examples/measurement_package/waveforms/** -text
+examples/import/*.csv -text whitespace=cr-at-eol

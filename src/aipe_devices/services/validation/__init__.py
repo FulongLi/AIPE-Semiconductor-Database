@@ -5,6 +5,12 @@ from aipe_devices.schema.enums import Origin
 from aipe_devices.schema.validation import ValidationIssue, ValidationReport
 
 EXPECTED_UNITS = {
+    "td_on": "s",
+    "td_off": "s",
+    "tr": "s",
+    "tf": "s",
+    "dv_dt": "V/s",
+    "di_dt": "A/s",
     "Eon": "J",
     "Eoff": "J",
     "Err": "J",
@@ -18,6 +24,7 @@ EXPECTED_UNITS = {
     "ciss": "F",
     "coss": "F",
     "crss": "F",
+    "Eoss": "J",
 }
 AXIS_UNITS = {
     "junction_temperature": "K",
@@ -26,6 +33,7 @@ AXIS_UNITS = {
     "gate_resistance_on": "Ohm",
     "gate_resistance_off": "Ohm",
     "time": "s",
+    "drain_source_voltage": "V",
 }
 
 
@@ -68,6 +76,14 @@ def validate_device(device: PowerSemiconductorDevice) -> ValidationReport:
             unit = record.unit if hasattr(record, "unit") else record.quantity.unit
             if record.name in EXPECTED_UNITS and unit != EXPECTED_UNITS[record.name]:
                 issue("unit", record.id, f"{record.name} requires {EXPECTED_UNITS[record.name]}")
+            if (
+                hasattr(record, "quantity")
+                and unit in {"J", "F", "Ohm"}
+                and record.quantity.value < 0
+            ):
+                issue(
+                    "negative_characteristic", record.id, "Negative energy/capacitance/resistance"
+                )
         if hasattr(record, "axes"):
             for axis in record.axes:
                 if any(b < a for a, b in zip(axis.values, axis.values[1:])):

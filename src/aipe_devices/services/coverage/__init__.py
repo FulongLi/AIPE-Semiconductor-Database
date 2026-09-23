@@ -3,6 +3,11 @@ from aipe_devices.schema.enums import Availability, Freshness
 
 
 class CoverageAnalyzer:
+    def gaps(self, device, policy=None):
+        from .gaps import coverage_gaps
+
+        return coverage_gaps(device, policy)
+
     def analyze(
         self, device: PowerSemiconductorDevice, requirements: dict[str, set[str]] | None = None
     ) -> dict[str, Availability]:

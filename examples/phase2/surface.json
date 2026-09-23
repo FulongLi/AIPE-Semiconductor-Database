@@ -1,0 +1,1450 @@
+{
+  "schema_version": "1.0",
+  "kind": "surface_3d",
+  "series": [
+    {
+      "id": "synthetic_demo_001:Eon:1",
+      "label": "Eon",
+      "quantity": "Eon",
+      "unit": "J",
+      "visible_by_default": true,
+      "provenance": {
+        "origin": "synthetic",
+        "source_ids": [
+          "upload-c26eceee983d3bbd"
+        ],
+        "lifecycle": "derived",
+        "dependencies": [
+          {
+            "id": "input:c26eceee983d3bbd9636fa5cd4f02d271fbacb51bc6ac43e97e6c14e1eb0197f",
+            "version": "1",
+            "checksum": "c26eceee983d3bbd9636fa5cd4f02d271fbacb51bc6ac43e97e6c14e1eb0197f"
+          }
+        ],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 3,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 3,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 3,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 3,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 3,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 3,
+            "original_value": 0.3700000000000001,
+            "original_unit": "mJ",
+            "canonical_value": 0.0003700000000000001,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 4,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 4,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 4,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 4,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 4,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 4,
+            "original_value": 0.4,
+            "original_unit": "mJ",
+            "canonical_value": 0.0004,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 9,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 9,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 9,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 9,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 9,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 9,
+            "original_value": 0.395,
+            "original_unit": "mJ",
+            "canonical_value": 0.000395,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 10,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 10,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 10,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 10,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 10,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 10,
+            "original_value": 0.425,
+            "original_unit": "mJ",
+            "canonical_value": 0.000425,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 15,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 15,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 15,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 15,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 15,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 15,
+            "original_value": 0.47,
+            "original_unit": "mJ",
+            "canonical_value": 0.00047,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 16,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 16,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 16,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 16,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 16,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 16,
+            "original_value": 0.5,
+            "original_unit": "mJ",
+            "canonical_value": 0.0005,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 21,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 21,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 21,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 21,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 21,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 21,
+            "original_value": 0.495,
+            "original_unit": "mJ",
+            "canonical_value": 0.000495,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 22,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 22,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 22,
+            "original_value": 10,
+            "original_unit": "A",
+            "canonical_value": 10.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 22,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 22,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 22,
+            "original_value": 0.5249999999999999,
+            "original_unit": "mJ",
+            "canonical_value": 0.000525,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 5,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 5,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 5,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 5,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 5,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 5,
+            "original_value": 0.62,
+            "original_unit": "mJ",
+            "canonical_value": 0.00062,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 6,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 6,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 6,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 6,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 6,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 6,
+            "original_value": 0.65,
+            "original_unit": "mJ",
+            "canonical_value": 0.0006500000000000001,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 11,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 11,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 11,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 11,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 11,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 11,
+            "original_value": 0.645,
+            "original_unit": "mJ",
+            "canonical_value": 0.0006450000000000001,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 12,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 12,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 12,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 12,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 12,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 12,
+            "original_value": 0.675,
+            "original_unit": "mJ",
+            "canonical_value": 0.000675,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 17,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 17,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 17,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 17,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 17,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 17,
+            "original_value": 0.72,
+            "original_unit": "mJ",
+            "canonical_value": 0.0007199999999999999,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 18,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 18,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 18,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 18,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 18,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 18,
+            "original_value": 0.75,
+            "original_unit": "mJ",
+            "canonical_value": 0.00075,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 23,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 23,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 23,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 23,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 23,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 23,
+            "original_value": 0.745,
+            "original_unit": "mJ",
+            "canonical_value": 0.000745,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 24,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 24,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 24,
+            "original_value": 20,
+            "original_unit": "A",
+            "canonical_value": 20.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 24,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 24,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 24,
+            "original_value": 0.775,
+            "original_unit": "mJ",
+            "canonical_value": 0.0007750000000000001,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 7,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 7,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 7,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 7,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 7,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 7,
+            "original_value": 1.12,
+            "original_unit": "mJ",
+            "canonical_value": 0.0011200000000000001,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 8,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 8,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 8,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 8,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 8,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 8,
+            "original_value": 1.15,
+            "original_unit": "mJ",
+            "canonical_value": 0.00115,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 13,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 13,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 13,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 13,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 13,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 13,
+            "original_value": 1.145,
+            "original_unit": "mJ",
+            "canonical_value": 0.001145,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 14,
+            "original_value": 25,
+            "original_unit": "degC",
+            "canonical_value": 298.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 14,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 14,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 14,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 14,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 14,
+            "original_value": 1.175,
+            "original_unit": "mJ",
+            "canonical_value": 0.001175,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 19,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 19,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 19,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 19,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 19,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 19,
+            "original_value": 1.22,
+            "original_unit": "mJ",
+            "canonical_value": 0.00122,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 20,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 20,
+            "original_value": 600,
+            "original_unit": "V",
+            "canonical_value": 600.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 20,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 20,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 20,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 20,
+            "original_value": 1.25,
+            "original_unit": "mJ",
+            "canonical_value": 0.00125,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 25,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 25,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 25,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 25,
+            "original_value": 2,
+            "original_unit": "Ohm",
+            "canonical_value": 2.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 25,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 25,
+            "original_value": 1.245,
+            "original_unit": "mJ",
+            "canonical_value": 0.0012450000000000002,
+            "canonical_unit": "J"
+          },
+          {
+            "sheet": "switching",
+            "column": "Tj(C)",
+            "row": 26,
+            "original_value": 125,
+            "original_unit": "degC",
+            "canonical_value": 398.15,
+            "canonical_unit": "K"
+          },
+          {
+            "sheet": "switching",
+            "column": "Vdc(V)",
+            "row": 26,
+            "original_value": 800,
+            "original_unit": "V",
+            "canonical_value": 800.0,
+            "canonical_unit": "V"
+          },
+          {
+            "sheet": "switching",
+            "column": "Id(A)",
+            "row": 26,
+            "original_value": 40,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgon(Ohm)",
+            "row": 26,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Rgoff(Ohm)",
+            "row": 26,
+            "original_value": 5,
+            "original_unit": "Ohm",
+            "canonical_value": 5.0,
+            "canonical_unit": "Ohm"
+          },
+          {
+            "sheet": "switching",
+            "column": "Eon(mJ)",
+            "row": 26,
+            "original_value": 1.275,
+            "original_unit": "mJ",
+            "canonical_value": 0.0012749999999999999,
+            "canonical_unit": "J"
+          }
+        ]
+      },
+      "quality": {
+        "flags": [],
+        "review_status": "unreviewed"
+      },
+      "uncertainty": null,
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": {
+          "value": 5.0,
+          "unit": "Ohm"
+        },
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "data_reference": {
+        "record_id": "synthetic_demo_001:Eon:1",
+        "device_id": "synthetic_demo_001",
+        "device_revision": 1,
+        "artifact": null,
+        "channel": null
+      },
+      "data": {
+        "axes": [
+          {
+            "name": "current",
+            "unit": "A",
+            "values": [
+              10.0,
+              20.0,
+              40.0
+            ]
+          },
+          {
+            "name": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              398.15
+            ]
+          }
+        ],
+        "values": [
+          0.000425,
+          0.000525,
+          0.000675,
+          0.0007750000000000001,
+          0.001175,
+          0.0012749999999999999
+        ],
+        "layout": "last_axis_fastest"
+      },
+      "selected_parameters": {
+        "dc_bus_voltage": {
+          "value": 800.0,
+          "unit": "V"
+        },
+        "gate_resistance_on": {
+          "value": 5.0,
+          "unit": "Ohm"
+        }
+      },
+      "sources": [
+        {
+          "id": "upload-c26eceee983d3bbd",
+          "kind": "user_upload",
+          "name": "device_switching.xlsx",
+          "artifact": null,
+          "url": null,
+          "access": {
+            "license": null,
+            "redistribution_allowed": null,
+            "commercial_use_allowed": null,
+            "visibility": "unknown",
+            "owner": null,
+            "category": "unknown"
+          },
+          "import_metadata": {
+            "source_type": "xlsx",
+            "original_filename": "device_switching.xlsx",
+            "source_sha256": "c26eceee983d3bbd9636fa5cd4f02d271fbacb51bc6ac43e97e6c14e1eb0197f",
+            "import_timestamp": "2026-09-23T02:28:38.028276Z",
+            "importer_version": "2.0.0"
+          }
+        }
+      ]
+    }
+  ],
+  "parameter_controls": [
+    {
+      "parameter": "dc_bus_voltage",
+      "unit": "V",
+      "values": [
+        600.0,
+        800.0
+      ],
+      "selected": 800.0
+    },
+    {
+      "parameter": "gate_resistance_on",
+      "unit": "Ohm",
+      "values": [
+        2.0,
+        5.0
+      ],
+      "selected": 5.0
+    }
+  ],
+  "selected_slice": null,
+  "selected_point": null,
+  "annotations": [],
+  "dynamic_metrics": [],
+  "synchronized_axis": null,
+  "warnings": []
+}

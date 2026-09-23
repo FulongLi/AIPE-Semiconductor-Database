@@ -3,43 +3,48 @@
   "id": "request:example",
   "device_id": "synthetic_dpt_device",
   "physical_sample_id": "synthetic_sample_1",
-  "protocols": [
+  "test_plan_items": [
     {
-      "id": "AIPE-DPT",
-      "version": "1.0",
-      "category": "dpt",
-      "definition": null
+      "id": "dpt-example",
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": {
+          "value": 800.0,
+          "unit": "V"
+        },
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [],
+      "requested_metrics": [
+        "Eon"
+      ],
+      "repetitions": 1,
+      "notes": null,
+      "requirements": [],
+      "draft": false
     }
   ],
-  "conditions": [
-    {
-      "junction_temperature": {
-        "value": 298.15,
-        "unit": "K"
-      },
-      "case_temperature": null,
-      "ambient_temperature": null,
-      "dc_bus_voltage": {
-        "value": 800.0,
-        "unit": "V"
-      },
-      "drain_current": null,
-      "collector_current": null,
-      "gate_voltage_on": null,
-      "gate_voltage_off": null,
-      "gate_resistance_on": null,
-      "gate_resistance_off": null,
-      "switching_frequency": null,
-      "pulse_width": null,
-      "duty_cycle": null,
-      "gate_state": "unknown",
-      "extensions": []
-    }
-  ],
-  "requested_metrics": [
-    "Eon"
-  ],
-  "repetitions": 1,
   "access": {
     "license": null,
     "redistribution_allowed": null,

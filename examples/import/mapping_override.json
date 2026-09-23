@@ -1,0 +1,10 @@
+{
+  "Loss1": {
+    "semantic": "Eon",
+    "unit": "mJ"
+  },
+  "Loss2": {
+    "semantic": "Eoff",
+    "unit": "mJ"
+  }
+}

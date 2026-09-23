@@ -3,6 +3,17 @@
 from aipe_devices.domain.quantities import Quantity
 
 CONVERSIONS = {
+    "µJ": ("J", 1e-6, 0),
+    "μJ": ("J", 1e-6, 0),
+    "mΩ": ("Ohm", 1e-3, 0),
+    "Ω": ("Ohm", 1, 0),
+    "µs": ("s", 1e-6, 0),
+    "μs": ("s", 1e-6, 0),
+    "ms": ("s", 1e-3, 0),
+    "uF": ("F", 1e-6, 0),
+    "µF": ("F", 1e-6, 0),
+    "mA": ("A", 1e-3, 0),
+    "mV": ("V", 1e-3, 0),
     "mJ": ("J", 1e-3, 0),
     "uJ": ("J", 1e-6, 0),
     "mOhm": ("Ohm", 1e-3, 0),

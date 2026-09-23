@@ -1,0 +1,1452 @@
+{
+  "$defs": {
+    "AccessMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License"
+        },
+        "redistribution_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redistribution Allowed"
+        },
+        "commercial_use_allowed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Commercial Use Allowed"
+        },
+        "visibility": {
+          "default": "unknown",
+          "enum": [
+            "public",
+            "partner",
+            "private",
+            "unknown"
+          ],
+          "title": "Visibility",
+          "type": "string"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "category": {
+          "default": "unknown",
+          "enum": [
+            "manufacturer",
+            "aipe",
+            "partner",
+            "licensed",
+            "customer",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        }
+      },
+      "title": "AccessMetadata",
+      "type": "object"
+    },
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "uri": {
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        },
+        "checksum": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Checksum",
+          "type": "string"
+        },
+        "format": {
+          "minLength": 1,
+          "title": "Format",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "uri",
+        "checksum",
+        "format",
+        "size"
+      ],
+      "title": "ArtifactRef",
+      "type": "object"
+    },
+    "Axis": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1,
+          "title": "Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "unit",
+        "values"
+      ],
+      "title": "Axis",
+      "type": "object"
+    },
+    "ConditionParameter": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "name",
+        "quantity"
+      ],
+      "title": "ConditionParameter",
+      "type": "object"
+    },
+    "DataReference": {
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "device_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Device Id"
+        },
+        "device_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Device Revision"
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel"
+        }
+      },
+      "required": [
+        "record_id"
+      ],
+      "title": "DataReference",
+      "type": "object"
+    },
+    "Dependency": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "checksum": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checksum"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "Dependency",
+      "type": "object"
+    },
+    "DynamicMetrics": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "test_run_id": {
+          "title": "Test Run Id",
+          "type": "string"
+        },
+        "waveform_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Waveform Ids",
+          "type": "array"
+        },
+        "recipe": {
+          "$ref": "#/$defs/Dependency"
+        },
+        "metrics": {
+          "items": {
+            "$ref": "#/$defs/ScalarRecord"
+          },
+          "minItems": 1,
+          "title": "Metrics",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "test_run_id",
+        "waveform_ids",
+        "recipe",
+        "metrics"
+      ],
+      "title": "DynamicMetrics",
+      "type": "object"
+    },
+    "EventAnnotation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "turn_on",
+            "turn_off",
+            "reverse_recovery",
+            "integration_window"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "start_seconds": {
+          "title": "Start Seconds",
+          "type": "number"
+        },
+        "end_seconds": {
+          "title": "End Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "start_seconds",
+        "end_seconds"
+      ],
+      "title": "EventAnnotation",
+      "type": "object"
+    },
+    "Freshness": {
+      "enum": [
+        "current",
+        "stale"
+      ],
+      "title": "Freshness",
+      "type": "string"
+    },
+    "ImportMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "enum": [
+            "xlsx",
+            "csv",
+            "json"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "original_filename": {
+          "title": "Original Filename",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "import_timestamp": {
+          "format": "date-time",
+          "title": "Import Timestamp",
+          "type": "string"
+        },
+        "importer_version": {
+          "title": "Importer Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_type",
+        "original_filename",
+        "source_sha256",
+        "import_timestamp",
+        "importer_version"
+      ],
+      "title": "ImportMetadata",
+      "type": "object"
+    },
+    "Lifecycle": {
+      "enum": [
+        "raw",
+        "normalized",
+        "validated",
+        "canonical",
+        "derived",
+        "application_view"
+      ],
+      "title": "Lifecycle",
+      "type": "string"
+    },
+    "OperatingCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "junction_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "case_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ambient_temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dc_bus_voltage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "drain_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "collector_current": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_voltage_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_on": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_resistance_off": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "switching_frequency": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "pulse_width": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "duty_cycle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gate_state": {
+          "default": "unknown",
+          "enum": [
+            "on",
+            "off",
+            "unknown"
+          ],
+          "title": "Gate State",
+          "type": "string"
+        },
+        "extensions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConditionParameter"
+          },
+          "title": "Extensions",
+          "type": "array"
+        }
+      },
+      "title": "OperatingCondition",
+      "type": "object"
+    },
+    "Origin": {
+      "enum": [
+        "unknown",
+        "measured",
+        "manufacturer_datasheet",
+        "manufacturer_model",
+        "digitized",
+        "interpolated",
+        "extrapolated",
+        "fitted",
+        "physics_derived",
+        "inferred",
+        "synthetic"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "ParameterControl": {
+      "additionalProperties": false,
+      "properties": {
+        "parameter": {
+          "title": "Parameter",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Values",
+          "type": "array"
+        },
+        "selected": {
+          "title": "Selected",
+          "type": "number"
+        }
+      },
+      "required": [
+        "parameter",
+        "unit",
+        "values",
+        "selected"
+      ],
+      "title": "ParameterControl",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/Lifecycle",
+          "default": "canonical"
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Dependency"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "recipe_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipe Id"
+        },
+        "recipe_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipe Version"
+        },
+        "freshness": {
+          "$ref": "#/$defs/Freshness",
+          "default": "current"
+        },
+        "source_locators": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SourceLocator"
+          },
+          "title": "Source Locators",
+          "type": "array"
+        }
+      },
+      "required": [
+        "origin",
+        "source_ids"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Quality": {
+      "additionalProperties": false,
+      "properties": {
+        "flags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "review_status": {
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "title": "Quality",
+      "type": "object"
+    },
+    "Quantity": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "Quantity",
+      "type": "object"
+    },
+    "ScalarRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "condition": {
+          "$ref": "#/$defs/OperatingCondition",
+          "default": {
+            "junction_temperature": null,
+            "case_temperature": null,
+            "ambient_temperature": null,
+            "dc_bus_voltage": null,
+            "drain_current": null,
+            "collector_current": null,
+            "gate_voltage_on": null,
+            "gate_voltage_off": null,
+            "gate_resistance_on": null,
+            "gate_resistance_off": null,
+            "switching_frequency": null,
+            "pulse_width": null,
+            "duty_cycle": null,
+            "gate_state": "unknown",
+            "extensions": []
+          }
+        },
+        "statistic": {
+          "$ref": "#/$defs/Statistic",
+          "default": "unspecified"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "quality": {
+          "$ref": "#/$defs/Quality",
+          "default": {
+            "flags": [],
+            "review_status": "unreviewed"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "quantity",
+        "provenance"
+      ],
+      "title": "ScalarRecord",
+      "type": "object"
+    },
+    "SelectedPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "series_id": {
+          "title": "Series Id",
+          "type": "string"
+        },
+        "coordinates": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Quantity"
+          },
+          "title": "Coordinates",
+          "type": "object"
+        },
+        "value": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "operating_condition": {
+          "$ref": "#/$defs/OperatingCondition"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "sources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "quality": {
+          "$ref": "#/$defs/Quality"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "series_id",
+        "coordinates",
+        "value",
+        "operating_condition",
+        "provenance",
+        "quality"
+      ],
+      "title": "SelectedPoint",
+      "type": "object"
+    },
+    "SelectedSlice": {
+      "additionalProperties": false,
+      "properties": {
+        "parameter": {
+          "title": "Parameter",
+          "type": "string"
+        },
+        "coordinate": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "line": {
+          "$ref": "#/$defs/TensorView"
+        },
+        "series_id": {
+          "title": "Series Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "parameter",
+        "coordinate",
+        "line",
+        "series_id"
+      ],
+      "title": "SelectedSlice",
+      "type": "object"
+    },
+    "SeriesSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "visible_by_default": {
+          "default": true,
+          "title": "Visible By Default",
+          "type": "boolean"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "quality": {
+          "$ref": "#/$defs/Quality",
+          "default": {
+            "flags": [],
+            "review_status": "unreviewed"
+          }
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "condition": {
+          "$ref": "#/$defs/OperatingCondition",
+          "default": {
+            "junction_temperature": null,
+            "case_temperature": null,
+            "ambient_temperature": null,
+            "dc_bus_voltage": null,
+            "drain_current": null,
+            "collector_current": null,
+            "gate_voltage_on": null,
+            "gate_voltage_off": null,
+            "gate_resistance_on": null,
+            "gate_resistance_off": null,
+            "switching_frequency": null,
+            "pulse_width": null,
+            "duty_cycle": null,
+            "gate_state": "unknown",
+            "extensions": []
+          }
+        },
+        "data_reference": {
+          "$ref": "#/$defs/DataReference"
+        },
+        "data": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TensorView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "selected_parameters": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Quantity"
+          },
+          "title": "Selected Parameters",
+          "type": "object"
+        },
+        "sources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "title": "Sources",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "quantity",
+        "unit",
+        "provenance",
+        "data_reference"
+      ],
+      "title": "SeriesSpec",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "manufacturer",
+            "laboratory",
+            "test_partner",
+            "paper",
+            "AIPE",
+            "simulation_model",
+            "distributor",
+            "user_upload"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "access": {
+          "$ref": "#/$defs/AccessMetadata",
+          "default": {
+            "license": null,
+            "redistribution_allowed": null,
+            "commercial_use_allowed": null,
+            "visibility": "unknown",
+            "owner": null,
+            "category": "unknown"
+          }
+        },
+        "import_metadata": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImportMetadata"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "SourceLocator": {
+      "additionalProperties": false,
+      "properties": {
+        "sheet": {
+          "title": "Sheet",
+          "type": "string"
+        },
+        "column": {
+          "title": "Column",
+          "type": "string"
+        },
+        "row": {
+          "minimum": 1,
+          "title": "Row",
+          "type": "integer"
+        },
+        "original_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Original Value"
+        },
+        "original_unit": {
+          "title": "Original Unit",
+          "type": "string"
+        },
+        "canonical_value": {
+          "title": "Canonical Value",
+          "type": "number"
+        },
+        "canonical_unit": {
+          "title": "Canonical Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sheet",
+        "column",
+        "row",
+        "original_value",
+        "original_unit",
+        "canonical_value",
+        "canonical_unit"
+      ],
+      "title": "SourceLocator",
+      "type": "object"
+    },
+    "Statistic": {
+      "enum": [
+        "unspecified",
+        "typical",
+        "minimum",
+        "maximum",
+        "measured_mean",
+        "median",
+        "standard_deviation"
+      ],
+      "title": "Statistic",
+      "type": "string"
+    },
+    "TensorView": {
+      "additionalProperties": false,
+      "properties": {
+        "axes": {
+          "items": {
+            "$ref": "#/$defs/Axis"
+          },
+          "title": "Axes",
+          "type": "array"
+        },
+        "values": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Values",
+          "type": "array"
+        },
+        "layout": {
+          "const": "last_axis_fastest",
+          "default": "last_axis_fastest",
+          "title": "Layout",
+          "type": "string"
+        }
+      },
+      "required": [
+        "axes",
+        "values"
+      ],
+      "title": "TensorView",
+      "type": "object"
+    },
+    "Uncertainty": {
+      "additionalProperties": false,
+      "description": "Absolute uncertainty uses the same unit as its associated value.",
+      "properties": {
+        "standard": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Standard"
+        },
+        "repetitions": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Repetitions"
+        },
+        "minimum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minimum"
+        },
+        "maximum": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maximum"
+        },
+        "confidence_interval": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence Interval"
+        },
+        "confidence_level": {
+          "anyOf": [
+            {
+              "exclusiveMaximum": 1,
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence Level"
+        },
+        "sample_variation": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Variation"
+        }
+      },
+      "title": "Uncertainty",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "line",
+        "multi_line",
+        "surface_3d",
+        "multi_surface_3d",
+        "waveform"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "series": {
+      "items": {
+        "$ref": "#/$defs/SeriesSpec"
+      },
+      "minItems": 1,
+      "title": "Series",
+      "type": "array"
+    },
+    "parameter_controls": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ParameterControl"
+      },
+      "title": "Parameter Controls",
+      "type": "array"
+    },
+    "selected_slice": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SelectedSlice"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "selected_point": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SelectedPoint"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "annotations": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/EventAnnotation"
+      },
+      "title": "Annotations",
+      "type": "array"
+    },
+    "dynamic_metrics": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/DynamicMetrics"
+      },
+      "title": "Dynamic Metrics",
+      "type": "array"
+    },
+    "synchronized_axis": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Synchronized Axis"
+    },
+    "warnings": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "kind",
+    "series"
+  ],
+  "title": "VisualizationSpec",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

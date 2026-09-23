@@ -26,6 +26,7 @@ from aipe_devices.domain.provenance import (
     Provenance,
     Source,
 )
+from aipe_devices.measurement.plans import TestPlanItem
 from aipe_devices.measurement.request_generator import MeasurementRequest
 from aipe_devices.measurement.submission_validator import MeasurementPackage
 
@@ -142,9 +143,14 @@ def main():
         id="request:example",
         device_id="synthetic_dpt_device",
         physical_sample_id="synthetic_sample_1",
-        protocols=(protocol,),
-        conditions=(condition,),
-        requested_metrics=("Eon",),
+        test_plan_items=(
+            TestPlanItem(
+                id="dpt-example",
+                protocol=protocol,
+                fixed_conditions=condition,
+                requested_metrics=("Eon",),
+            ),
+        ),
     )
     run = TestRun(
         id="run:example",

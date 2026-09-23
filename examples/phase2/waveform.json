@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "kind": "waveform",
+  "series": [
+    {
+      "id": "waveform:synthetic:vds_V",
+      "label": "vds_V",
+      "quantity": "voltage",
+      "unit": "V",
+      "visible_by_default": true,
+      "provenance": {
+        "origin": "synthetic",
+        "source_ids": [
+          "source:example"
+        ],
+        "lifecycle": "derived",
+        "dependencies": [
+          {
+            "id": "example-generator",
+            "version": "1.0",
+            "checksum": null
+          }
+        ],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "quality": {
+        "flags": [],
+        "review_status": "unreviewed"
+      },
+      "uncertainty": null,
+      "condition": {
+        "junction_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": {
+          "value": 800.0,
+          "unit": "V"
+        },
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "data_reference": {
+        "record_id": "waveform:synthetic",
+        "device_id": "synthetic_demo_001",
+        "device_revision": null,
+        "artifact": {
+          "id": "artifact:synthetic",
+          "uri": "waveforms/synthetic.csv",
+          "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1",
+          "format": "text/csv",
+          "size": 58
+        },
+        "channel": "vds_V"
+      },
+      "data": null,
+      "selected_parameters": {},
+      "sources": []
+    },
+    {
+      "id": "waveform:synthetic:id_A",
+      "label": "id_A",
+      "quantity": "current",
+      "unit": "A",
+      "visible_by_default": true,
+      "provenance": {
+        "origin": "synthetic",
+        "source_ids": [
+          "source:example"
+        ],
+        "lifecycle": "derived",
+        "dependencies": [
+          {
+            "id": "example-generator",
+            "version": "1.0",
+            "checksum": null
+          }
+        ],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "quality": {
+        "flags": [],
+        "review_status": "unreviewed"
+      },
+      "uncertainty": null,
+      "condition": {
+        "junction_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": {
+          "value": 800.0,
+          "unit": "V"
+        },
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "data_reference": {
+        "record_id": "waveform:synthetic",
+        "device_id": "synthetic_demo_001",
+        "device_revision": null,
+        "artifact": {
+          "id": "artifact:synthetic",
+          "uri": "waveforms/synthetic.csv",
+          "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1",
+          "format": "text/csv",
+          "size": 58
+        },
+        "channel": "id_A"
+      },
+      "data": null,
+      "selected_parameters": {},
+      "sources": []
+    }
+  ],
+  "parameter_controls": [],
+  "selected_slice": null,
+  "selected_point": null,
+  "annotations": [
+    {
+      "id": "event:turn-on",
+      "kind": "turn_on",
+      "start_seconds": 0.0,
+      "end_seconds": 3e-8
+    }
+  ],
+  "dynamic_metrics": [
+    {
+      "id": "metrics:example",
+      "test_run_id": "run:example",
+      "waveform_ids": [
+        "waveform:synthetic"
+      ],
+      "recipe": {
+        "id": "illustrative-integration",
+        "version": "1.0",
+        "checksum": null
+      },
+      "metrics": [
+        {
+          "id": "metric:eon",
+          "name": "Eon",
+          "quantity": {
+            "value": 0.00002105,
+            "unit": "J"
+          },
+          "provenance": {
+            "origin": "synthetic",
+            "source_ids": [
+              "source:example"
+            ],
+            "lifecycle": "derived",
+            "dependencies": [
+              {
+                "id": "waveform:synthetic",
+                "version": "1",
+                "checksum": "61dcf258143f9f60e180a296ff59e0abf067bfbda5701d236014e0feb141a3b1"
+              },
+              {
+                "id": "illustrative-integration",
+                "version": "1.0",
+                "checksum": null
+              }
+            ],
+            "recipe_id": "illustrative-integration",
+            "recipe_version": "1.0",
+            "freshness": "current",
+            "source_locators": []
+          },
+          "condition": {
+            "junction_temperature": {
+              "value": 298.15,
+              "unit": "K"
+            },
+            "case_temperature": null,
+            "ambient_temperature": null,
+            "dc_bus_voltage": {
+              "value": 800.0,
+              "unit": "V"
+            },
+            "drain_current": null,
+            "collector_current": null,
+            "gate_voltage_on": null,
+            "gate_voltage_off": null,
+            "gate_resistance_on": null,
+            "gate_resistance_off": null,
+            "switching_frequency": null,
+            "pulse_width": null,
+            "duty_cycle": null,
+            "gate_state": "unknown",
+            "extensions": []
+          },
+          "statistic": "unspecified",
+          "uncertainty": null,
+          "quality": {
+            "flags": [],
+            "review_status": "unreviewed"
+          }
+        }
+      ]
+    }
+  ],
+  "synchronized_axis": "time_s",
+  "warnings": []
+}

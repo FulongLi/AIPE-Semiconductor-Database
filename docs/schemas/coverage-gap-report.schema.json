@@ -1,0 +1,136 @@
+{
+  "$defs": {
+    "Availability": {
+      "enum": [
+        "available",
+        "partial",
+        "missing",
+        "not_applicable",
+        "unknown"
+      ],
+      "title": "Availability",
+      "type": "string"
+    },
+    "CoverageGap": {
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "$ref": "#/$defs/CoverageRule"
+        },
+        "status": {
+          "$ref": "#/$defs/Availability"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "status",
+        "message"
+      ],
+      "title": "CoverageGap",
+      "type": "object"
+    },
+    "CoverageRule": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "group": {
+          "title": "Group",
+          "type": "string"
+        },
+        "metrics": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "importance": {
+          "default": "optional",
+          "enum": [
+            "required",
+            "recommended",
+            "optional"
+          ],
+          "title": "Importance",
+          "type": "string"
+        },
+        "check": {
+          "default": "presence",
+          "enum": [
+            "presence",
+            "high_temperature",
+            "gate_resistance"
+          ],
+          "title": "Check",
+          "type": "string"
+        },
+        "temperatures_kelvin": {
+          "default": [],
+          "items": {
+            "type": "number"
+          },
+          "title": "Temperatures Kelvin",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "group"
+      ],
+      "title": "CoverageRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "device_id": {
+      "title": "Device Id",
+      "type": "string"
+    },
+    "policy": {
+      "title": "Policy",
+      "type": "string"
+    },
+    "entries": {
+      "items": {
+        "$ref": "#/$defs/CoverageGap"
+      },
+      "title": "Entries",
+      "type": "array"
+    },
+    "acceptable": {
+      "title": "Acceptable",
+      "type": "boolean"
+    },
+    "scope": {
+      "default": "Evidence checks only; no operating-envelope, safety, or converter sufficiency claim.",
+      "title": "Scope",
+      "type": "string"
+    }
+  },
+  "required": [
+    "device_id",
+    "policy",
+    "entries",
+    "acceptable"
+  ],
+  "title": "CoverageGapReport",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": "3.0.0",
+  "id": "abf923e4-c6f4-466e-a345-4be60276d775",
+  "device_id": "synthetic_demo_001",
+  "physical_sample_id": null,
+  "test_plan_items": [
+    {
+      "id": "gap-thermal",
+      "protocol": {
+        "id": "AIPE-THERMAL",
+        "version": "1.0",
+        "category": "thermal",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [],
+      "requested_metrics": [
+        "thermal_impedance"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule thermal: No current records",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing."
+      ],
+      "draft": true
+    },
+    {
+      "id": "gap-output_capacitance",
+      "protocol": {
+        "id": "AIPE-CAP",
+        "version": "1.0",
+        "category": "capacitance",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [],
+      "requested_metrics": [
+        "coss"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule output_capacitance: No current matching evidence",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing."
+      ],
+      "draft": true
+    },
+    {
+      "id": "gap-reverse_conduction",
+      "protocol": {
+        "id": "AIPE-REVERSE",
+        "version": "1.0",
+        "category": "reverse_conduction",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [],
+      "requested_metrics": [
+        "voltage_drop"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule reverse_conduction: No current matching evidence",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing."
+      ],
+      "draft": true
+    },
+    {
+      "id": "gap-high_temperature_Eon",
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [
+        {
+          "parameter": "junction_temperature",
+          "unit": "K",
+          "values": [
+            398.15,
+            423.15
+          ],
+          "range": null
+        }
+      ],
+      "requested_metrics": [
+        "Eon"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule high_temperature_Eon: Requested temperature points (K): (398.15, 423.15); found: [298.15, 398.15]",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing."
+      ],
+      "draft": true
+    },
+    {
+      "id": "gap-high_temperature_Eoff",
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [
+        {
+          "parameter": "junction_temperature",
+          "unit": "K",
+          "values": [
+            398.15,
+            423.15
+          ],
+          "range": null
+        }
+      ],
+      "requested_metrics": [
+        "Eoff"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule high_temperature_Eoff: Requested temperature points (K): (398.15, 423.15); found: [298.15, 398.15]",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing."
+      ],
+      "draft": true
+    },
+    {
+      "id": "gap-rg_dependence_Eoff",
+      "protocol": {
+        "id": "AIPE-DPT",
+        "version": "1.0",
+        "category": "dpt",
+        "definition": null
+      },
+      "fixed_conditions": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "sweep_axes": [],
+      "requested_metrics": [
+        "Eoff"
+      ],
+      "repetitions": 1,
+      "notes": "Policy dab_loss_foundation, rule rg_dependence_Eoff: Requires >=2 gate_resistance_off points in one record",
+      "requirements": [
+        "Review protocol definition, safe operating conditions, sample, and repetitions before testing.",
+        "Specify gate-resistance sweep values."
+      ],
+      "draft": true
+    }
+  ],
+  "access": {
+    "license": null,
+    "redistribution_allowed": null,
+    "commercial_use_allowed": null,
+    "visibility": "unknown",
+    "owner": null,
+    "category": "unknown"
+  }
+}

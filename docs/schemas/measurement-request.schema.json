@@ -388,6 +388,181 @@
       ],
       "title": "Quantity",
       "type": "object"
+    },
+    "SweepAxis": {
+      "additionalProperties": false,
+      "properties": {
+        "parameter": {
+          "title": "Parameter",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "1",
+            "V",
+            "A",
+            "Ohm",
+            "F",
+            "C",
+            "K",
+            "J",
+            "s",
+            "W",
+            "Hz",
+            "H",
+            "K/W",
+            "J/K",
+            "V/s",
+            "A/s",
+            "1/s"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Values"
+        },
+        "range": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SweepRange"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "parameter",
+        "unit"
+      ],
+      "title": "SweepAxis",
+      "type": "object"
+    },
+    "SweepRange": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "title": "Start",
+          "type": "number"
+        },
+        "stop": {
+          "title": "Stop",
+          "type": "number"
+        },
+        "step": {
+          "exclusiveMinimum": 0,
+          "title": "Step",
+          "type": "number"
+        }
+      },
+      "required": [
+        "start",
+        "stop",
+        "step"
+      ],
+      "title": "SweepRange",
+      "type": "object"
+    },
+    "TestPlanItem": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "protocol": {
+          "$ref": "#/$defs/MeasurementProtocol"
+        },
+        "fixed_conditions": {
+          "$ref": "#/$defs/OperatingCondition",
+          "default": {
+            "junction_temperature": null,
+            "case_temperature": null,
+            "ambient_temperature": null,
+            "dc_bus_voltage": null,
+            "drain_current": null,
+            "collector_current": null,
+            "gate_voltage_on": null,
+            "gate_voltage_off": null,
+            "gate_resistance_on": null,
+            "gate_resistance_off": null,
+            "switching_frequency": null,
+            "pulse_width": null,
+            "duty_cycle": null,
+            "gate_state": "unknown",
+            "extensions": []
+          }
+        },
+        "sweep_axes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SweepAxis"
+          },
+          "title": "Sweep Axes",
+          "type": "array"
+        },
+        "requested_metrics": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Requested Metrics",
+          "type": "array"
+        },
+        "repetitions": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Repetitions",
+          "type": "integer"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "requirements": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Requirements",
+          "type": "array"
+        },
+        "draft": {
+          "default": false,
+          "title": "Draft",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "protocol"
+      ],
+      "title": "TestPlanItem",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -420,35 +595,13 @@
       "default": null,
       "title": "Physical Sample Id"
     },
-    "protocols": {
+    "test_plan_items": {
       "items": {
-        "$ref": "#/$defs/MeasurementProtocol"
+        "$ref": "#/$defs/TestPlanItem"
       },
       "minItems": 1,
-      "title": "Protocols",
+      "title": "Test Plan Items",
       "type": "array"
-    },
-    "conditions": {
-      "items": {
-        "$ref": "#/$defs/OperatingCondition"
-      },
-      "minItems": 1,
-      "title": "Conditions",
-      "type": "array"
-    },
-    "requested_metrics": {
-      "default": [],
-      "items": {
-        "type": "string"
-      },
-      "title": "Requested Metrics",
-      "type": "array"
-    },
-    "repetitions": {
-      "default": 1,
-      "minimum": 1,
-      "title": "Repetitions",
-      "type": "integer"
     },
     "access": {
       "$ref": "#/$defs/AccessMetadata",
@@ -465,8 +618,7 @@
   "required": [
     "id",
     "device_id",
-    "protocols",
-    "conditions"
+    "test_plan_items"
   ],
   "title": "MeasurementRequest",
   "type": "object",

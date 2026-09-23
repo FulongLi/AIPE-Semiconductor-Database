@@ -1,0 +1,3 @@
+manufacturer,part_number,Id(A),Loss1,Loss2
+Synthetic Example,AMBIGUOUS-001,10,0.2,0.1
+Synthetic Example,AMBIGUOUS-001,20,0.4,0.2

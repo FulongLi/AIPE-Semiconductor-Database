@@ -538,6 +538,47 @@
       "title": "Freshness",
       "type": "string"
     },
+    "ImportMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "enum": [
+            "xlsx",
+            "csv",
+            "json"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "original_filename": {
+          "title": "Original Filename",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "import_timestamp": {
+          "format": "date-time",
+          "title": "Import Timestamp",
+          "type": "string"
+        },
+        "importer_version": {
+          "title": "Importer Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_type",
+        "original_filename",
+        "source_sha256",
+        "import_timestamp",
+        "importer_version"
+      ],
+      "title": "ImportMetadata",
+      "type": "object"
+    },
     "JsonValue": {},
     "Lifecycle": {
       "enum": [
@@ -816,6 +857,7 @@
     },
     "Origin": {
       "enum": [
+        "unknown",
         "measured",
         "manufacturer_datasheet",
         "manufacturer_model",
@@ -883,6 +925,14 @@
         "freshness": {
           "$ref": "#/$defs/Freshness",
           "default": "current"
+        },
+        "source_locators": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SourceLocator"
+          },
+          "title": "Source Locators",
+          "type": "array"
         }
       },
       "required": [
@@ -1099,7 +1149,8 @@
             "paper",
             "AIPE",
             "simulation_model",
-            "distributor"
+            "distributor",
+            "user_upload"
           ],
           "title": "Kind",
           "type": "string"
@@ -1142,6 +1193,17 @@
             "owner": null,
             "category": "unknown"
           }
+        },
+        "import_metadata": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImportMetadata"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -1150,6 +1212,61 @@
         "name"
       ],
       "title": "Source",
+      "type": "object"
+    },
+    "SourceLocator": {
+      "additionalProperties": false,
+      "properties": {
+        "sheet": {
+          "title": "Sheet",
+          "type": "string"
+        },
+        "column": {
+          "title": "Column",
+          "type": "string"
+        },
+        "row": {
+          "minimum": 1,
+          "title": "Row",
+          "type": "integer"
+        },
+        "original_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Original Value"
+        },
+        "original_unit": {
+          "title": "Original Unit",
+          "type": "string"
+        },
+        "canonical_value": {
+          "title": "Canonical Value",
+          "type": "number"
+        },
+        "canonical_unit": {
+          "title": "Canonical Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sheet",
+        "column",
+        "row",
+        "original_value",
+        "original_unit",
+        "canonical_value",
+        "canonical_unit"
+      ],
+      "title": "SourceLocator",
       "type": "object"
     },
     "Statistic": {

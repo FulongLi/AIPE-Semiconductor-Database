@@ -1,0 +1,253 @@
+{
+  "input_format": "csv",
+  "source_metadata": {
+    "source_type": "csv",
+    "original_filename": "device_ambiguous.csv",
+    "source_sha256": "080fbfcbe450c5ac878deba0c0a0892de104243d63b93eb7845f0e22444606da",
+    "import_timestamp": "2026-09-23T02:28:38.041393Z",
+    "importer_version": "2.0.0"
+  },
+  "detected_tables": [
+    {
+      "name": "csv",
+      "header_row": 1,
+      "columns": [
+        "manufacturer",
+        "part_number",
+        "Id(A)",
+        "Loss1",
+        "Loss2"
+      ],
+      "row_count": 2
+    }
+  ],
+  "recognized_columns": [
+    {
+      "table": "csv",
+      "column": "manufacturer",
+      "semantic": "manufacturer",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "csv",
+      "column": "part_number",
+      "semantic": "part_number",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "csv",
+      "column": "Id(A)",
+      "semantic": "drain_current",
+      "unit": "A",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    }
+  ],
+  "unresolved_columns": [
+    {
+      "table": "csv",
+      "column": "Loss1",
+      "semantic": null,
+      "unit": null,
+      "status": "unresolved",
+      "ignored": false,
+      "reason": "Unknown semantic; explicit mapping or ignore required"
+    },
+    {
+      "table": "csv",
+      "column": "Loss2",
+      "semantic": null,
+      "unit": null,
+      "status": "unresolved",
+      "ignored": false,
+      "reason": "Unknown semantic; explicit mapping or ignore required"
+    }
+  ],
+  "unit_conversions": [
+    {
+      "source": "A",
+      "target": "A"
+    }
+  ],
+  "records_created": 0,
+  "warnings": [],
+  "errors": [],
+  "device_identity_status": "available",
+  "validation_result": {
+    "issues": []
+  },
+  "coverage_summary": {
+    "device_id": "synthetic_example_ambiguous-001",
+    "policy": "generic_device_storage",
+    "entries": [
+      {
+        "rule": {
+          "id": "identity",
+          "group": "identity",
+          "metrics": [],
+          "importance": "required",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "available",
+        "evidence_ids": [],
+        "message": "Required device identity is present"
+      },
+      {
+        "rule": {
+          "id": "conduction",
+          "group": "conduction",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "switching",
+          "group": "switching",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "capacitance",
+          "group": "capacitance",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "gate_charge",
+          "group": "gate_charge",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "reverse_conduction",
+          "group": "reverse_conduction",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "soa",
+          "group": "soa",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "thermal",
+          "group": "thermal",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current records"
+      },
+      {
+        "rule": {
+          "id": "reliability",
+          "group": "reliability",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "No current records"
+      },
+      {
+        "rule": {
+          "id": "dynamic_test",
+          "group": "dynamic_test",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "External references only; inspect linked records"
+      },
+      {
+        "rule": {
+          "id": "market",
+          "group": "market",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "External references only; inspect linked records"
+      },
+      {
+        "rule": {
+          "id": "models",
+          "group": "models",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "No current records"
+      }
+    ],
+    "acceptable": true,
+    "scope": "Evidence checks only; no operating-envelope, safety, or converter sufficiency claim."
+  },
+  "final_status": "needs_confirmation",
+  "dataset_status": "partial",
+  "canonical_output": null
+}
