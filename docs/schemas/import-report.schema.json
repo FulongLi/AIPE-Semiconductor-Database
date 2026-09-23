@@ -1,0 +1,492 @@
+{
+  "$defs": {
+    "Availability": {
+      "enum": [
+        "available",
+        "partial",
+        "missing",
+        "not_applicable",
+        "unknown"
+      ],
+      "title": "Availability",
+      "type": "string"
+    },
+    "ColumnMapping": {
+      "additionalProperties": false,
+      "properties": {
+        "table": {
+          "title": "Table",
+          "type": "string"
+        },
+        "column": {
+          "title": "Column",
+          "type": "string"
+        },
+        "semantic": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Semantic"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "status": {
+          "default": "unresolved",
+          "enum": [
+            "confirmed",
+            "high_confidence",
+            "needs_confirmation",
+            "unresolved"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "ignored": {
+          "default": false,
+          "title": "Ignored",
+          "type": "boolean"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "table",
+        "column"
+      ],
+      "title": "ColumnMapping",
+      "type": "object"
+    },
+    "CoverageGap": {
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "$ref": "#/$defs/CoverageRule"
+        },
+        "status": {
+          "$ref": "#/$defs/Availability"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "status",
+        "message"
+      ],
+      "title": "CoverageGap",
+      "type": "object"
+    },
+    "CoverageGapReport": {
+      "additionalProperties": false,
+      "properties": {
+        "device_id": {
+          "title": "Device Id",
+          "type": "string"
+        },
+        "policy": {
+          "title": "Policy",
+          "type": "string"
+        },
+        "entries": {
+          "items": {
+            "$ref": "#/$defs/CoverageGap"
+          },
+          "title": "Entries",
+          "type": "array"
+        },
+        "acceptable": {
+          "title": "Acceptable",
+          "type": "boolean"
+        },
+        "scope": {
+          "default": "Evidence checks only; no operating-envelope, safety, or converter sufficiency claim.",
+          "title": "Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "device_id",
+        "policy",
+        "entries",
+        "acceptable"
+      ],
+      "title": "CoverageGapReport",
+      "type": "object"
+    },
+    "CoverageRule": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "group": {
+          "title": "Group",
+          "type": "string"
+        },
+        "metrics": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "importance": {
+          "default": "optional",
+          "enum": [
+            "required",
+            "recommended",
+            "optional"
+          ],
+          "title": "Importance",
+          "type": "string"
+        },
+        "check": {
+          "default": "presence",
+          "enum": [
+            "presence",
+            "high_temperature",
+            "gate_resistance"
+          ],
+          "title": "Check",
+          "type": "string"
+        },
+        "temperatures_kelvin": {
+          "default": [],
+          "items": {
+            "type": "number"
+          },
+          "title": "Temperatures Kelvin",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "group"
+      ],
+      "title": "CoverageRule",
+      "type": "object"
+    },
+    "DetectedTable": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "header_row": {
+          "title": "Header Row",
+          "type": "integer"
+        },
+        "columns": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Columns",
+          "type": "array"
+        },
+        "row_count": {
+          "title": "Row Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "header_row",
+        "columns",
+        "row_count"
+      ],
+      "title": "DetectedTable",
+      "type": "object"
+    },
+    "ImportMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "enum": [
+            "xlsx",
+            "csv",
+            "json"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "original_filename": {
+          "title": "Original Filename",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "import_timestamp": {
+          "format": "date-time",
+          "title": "Import Timestamp",
+          "type": "string"
+        },
+        "importer_version": {
+          "title": "Importer Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_type",
+        "original_filename",
+        "source_sha256",
+        "import_timestamp",
+        "importer_version"
+      ],
+      "title": "ImportMetadata",
+      "type": "object"
+    },
+    "UnitMapping": {
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "target"
+      ],
+      "title": "UnitMapping",
+      "type": "object"
+    },
+    "ValidationIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "enum": [
+            "error",
+            "warning"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "severity",
+        "code",
+        "path",
+        "message"
+      ],
+      "title": "ValidationIssue",
+      "type": "object"
+    },
+    "ValidationReport": {
+      "additionalProperties": false,
+      "properties": {
+        "issues": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ValidationIssue"
+          },
+          "title": "Issues",
+          "type": "array"
+        }
+      },
+      "title": "ValidationReport",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "input_format": {
+      "title": "Input Format",
+      "type": "string"
+    },
+    "source_metadata": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ImportMetadata"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "detected_tables": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/DetectedTable"
+      },
+      "title": "Detected Tables",
+      "type": "array"
+    },
+    "recognized_columns": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ColumnMapping"
+      },
+      "title": "Recognized Columns",
+      "type": "array"
+    },
+    "unresolved_columns": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ColumnMapping"
+      },
+      "title": "Unresolved Columns",
+      "type": "array"
+    },
+    "unit_conversions": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/UnitMapping"
+      },
+      "title": "Unit Conversions",
+      "type": "array"
+    },
+    "records_created": {
+      "default": 0,
+      "title": "Records Created",
+      "type": "integer"
+    },
+    "warnings": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "errors": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "device_identity_status": {
+      "default": "missing",
+      "enum": [
+        "available",
+        "missing",
+        "conflicting"
+      ],
+      "title": "Device Identity Status",
+      "type": "string"
+    },
+    "validation_result": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ValidationReport"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "coverage_summary": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CoverageGapReport"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "final_status": {
+      "enum": [
+        "parsed",
+        "needs_confirmation",
+        "validated",
+        "partial",
+        "ready_to_import",
+        "imported",
+        "failed"
+      ],
+      "title": "Final Status",
+      "type": "string"
+    },
+    "dataset_status": {
+      "default": "partial",
+      "enum": [
+        "complete",
+        "partial"
+      ],
+      "title": "Dataset Status",
+      "type": "string"
+    },
+    "canonical_output": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canonical Output"
+    }
+  },
+  "required": [
+    "input_format",
+    "final_status"
+  ],
+  "title": "ImportReport",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

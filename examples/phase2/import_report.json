@@ -1,0 +1,377 @@
+{
+  "input_format": "xlsx",
+  "source_metadata": {
+    "source_type": "xlsx",
+    "original_filename": "device_switching.xlsx",
+    "source_sha256": "c26eceee983d3bbd9636fa5cd4f02d271fbacb51bc6ac43e97e6c14e1eb0197f",
+    "import_timestamp": "2026-09-23T02:28:38.028276Z",
+    "importer_version": "2.0.0"
+  },
+  "detected_tables": [
+    {
+      "name": "identity",
+      "header_row": 1,
+      "columns": [
+        "manufacturer",
+        "part_number",
+        "device_id",
+        "technology"
+      ],
+      "row_count": 1
+    },
+    {
+      "name": "switching",
+      "header_row": 2,
+      "columns": [
+        "Tj(C)",
+        "Vdc(V)",
+        "Id(A)",
+        "Rgon(Ohm)",
+        "Rgoff(Ohm)",
+        "Eon(mJ)",
+        "Eoff(mJ)"
+      ],
+      "row_count": 24
+    },
+    {
+      "name": "conduction",
+      "header_row": 1,
+      "columns": [
+        "Tj(C)",
+        "Id(A)",
+        "Vds(V)"
+      ],
+      "row_count": 6
+    }
+  ],
+  "recognized_columns": [
+    {
+      "table": "identity",
+      "column": "manufacturer",
+      "semantic": "manufacturer",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "identity",
+      "column": "part_number",
+      "semantic": "part_number",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "identity",
+      "column": "device_id",
+      "semantic": "device_id",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "identity",
+      "column": "technology",
+      "semantic": "technology",
+      "unit": null,
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Tj(C)",
+      "semantic": "junction_temperature",
+      "unit": "degC",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Vdc(V)",
+      "semantic": "dc_bus_voltage",
+      "unit": "V",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Id(A)",
+      "semantic": "drain_current",
+      "unit": "A",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Rgon(Ohm)",
+      "semantic": "gate_resistance_on",
+      "unit": "Ohm",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Rgoff(Ohm)",
+      "semantic": "gate_resistance_off",
+      "unit": "Ohm",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Eon(mJ)",
+      "semantic": "Eon",
+      "unit": "mJ",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "switching",
+      "column": "Eoff(mJ)",
+      "semantic": "Eoff",
+      "unit": "mJ",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "conduction",
+      "column": "Tj(C)",
+      "semantic": "junction_temperature",
+      "unit": "degC",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "conduction",
+      "column": "Id(A)",
+      "semantic": "drain_current",
+      "unit": "A",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    },
+    {
+      "table": "conduction",
+      "column": "Vds(V)",
+      "semantic": "voltage_drop",
+      "unit": "V",
+      "status": "high_confidence",
+      "ignored": false,
+      "reason": null
+    }
+  ],
+  "unresolved_columns": [],
+  "unit_conversions": [
+    {
+      "source": "degC",
+      "target": "K"
+    },
+    {
+      "source": "V",
+      "target": "V"
+    },
+    {
+      "source": "A",
+      "target": "A"
+    },
+    {
+      "source": "Ohm",
+      "target": "Ohm"
+    },
+    {
+      "source": "mJ",
+      "target": "J"
+    }
+  ],
+  "records_created": 3,
+  "warnings": [],
+  "errors": [],
+  "device_identity_status": "available",
+  "validation_result": {
+    "issues": []
+  },
+  "coverage_summary": {
+    "device_id": "synthetic_demo_001",
+    "policy": "generic_device_storage",
+    "entries": [
+      {
+        "rule": {
+          "id": "identity",
+          "group": "identity",
+          "metrics": [],
+          "importance": "required",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "available",
+        "evidence_ids": [],
+        "message": "Required device identity is present"
+      },
+      {
+        "rule": {
+          "id": "conduction",
+          "group": "conduction",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "available",
+        "evidence_ids": [
+          "synthetic_demo_001:voltage_drop:3"
+        ],
+        "message": "Matching current evidence present"
+      },
+      {
+        "rule": {
+          "id": "switching",
+          "group": "switching",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "available",
+        "evidence_ids": [
+          "synthetic_demo_001:Eon:1",
+          "synthetic_demo_001:Eoff:2"
+        ],
+        "message": "Matching current evidence present"
+      },
+      {
+        "rule": {
+          "id": "capacitance",
+          "group": "capacitance",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "gate_charge",
+          "group": "gate_charge",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "reverse_conduction",
+          "group": "reverse_conduction",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "soa",
+          "group": "soa",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current matching evidence"
+      },
+      {
+        "rule": {
+          "id": "thermal",
+          "group": "thermal",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "missing",
+        "evidence_ids": [],
+        "message": "No current records"
+      },
+      {
+        "rule": {
+          "id": "reliability",
+          "group": "reliability",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "No current records"
+      },
+      {
+        "rule": {
+          "id": "dynamic_test",
+          "group": "dynamic_test",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "External references only; inspect linked records"
+      },
+      {
+        "rule": {
+          "id": "market",
+          "group": "market",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "External references only; inspect linked records"
+      },
+      {
+        "rule": {
+          "id": "models",
+          "group": "models",
+          "metrics": [],
+          "importance": "optional",
+          "check": "presence",
+          "temperatures_kelvin": []
+        },
+        "status": "unknown",
+        "evidence_ids": [],
+        "message": "No current records"
+      }
+    ],
+    "acceptable": true,
+    "scope": "Evidence checks only; no operating-envelope, safety, or converter sufficiency claim."
+  },
+  "final_status": "partial",
+  "dataset_status": "partial",
+  "canonical_output": null
+}

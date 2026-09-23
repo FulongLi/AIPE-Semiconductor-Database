@@ -151,6 +151,8 @@ class TestRun(Model):
     production_lot_id: str | None = None
     condition: OperatingCondition
     protocol: MeasurementProtocol
+    test_plan_item_id: str | None = None
+    results: tuple[ScalarRecord, ...] = ()
     instrument_setup: InstrumentSetup = InstrumentSetup()
     waveform_refs: tuple[DynamicWaveformRef, ...] = ()
     processing_recipes: tuple[ProcessingRecipe, ...] = ()

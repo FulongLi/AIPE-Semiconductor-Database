@@ -1,4 +1,4 @@
-# AIPE Transistor Database — V3 foundation
+# AIPE Transistor Database — V3 / Phase 2
 
 AIPE is a Python data infrastructure layer for power semiconductors. It gives
 manufacturer models, datasheets, laboratory measurements and derived results one
@@ -134,6 +134,48 @@ The example is explicitly **synthetic**, not a device characterization claim. Se
 and [JSON Schemas](docs/schemas/). Validation checks references, recipes, optional
 request coverage, artifact paths, sizes and checksums.
 
+## Library import and Device Explorer
+
+Phase 2 adds transient Excel/CSV/generic JSON import, explicit semantic mapping,
+coverage gaps and draft measurement plans, and a renderer-neutral Device Explorer.
+Canonical JSON takes the direct schema/engineering-validation path. Ambiguous fields
+and missing units remain unresolved until an explicit mapping is provided.
+
+```mermaid
+flowchart TD
+    U[Excel / CSV / external JSON] --> I[Transient Library Importer]
+    I --> M[Semantic mapping and SI normalization]
+    M --> V[Validation and canonical candidate]
+    J[Canonical V3 JSON] --> V
+    V --> R[DeviceRepository: canonical JSON only]
+    V --> C[CoverageGapReport]
+    C --> P[Draft MeasurementRequest / TestPlanItem]
+    R --> S[VisualizationSpec]
+    S --> E[Device Explorer API]
+    A[Large scientific artifacts] --> AS[ArtifactStore references]
+    AS --> R
+```
+
+```bash
+python -m pip install -e '.[library]'
+aipe-devices inspect-import examples/import/device_switching.xlsx --origin synthetic
+aipe-devices import-library examples/import/device_switching.xlsx --origin synthetic --output data/derived/demo-library
+aipe-devices explore --repository data/derived/demo-library --search DEMO-001
+aipe-devices explore --repository data/derived/demo-library --device synthetic_demo_001 --curves
+python examples/device_explorer_demo.py
+```
+
+The checked-in spreadsheets are tiny, explicitly synthetic tutorial fixtures.
+Production uploads are never copied into this repository; the caller's original
+file is left intact. Import provenance stores filename, hash, timestamp, version,
+and row/column conversion locators. Large raw scientific artifacts and the original
+Wolfspeed evidence retain their existing storage policy.
+
+See [Phase-2 guide and examples](docs/phase2.md),
+[implementation report](docs/phase2-report.md), and
+[generated example outputs](examples/phase2/). The Explorer is an API/CLI foundation;
+no production GUI, implicit interpolation, or laboratory execution is included.
+
 ## Limitations and roadmap
 
 - Source coverage is not engineering operating coverage. 900/1000 °C points remain
@@ -151,7 +193,7 @@ request coverage, artifact paths, sizes and checksums.
 - No PDF digitization, SPICE parsing, laboratory control, lifetime prediction,
   distributor APIs or AI missing-data reconstruction.
 
-Phase 2 should resolve source-axis ambiguities, add reviewed operating envelopes and
+Future iterations should resolve source-axis ambiguities, add reviewed operating envelopes and
 multidimensional evaluations, validate exports in PLECS, implement DPT processing and
 artifact backends, and add measured/rating/capacitance datasets. See
 [architecture](docs/architecture.md), [audit](docs/audit.md),

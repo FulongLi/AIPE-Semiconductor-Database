@@ -17,7 +17,8 @@
         "visibility": "public",
         "owner": "AIPE example",
         "category": "aipe"
-      }
+      },
+      "import_metadata": null
     }
   ],
   "campaigns": [
@@ -37,7 +38,8 @@
           "visibility": "public",
           "owner": "AIPE example",
           "category": "aipe"
-        }
+        },
+        "import_metadata": null
       },
       "test_run_ids": [
         "run:example"
@@ -79,6 +81,8 @@
         "category": "dpt",
         "definition": null
       },
+      "test_plan_item_id": null,
+      "results": [],
       "instrument_setup": {
         "instruments": [],
         "sampling_rate": null,
@@ -138,7 +142,8 @@
             ],
             "recipe_id": null,
             "recipe_version": null,
-            "freshness": "current"
+            "freshness": "current",
+            "source_locators": []
           },
           "events": [
             {
@@ -201,7 +206,8 @@
                 ],
                 "recipe_id": "illustrative-integration",
                 "recipe_version": "1.0",
-                "freshness": "current"
+                "freshness": "current",
+                "source_locators": []
               },
               "condition": {
                 "junction_temperature": {

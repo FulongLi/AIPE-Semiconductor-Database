@@ -20,6 +20,7 @@ class Lifecycle(StrEnum):
 
 
 class Origin(StrEnum):
+    UNKNOWN = "unknown"
     MEASURED = "measured"
     DATASHEET = "manufacturer_datasheet"
     MODEL = "manufacturer_model"

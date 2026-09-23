@@ -57,7 +57,7 @@ def import_wolfspeed(raw_root, repository_root):
     }
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description="AIPE V3 data tools")
     commands = parser.add_subparsers(dest="command", required=True)
     importer = commands.add_parser(
@@ -72,7 +72,31 @@ def main():
     migration.add_argument("version", choices=["v1", "v2"])
     migration.add_argument("source", type=Path)
     migration.add_argument("repository", type=Path)
-    args = parser.parse_args()
+    for command in ("inspect-import", "import-library"):
+        library = commands.add_parser(command, help="Inspect or import transient user library data")
+        library.add_argument("file", type=Path)
+        library.add_argument("--mapping", type=Path, help="Explicit column mapping JSON")
+        library.add_argument("--manufacturer")
+        library.add_argument("--part-number")
+        library.add_argument("--device-id")
+        library.add_argument("--technology", choices=[t.value for t in Technology])
+        library.add_argument("--origin", default="unknown")
+        library.add_argument("--report", type=Path)
+        if command == "import-library":
+            library.add_argument("--output", type=Path, default=Path("data/canonical"))
+    explorer = commands.add_parser(
+        "explore", help="Renderer-neutral device search, summary, raw data, and visualization"
+    )
+    explorer.add_argument("--repository", type=Path, default=Path("data/canonical"))
+    explorer.add_argument("--search", default="")
+    explorer.add_argument("--device")
+    explorer.add_argument("--curves", action="store_true")
+    explorer.add_argument("--raw", help="Canonical record ID")
+    explorer.add_argument("--series", nargs="+", help="Curve IDs to display together")
+    explorer.add_argument("--fixed", default="{}", help="JSON object of exact SI slice coordinates")
+    explorer.add_argument("--x")
+    explorer.add_argument("--y")
+    args = parser.parse_args(argv)
     if args.command == "import-wolfspeed":
         report = import_wolfspeed(args.raw_root, args.repository)
         atomic_write(args.report, (json.dumps(report, indent=2) + "\n").encode())
@@ -89,6 +113,45 @@ def main():
         repository = JsonDeviceRepository(args.repository)
         for path in sorted(args.source.glob("*.json")):
             repository.save(loader(path))
+    elif args.command in {"inspect-import", "import-library"}:
+        from aipe_devices.importers.library import LibraryImporter
+
+        mappings = json.loads(args.mapping.read_text(encoding="utf-8")) if args.mapping else None
+        identity = {
+            k: getattr(args, k)
+            for k in ("manufacturer", "part_number", "device_id", "technology")
+            if getattr(args, k)
+        }
+        service = LibraryImporter()
+        session = service.inspect(
+            args.file, mappings=mappings, identity=identity, origin=args.origin
+        )
+        if args.command == "import-library" and session.status in {"partial", "ready_to_import"}:
+            session = service.save(session, JsonDeviceRepository(args.output))
+        output = session.report.model_dump_json(indent=2)
+        if args.report:
+            atomic_write(args.report, (output + "\n").encode("utf-8"))
+        print(output)
+        raise SystemExit(
+            1 if session.status == "failed" else 2 if session.status == "needs_confirmation" else 0
+        )
+    elif args.command == "explore":
+        from aipe_devices.explorer import DeviceExplorer
+
+        view = DeviceExplorer(JsonDeviceRepository(args.repository))
+        if not args.device:
+            output = view.search(args.search)
+        elif args.raw:
+            output = view.raw_record(args.device, args.raw)
+        elif args.series:
+            output = view.visualize(
+                args.device, args.series, fixed=json.loads(args.fixed), x=args.x, y=args.y
+            ).model_dump(mode="json")
+        elif args.curves:
+            output = view.characteristics(args.device)
+        else:
+            output = view.summary(args.device)
+        print(json.dumps(output, indent=2))
 
 
 if __name__ == "__main__":

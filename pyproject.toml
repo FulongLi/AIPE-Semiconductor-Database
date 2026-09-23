@@ -13,7 +13,8 @@ dependencies = ["pydantic>=2.10,<3"]
 
 [project.optional-dependencies]
 matlab = ["scipy>=1.11"]
-dev = ["pytest>=8", "ruff>=0.9", "build>=1", "scipy>=1.11"]
+library = ["openpyxl>=3.1,<4"]
+dev = ["pytest>=8", "ruff>=0.9", "build>=1", "scipy>=1.11", "openpyxl>=3.1,<4"]
 
 [project.scripts]
 aipe-devices = "aipe_devices.cli:main"

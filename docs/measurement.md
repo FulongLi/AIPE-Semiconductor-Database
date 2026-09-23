@@ -1,7 +1,8 @@
 # Measurement partner interface
 
-MeasurementRequest describes device/sample, protocol versions, condition grids,
-requested metrics, repetitions and intended rights. This package does not contact
+MeasurementRequest describes device/sample, independent `TestPlanItem` entries,
+and intended rights. Each item owns its protocol, fixed conditions, compact sweep
+axes, requested metrics, repetitions, notes and requirements. This package does not contact
 laboratories or operate equipment. MeasurementPackage contains source catalogue,
 campaigns, runs, artifact inventory and declared external lineage dependencies.
 
@@ -45,10 +46,24 @@ metric units/signs, recipe and input versions/checksums, request coverage and ar
 paths/hash/size. Paths must remain within the package. Missing samples warn for historical
 data. Declared external dependencies are explicit references, not fetched or verified remotely.
 
-Each requested protocol×condition combination needs the requested number of runs;
-matching runs must contain requested metric names. This is completeness validation,
-not calibration or physical acceptance testing. Statistics are representable, not computed.
-Use separate requests when categories require different condition grids.
+Each item requires its own points and repetitions; unrelated protocols never share
+a condition grid. `SweepAxis` accepts explicit SI values or an inclusive
+`SweepRange(start, stop, step)`. Validation counts observed coordinate keys rather
+than expanding all requested points. Runs may include additional measured conditions.
+Overlapping items require `TestRun.test_plan_item_id` to avoid double counting.
+Static/capacitance results can use `TestRun.results`; DPT results retain DynamicMetrics.
+This is completeness validation, not calibration or physical acceptance testing.
+
+Legacy Phase-1 requests using `protocols[]` and `conditions[]` are migrated at load
+time, preserving their old Cartesian meaning in explicit items. New serialization
+only emits `test_plan_items`. A compatibility `model_copy(update={"repetitions": n})`
+updates all item repetitions. New code should edit each item independently.
+Coverage-generated requests have `draft=True`; set safe conditions, protocol
+definitions and repetitions and review them before clearing the draft flag.
+Submission validation rejects unreviewed draft plans. No lab commands are sent.
+
+See [compact two-protocol example](../examples/phase2/compact_measurement_request.json)
+and [gap-derived draft](../examples/phase2/draft_measurement_request.json).
 
 JSON Schemas in `docs/schemas/` cover structure. Python adds cross-reference and physical
 checks. `scripts/generate_examples.py` rebuilds examples/schemas. Example protocol IDs

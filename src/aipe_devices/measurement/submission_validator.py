@@ -1,5 +1,6 @@
 import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Literal
 
@@ -10,6 +11,7 @@ from aipe_devices.domain.measurement import TestCampaign, TestRun
 from aipe_devices.domain.provenance import ArtifactRef, Dependency, Source
 from aipe_devices.schema.enums import DERIVED_ORIGINS, Lifecycle, Origin
 from aipe_devices.schema.validation import ValidationIssue, ValidationReport
+from aipe_devices.services.validation import EXPECTED_UNITS
 
 from .request_generator import MeasurementRequest
 
@@ -41,6 +43,7 @@ def validate_submission(
     source_ids = {s.id for s in package.sources}
     all_ids = [package.id, *(a.id for a in package.artifacts), *(s.id for s in package.sources)]
     run_ids = {r.id for r in package.runs}
+    plan_counts = {i.id: Counter() for i in request.test_plan_items} if request else {}
     for campaign in package.campaigns:
         all_ids.append(campaign.id)
         if not set(campaign.test_run_ids) <= run_ids or campaign.source.id not in source_ids:
@@ -123,9 +126,45 @@ def validate_submission(
                     issue("source_reference", m.id, "Unresolved metric source")
                 if m.quantity.unit in {"J", "C", "s", "Hz"} and m.quantity.value < 0:
                     issue("negative_metric", m.id, "Expected nonnegative metric")
+        for result in run.results:
+            all_ids.append(result.id)
+            check_dependencies(result)
+            if (
+                result.name in EXPECTED_UNITS
+                and result.quantity.unit != EXPECTED_UNITS[result.name]
+            ):
+                issue(
+                    "result_unit",
+                    result.id,
+                    f"{result.name} requires {EXPECTED_UNITS[result.name]}",
+                )
+            if not set(result.provenance.source_ids) <= source_ids:
+                issue("source_reference", result.id, "Unresolved result source")
+            if result.condition != run.condition:
+                issue("result_condition", result.id, "Result condition differs from run")
+            if (
+                result.quantity.unit in {"J", "C", "s", "Hz", "F", "Ohm", "K/W"}
+                and result.quantity.value < 0
+            ):
+                issue("negative_metric", result.id, "Expected nonnegative metric")
         if request is not None:
-            if run.protocol not in request.protocols or run.condition not in request.conditions:
+            matches = [
+                (item, item.match(run.protocol, run.condition))
+                for item in request.test_plan_items
+                if run.test_plan_item_id is None or item.id == run.test_plan_item_id
+            ]
+            matches = [(item, key) for item, key in matches if key is not None]
+            if not matches:
                 issue("request_mismatch", run.id, "Protocol/condition was not requested")
+            elif len(matches) > 1:
+                issue("request_ambiguous", run.id, "Set test_plan_item_id for overlapping items")
+            else:
+                item, key = matches[0]
+                plan_counts[item.id][key] += 1
+                names = {m.name for g in run.derived_metrics for m in g.metrics}
+                names.update(m.name for m in run.results)
+                if not set(item.requested_metrics) <= names:
+                    issue("request_metrics", run.id, "Requested item metrics missing")
             if request.physical_sample_id and run.physical_sample_id != request.physical_sample_id:
                 issue("request_sample", run.id, "Sample differs from measurement request")
     if len(all_ids) != len(set(all_ids)):
@@ -133,21 +172,14 @@ def validate_submission(
     if request is not None:
         if package.request_id != request.id or package.device_id != request.device_id:
             issue("request_reference", package.id, "Submission does not match request")
-        for protocol in request.protocols:
-            for condition in request.conditions:
-                matching = [
-                    r for r in package.runs if r.protocol == protocol and r.condition == condition
-                ]
-                if len(matching) < request.repetitions:
-                    issue(
-                        "request_coverage",
-                        package.id,
-                        "Requested condition/protocol repetitions missing",
-                    )
-                for run in matching:
-                    metric_names = {m.name for group in run.derived_metrics for m in group.metrics}
-                    if not set(request.requested_metrics) <= metric_names:
-                        issue("request_metrics", run.id, "Requested metrics missing")
+        for item in request.test_plan_items:
+            counts = plan_counts[item.id]
+            if item.draft:
+                issue("request_draft", item.id, "Draft plan requires engineering review")
+            if len(counts) != item.point_count or any(
+                n < item.repetitions for n in counts.values()
+            ):
+                issue("request_coverage", item.id, "Requested item points/repetitions missing")
     if root is not None:
         root = Path(root).resolve()
         for artifact in package.artifacts:

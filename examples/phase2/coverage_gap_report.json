@@ -1,0 +1,186 @@
+{
+  "device_id": "synthetic_demo_001",
+  "policy": "dab_loss_foundation",
+  "entries": [
+    {
+      "rule": {
+        "id": "identity",
+        "group": "identity",
+        "metrics": [],
+        "importance": "required",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "available",
+      "evidence_ids": [],
+      "message": "Required device identity is present"
+    },
+    {
+      "rule": {
+        "id": "conduction",
+        "group": "conduction",
+        "metrics": [],
+        "importance": "required",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "available",
+      "evidence_ids": [
+        "synthetic_demo_001:voltage_drop:3"
+      ],
+      "message": "Matching current evidence present"
+    },
+    {
+      "rule": {
+        "id": "Eon",
+        "group": "switching",
+        "metrics": [
+          "Eon"
+        ],
+        "importance": "required",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "available",
+      "evidence_ids": [
+        "synthetic_demo_001:Eon:1"
+      ],
+      "message": "Matching current evidence present"
+    },
+    {
+      "rule": {
+        "id": "Eoff",
+        "group": "switching",
+        "metrics": [
+          "Eoff"
+        ],
+        "importance": "required",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "available",
+      "evidence_ids": [
+        "synthetic_demo_001:Eoff:2"
+      ],
+      "message": "Matching current evidence present"
+    },
+    {
+      "rule": {
+        "id": "thermal",
+        "group": "thermal",
+        "metrics": [],
+        "importance": "required",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "missing",
+      "evidence_ids": [],
+      "message": "No current records"
+    },
+    {
+      "rule": {
+        "id": "output_capacitance",
+        "group": "capacitance",
+        "metrics": [
+          "coss",
+          "Eoss"
+        ],
+        "importance": "recommended",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "missing",
+      "evidence_ids": [],
+      "message": "No current matching evidence"
+    },
+    {
+      "rule": {
+        "id": "reverse_conduction",
+        "group": "reverse_conduction",
+        "metrics": [],
+        "importance": "recommended",
+        "check": "presence",
+        "temperatures_kelvin": []
+      },
+      "status": "missing",
+      "evidence_ids": [],
+      "message": "No current matching evidence"
+    },
+    {
+      "rule": {
+        "id": "high_temperature_Eon",
+        "group": "switching",
+        "metrics": [
+          "Eon"
+        ],
+        "importance": "recommended",
+        "check": "high_temperature",
+        "temperatures_kelvin": [
+          398.15,
+          423.15
+        ]
+      },
+      "status": "partial",
+      "evidence_ids": [
+        "synthetic_demo_001:Eon:1"
+      ],
+      "message": "Requested temperature points (K): (398.15, 423.15); found: [298.15, 398.15]"
+    },
+    {
+      "rule": {
+        "id": "high_temperature_Eoff",
+        "group": "switching",
+        "metrics": [
+          "Eoff"
+        ],
+        "importance": "recommended",
+        "check": "high_temperature",
+        "temperatures_kelvin": [
+          398.15,
+          423.15
+        ]
+      },
+      "status": "partial",
+      "evidence_ids": [
+        "synthetic_demo_001:Eoff:2"
+      ],
+      "message": "Requested temperature points (K): (398.15, 423.15); found: [298.15, 398.15]"
+    },
+    {
+      "rule": {
+        "id": "rg_dependence_Eon",
+        "group": "switching",
+        "metrics": [
+          "Eon"
+        ],
+        "importance": "recommended",
+        "check": "gate_resistance",
+        "temperatures_kelvin": []
+      },
+      "status": "available",
+      "evidence_ids": [
+        "synthetic_demo_001:Eon:1"
+      ],
+      "message": "Requires >=2 gate_resistance_on points in one record"
+    },
+    {
+      "rule": {
+        "id": "rg_dependence_Eoff",
+        "group": "switching",
+        "metrics": [
+          "Eoff"
+        ],
+        "importance": "recommended",
+        "check": "gate_resistance",
+        "temperatures_kelvin": []
+      },
+      "status": "missing",
+      "evidence_ids": [
+        "synthetic_demo_001:Eoff:2"
+      ],
+      "message": "Requires >=2 gate_resistance_off points in one record"
+    }
+  ],
+  "acceptable": false,
+  "scope": "Evidence checks only; no operating-envelope, safety, or converter sufficiency claim."
+}

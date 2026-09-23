@@ -1,0 +1,18 @@
+{
+  "identity": {
+    "manufacturer": "Synthetic Example",
+    "part_number": "JSON-001"
+  },
+  "conduction": [
+    {
+      "Tj(C)": 25,
+      "Id(A)": 10,
+      "Vds(V)": 0.2
+    },
+    {
+      "Tj(C)": 25,
+      "Id(A)": 20,
+      "Vds(V)": 0.4
+    }
+  ]
+}
