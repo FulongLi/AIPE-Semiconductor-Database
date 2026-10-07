@@ -42,7 +42,7 @@ No code from the old monolithic class was copied into the new foundation.
 ## 4. New directory tree
 
 ```text
-AIPE-Transistor-Database/
+AIPE-Semiconductor-Database/
 ├── pyproject.toml, README.md, CHANGELOG.md, LICENSING.md, .gitignore
 ├── .github/workflows/tests.yml
 ├── src/aipe_devices/

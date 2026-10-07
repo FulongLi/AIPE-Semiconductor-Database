@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.1.0",
+  "id": "aipe.semiconductor-database",
+  "name": "AIPE Semiconductor Database",
+  "type": "database",
+  "domains": [
+    "power-electronics"
+  ],
+  "description": "Canonical V3 power semiconductor records with SI curves, source rights, evidence lineage and a conservative Core candidate adapter.",
+  "status": "active",
+  "maturity": "usable",
+  "repository": "https://github.com/FulongLi/AIPE-Semiconductor-Database",
+  "license": "NOASSERTION",
+  "capabilities": [
+    "semiconductor-data",
+    "semiconductor-query",
+    "semiconductor-core-candidate-export"
+  ],
+  "inputs": [
+    {
+      "name": "canonical-device",
+      "description": "Independent domain schema 3.0.0 device records."
+    },
+    {
+      "name": "raw-device-evidence",
+      "description": "Manufacturer models, explicit import mappings and measurement packages."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "device-record",
+      "description": "Canonical V3 semiconductor data with provenance."
+    },
+    {
+      "name": "core-candidate",
+      "description": "Candidate identity and source evidence for Engineering State 0.1.0.",
+      "schema": "https://raw.githubusercontent.com/FulongLi/AIPE-Core/v0.1.0/schemas/semiconductor.schema.json"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "aipe.core",
+      "version": "0.1.x",
+      "optional": false
+    }
+  ],
+  "compatibility": {
+    "core": "0.1.x",
+    "engineering_state": "0.1.x",
+    "integration": "mapped"
+  },
+  "tools": [
+    {
+      "id": "python",
+      "name": "Python",
+      "capabilities": [
+        "semiconductor-data-query",
+        "data-validation",
+        "core-candidate-export"
+      ],
+      "licence_class": "open_source",
+      "optional": false,
+      "interfaces": [
+        "cli",
+        "python"
+      ],
+      "platforms": [
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "url": "https://www.python.org/",
+      "limitations": [
+        "Physical models require separate validation."
+      ]
+    },
+    {
+      "id": "plecs",
+      "name": "PLECS",
+      "capabilities": [
+        "optional-export-consumption"
+      ],
+      "licence_class": "commercial",
+      "optional": true,
+      "interfaces": [
+        "file"
+      ],
+      "platforms": [
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "url": "https://www.plexim.com/plecs",
+      "limitations": [
+        "External licence required to run the commercial tool; exporting files does not execute it."
+      ]
+    },
+    {
+      "id": "matlab",
+      "name": "MATLAB",
+      "capabilities": [
+        "optional-export-consumption"
+      ],
+      "licence_class": "commercial",
+      "optional": true,
+      "interfaces": [
+        "file"
+      ],
+      "platforms": [
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "url": "https://www.mathworks.com/products/matlab.html",
+      "limitations": [
+        "External licence required to run the commercial tool; exporting files does not execute it."
+      ]
+    }
+  ],
+  "connectors": [],
+  "validation": {
+    "status": "tested",
+    "evidence": [
+      "tests/unit/test_core_export.py",
+      "tests/integration/test_repository_corpus.py",
+      ".github/workflows/tests.yml"
+    ],
+    "limitations": [
+      "Identity/source mapping only; detailed ratings and curves stay in V3 records.",
+      "Manufacturer model data is not converted into measured evidence.",
+      "Existing code and data rights remain NOASSERTION; see LICENSING.md."
+    ]
+  },
+  "documentation": [
+    "README.md",
+    "docs/core-integration.md",
+    "docs/architecture.md",
+    "LICENSING.md"
+  ]
+}
