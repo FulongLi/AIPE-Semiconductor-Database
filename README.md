@@ -1,9 +1,15 @@
-# AIPE Transistor Database — V3 / Phase 2
+# AIPE Semiconductor Database — V3 / Phase 2
 
 AIPE is a Python data infrastructure layer for power semiconductors. It gives
 manufacturer models, datasheets, laboratory measurements and derived results one
 versioned semantic vocabulary, with explicit units, conditions and evidence lineage.
 It supports future device comparison, converter evaluation and AI-assisted design.
+
+This repository is the canonical semiconductor database in **AI for Power
+Engineering**. [aipe.yaml](aipe.yaml) advertises its capabilities to AIPE-Registry.
+The domain schema remains **3.0.0**; [Core interoperability](docs/core-integration.md)
+maps candidate device identity and source evidence to Engineering State **0.1.0**.
+The open path is Python; PLECS and MATLAB remain optional export integrations.
 
 The initial corpus contains **163 Wolfspeed SiC devices: 119 discrete models and
 44 module models**. All original XML and the manufacturer guide are preserved.
