@@ -1,235 +1,76 @@
-# AIPE Semiconductor Database — V3 / Phase 2
+# AIPE — Semiconductor Database
 
-AIPE is a Python data infrastructure layer for power semiconductors. It gives
-manufacturer models, datasheets, laboratory measurements and derived results one
-versioned semantic vocabulary, with explicit units, conditions and evidence lineage.
-It supports future device comparison, converter evaluation and AI-assisted design.
+AIPE Semiconductor Database is the canonical power-semiconductor data infrastructure of **AI for Power
+Engineering**. The Python package `aipe-devices` gives manufacturer models, datasheets, laboratory
+measurements and derived results one versioned semantic vocabulary with explicit units, operating conditions
+and evidence lineage, so that device comparison, converter evaluation and AI-assisted design rest on
+traceable data. Its `aipe.yaml` advertises the capabilities to AIPE-Registry; the domain schema is 3.0.0 and
+a documented mapping relates device identity and evidence to the AIPE-Core Engineering State 0.1.0.
 
-This repository is the canonical semiconductor database in **AI for Power
-Engineering**. [aipe.yaml](aipe.yaml) advertises its capabilities to AIPE-Registry.
-The domain schema remains **3.0.0**; [Core interoperability](docs/core-integration.md)
-maps candidate device identity and source evidence to Engineering State **0.1.0**.
-The open path is Python; PLECS and MATLAB remain optional export integrations.
+## Features
 
-The initial corpus contains **163 Wolfspeed SiC devices: 119 discrete models and
-44 module models**. All original XML and the manufacturer guide are preserved.
-The domain also supports Si MOSFET, IGBT and GaN identities, sample/lot distinctions,
-multiple package components, reliability records and separate market observations.
+- Canonical corpus of 163 Wolfspeed SiC devices (119 discrete, 44 module models) rebuilt from the preserved
+  manufacturer XML, which is kept byte-identical under `data/raw/`
+- Pydantic domain models for Si MOSFET, IGBT, SiC and GaN identities, packages, sample/lot distinctions,
+  reliability records and market observations
+- Import adapters (PLECS XML, Excel/CSV/JSON libraries, datasheet transcriptions) with SI normalisation and
+  schema plus engineering validation; exporters to PLECS, MATLAB and JSON
+- Services: coverage analysis, bounded 1-D and N-D interpolation, Cauer/Foster thermal models,
+  dual-active-bridge switch-loss evaluation, evidence-tiered device screening and prioritised measurement
+  requests
+- Measurement-partner interface (`MeasurementRequest` / `MeasurementPackage`) and a renderer-neutral Device
+  Explorer API
+- Append-only repository: manufacturer and measured evidence is never overwritten
 
-## Architecture
+## Installation
 
-```mermaid
-flowchart LR
-    S[Manufacturers / laboratories / simulation models] --> I[Import adapters]
-    I --> R[Immutable raw evidence and artifacts]
-    R --> N[Unit and axis normalization]
-    N --> V[Schema and engineering validation]
-    V --> C[Canonical AIPE device records]
-    C --> DB[DeviceRepository]
-    DB --> P[Coverage / interpolation / thermal services]
-    P --> D[Derived records with input and recipe versions]
-    D --> A[Comparison / converter design / AI application views]
-    C --> E[PLECS / MATLAB / JSON exporters]
-```
+Python 3.10 or newer; Pydantic is the only core runtime dependency. Source datasets stay in the checkout
+and are not bundled into the wheel.
 
-`PowerSemiconductorDevice` composes small mostly immutable domain models. PLECS is
-an adapter and an associated simulation model, not the database schema. Curves use
-generic named axes and SI values, including four-dimensional gate-resistance tables.
-External formulas and simulator bindings live only in model adapter metadata.
-
-| Layer | Location / meaning |
-| --- | --- |
-| Raw | `data/raw/`: unchanged evidence with SHA-256 inventory |
-| Canonical | `data/canonical/`: official schema 3.0.0 devices rebuilt from XML |
-| Derived | `data/derived/`: calculations with input IDs, versions and recipes |
-| Large artifacts | `ArtifactStore`: waveform URI, checksum, format and size |
-| Legacy | `legacy/v1/`, `legacy/v2/`: migration sources, never runtime databases |
-
-Small static curves belong in characteristic records. DPT waveform samples remain
-in artifacts; metadata describes test runs, instruments, protocols, events and
-derived metrics. Source and estimated records remain distinct. Repository updates
-cannot replace or remove manufacturer/measured evidence; append a new record.
-
-## Install and test
-
-Python 3.10+ is required (a `StrEnum` backport covers 3.10). Pydantic is the only core
-runtime dependency.
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
+```sh
 python -m pip install -e '.[dev]'
-pytest -q
-ruff check src tests scripts
-ruff format --check src tests scripts
 ```
 
-For runtime only, use `pip install -e .`. MATLAB export needs `.[matlab]` (SciPy).
-Source datasets stay in the checkout and are not bundled into the Python wheel.
-
-## Query and export
-
-Run examples from the repository root:
+## Usage
 
 ```python
 from aipe_devices.repository.json_repository import JsonDeviceRepository
 from aipe_devices.services.coverage import CoverageAnalyzer
-from aipe_devices.exporters.plecs import PlecsExporter
 
 repo = JsonDeviceRepository("data/canonical")
 device = repo.get("wolfspeed_c2m0025120d")
 print(device.identity.part_number)
 print(CoverageAnalyzer().analyze(device))
 print([d.device_id for d in repo.search("C2M0025")])
-xml = PlecsExporter().export(device, "data/derived/C2M0025120D.xml")
 ```
 
-```python
-from aipe_devices.exporters.json import JsonExporter
-from aipe_devices.domain.device import PowerSemiconductorDevice
-from aipe_devices.exporters.matlab import MatlabExporter
-
-text = JsonExporter().export(device)
-assert PowerSemiconductorDevice.model_validate_json(text) == device
-MatlabExporter().export(device, "data/derived/C2M0025120D.mat")
-```
-
-## Import PLECS and migrate
-
-```python
-from aipe_devices.importers.plecs import PlecsImporter
-from aipe_devices.schema.enums import Technology
-from aipe_devices.services.validation import validate_device
-
-device = PlecsImporter().load(
-    "data/raw/wolfspeed/SiC/Wolfspeed/MOSFET with Diode/MOSFETs/C2M0025120D.xml",
-    technology=Technology.SIC_MOSFET,
-    integration="discrete",
-)
-report = validate_device(device)
-report.raise_for_errors()
-```
-
-Technology and integration come from the known catalogue because XML alone does
-not establish material or internal module topology. No ratings, gate voltages,
-die counts or datasheet conditions are guessed from part numbers/comments.
-
-```bash
-aipe-devices import-wolfspeed data/raw/wolfspeed data/canonical --report docs/migration-report.json
-aipe-devices migrate-legacy v1 legacy/v1 /tmp/aipe-v1-migration
-aipe-devices migrate-legacy v2 legacy/v2 /tmp/aipe-v2-migration
-```
-
-Reimporting the official corpus verifies identical records; changed existing records
-raise instead of being overwritten. Review alternative legacy migrations in separate
-repositories. [Migration details](docs/migration.md) explain V2 information loss.
-
-## Measurement partners
-
-Partners receive a versioned `MeasurementRequest` and submit a `MeasurementPackage`
-manifest with runs, source/access metadata and artifact references. Protocol version,
-sample/lot identity, deskew, probe settings and processing recipes have dedicated
-types. No waveform arrays are embedded in device JSON.
-
-```bash
+```sh
 aipe-devices validate-package examples/measurement_package/manifest.json
-python scripts/generate_examples.py
+pytest -q
 ```
 
-The example is explicitly **synthetic**, not a device characterization claim. See
-[partner interface](docs/measurement.md), [example request](examples/measurement_request.json)
-and [JSON Schemas](docs/schemas/). Validation checks references, recipes, optional
-request coverage, artifact paths, sizes and checksums.
+Export, PLECS import, legacy migration, library import, the Device Explorer and the DAB loss-evaluation
+commands are described in [docs/usage.md](docs/usage.md).
 
-## Library import and Device Explorer
+## Project Information
 
-Phase 2 adds transient Excel/CSV/generic JSON import, explicit semantic mapping,
-coverage gaps and draft measurement plans, and a renderer-neutral Device Explorer.
-Canonical JSON takes the direct schema/engineering-validation path. Ambiguous fields
-and missing units remain unresolved until an explicit mapping is provided.
+- Version: 3.1.0 (`pyproject.toml`, package `aipe-devices`; domain schema 3.0.0)
+- Status: Alpha (`aipe.yaml`: status `active`, maturity `usable`; no measured evidence backs any loss
+  result)
+- Developer: Fulong Li
+- Organisation: Spirit Connect / AIPE Labs
+- License: not declared. No repository licence has been selected (`aipe.yaml`: `NOASSERTION`;
+  `pyproject.toml` ships [LICENSING.md](LICENSING.md) instead of an SPDX identifier). Manufacturer data in
+  `data/raw/` keeps Wolfspeed's rights; LICENSING.md covers code, data and historical-contribution rights.
 
-```mermaid
-flowchart TD
-    U[Excel / CSV / external JSON] --> I[Transient Library Importer]
-    I --> M[Semantic mapping and SI normalization]
-    M --> V[Validation and canonical candidate]
-    J[Canonical V3 JSON] --> V
-    V --> R[DeviceRepository: canonical JSON only]
-    V --> C[CoverageGapReport]
-    C --> P[Draft MeasurementRequest / TestPlanItem]
-    R --> S[VisualizationSpec]
-    S --> E[Device Explorer API]
-    A[Large scientific artifacts] --> AS[ArtifactStore references]
-    AS --> R
-```
+## Documentation
 
-```bash
-python -m pip install -e '.[library]'
-aipe-devices inspect-import examples/import/device_switching.xlsx --origin synthetic
-aipe-devices import-library examples/import/device_switching.xlsx --origin synthetic --output data/derived/demo-library
-aipe-devices explore --repository data/derived/demo-library --search DEMO-001
-aipe-devices explore --repository data/derived/demo-library --device synthetic_demo_001 --curves
-python examples/device_explorer_demo.py
-```
-
-The checked-in spreadsheets are tiny, explicitly synthetic tutorial fixtures.
-Production uploads are never copied into this repository; the caller's original
-file is left intact. Import provenance stores filename, hash, timestamp, version,
-and row/column conversion locators. Large raw scientific artifacts and the original
-Wolfspeed evidence retain their existing storage policy.
-
-See [Phase-2 guide and examples](docs/phase2.md),
-[implementation report](docs/phase2-report.md), and
-[generated example outputs](examples/phase2/). The Explorer is an API/CLI foundation;
-no production GUI, implicit interpolation, or laboratory execution is included.
-
-## DAB loss evaluation, screening and measurement requests
-
-Version 3.1.0 adds a working `LossEvaluator` for a dual-active-bridge switch position,
-N-D tensor interpolation with an explicit operating-envelope policy (PLECS guard rows
-dropped, extrapolation only on request and flagged), Cauer/Foster thermal services with
-an electro-thermal fixed point, reviewable datasheet candidate records under
-`data/candidates/`, an evidence-tiered device screening and prioritised laboratory
-measurement requests. All of it consumes actual converter stress from the AIPE waveform
-summary (or the HDF5 waveform) and reports every unavailable quantity instead of
-estimating it.
-
-```bash
-aipe-devices dab-losses --device wolfspeed_c3m0075120k --summary runs/dab-l1-nominal-ic/summary.json --switch S1 --tj 398.15 --vdc 800 --fsw 100e3 --rg-on 2 --rg-off 2 --rth-cs 0.1 --rth-sa 0.5
-aipe-devices dab-screen --summary runs/dab-l1-nominal-ic/summary.json --rth-cs 0.1 --rth-sa 0.5
-aipe-devices measurement-requests --device wolfspeed_c3m0075120k --summary runs/dab-l1-nominal-ic/summary.json --switch S1 --tj 398.15 --vdc 800 --fsw 100e3 --rg-on 2 --rg-off 2
-aipe-devices import-candidates data/candidates/sic-dab-shortlist-2026-10-21.yaml --output data/candidates/records
-```
-
-For the nominal 10 kW run (800 V -> 400 V, 100 kHz) the primary C3M0075120K position
-evaluates to 10.4 W conduction + 5.95 W turn-off at 125 degC with ZVS turn-on, and the
-secondary C3M0030090K position to 13.9 W + 5.8 W. Candidate records are unreviewed
-datasheet transcriptions linked to canonical records where both exist; they never enter
-`data/canonical/`. See [the DAB guide](docs/dab-loss-screening.md),
-[generated outputs](examples/dab/) and [candidate rules](data/candidates/README.md).
-
-## Limitations and roadmap
-
-- Source coverage is not engineering operating coverage. 900/1000 °C points remain
-  in 742 curves; 24 curves in six devices have duplicate temperature coordinates.
-  Reports expose both; interpolation rejects duplicate coordinates.
-- PLECS adapters cover this corpus's tabulated MOSFET-with-diode dialect, including
-  90 custom tables. Export requires explicit adapter bindings. Unknown custom-table
-  semantics are rejected. No formula execution or simulator/XSD validation is claimed.
-- Ratings, capacitance, gate charge, SOA, reliability and internal module connectivity
-  remain unknown in the canonical corpus; unreviewed datasheet candidates carry some of
-  them for 19 parts. Synthetic fixtures exercise other technology schemas only.
-- 1D and N-D linear interpolation, Cauer/Foster thermal responses and a DAB switch loss
-  evaluator are implemented on manufacturer model data; model fitting and generic
-  waveform processing remain extension contracts. No measured evidence backs any loss.
-- JSON persistence has atomic files and an exclusive writer lock. No distributed
-  database, cloud backend or authorization engine is included.
-- No PDF digitization, SPICE parsing, laboratory control, lifetime prediction,
-  distributor APIs or AI missing-data reconstruction.
-
-Future iterations should resolve source-axis ambiguities, add reviewed operating envelopes and
-multidimensional evaluations, validate exports in PLECS, implement DPT processing and
-artifact backends, and add measured/rating/capacitance datasets. See
-[architecture](docs/architecture.md), [DAB guide](docs/dab-loss-screening.md), [audit](docs/audit.md),
-[deliverables](docs/refactor-report.md), [breaking changes](CHANGELOG.md)
-and [licensing notes](LICENSING.md).
+- [Usage: query, export, import, migration, measurement packages, Device Explorer, DAB losses](docs/usage.md)
+- [Limitations and roadmap](docs/limitations.md)
+- [Architecture and invariants](docs/architecture.md) · [Core integration](docs/core-integration.md)
+- [DAB loss evaluation and screening](docs/dab-loss-screening.md) ·
+  [Phase-2 library import and Explorer](docs/phase2.md) ·
+  [Measurement partner interface](docs/measurement.md) · [Migration](docs/migration.md)
+- [JSON Schemas](docs/schemas/) · [Candidate records](data/candidates/README.md) · [Audit](docs/audit.md) ·
+  [Refactor report](docs/refactor-report.md)
+- [CHANGELOG.md](CHANGELOG.md) · [LICENSING.md](LICENSING.md) · [Capability manifest](aipe.yaml)
