@@ -1,0 +1,1197 @@
+{
+  "schema": "aipe-dab-loss-evaluation/0.1",
+  "result": {
+    "device_id": "wolfspeed_c3m0075120k",
+    "device_revision": 1,
+    "switch_id": "S1",
+    "operating_point": {
+      "junction_temperature": {
+        "value": 398.15,
+        "unit": "K"
+      },
+      "case_temperature": null,
+      "ambient_temperature": null,
+      "dc_bus_voltage": {
+        "value": 800.0,
+        "unit": "V"
+      },
+      "drain_current": null,
+      "collector_current": null,
+      "gate_voltage_on": {
+        "value": 15.0,
+        "unit": "V"
+      },
+      "gate_voltage_off": {
+        "value": -4.0,
+        "unit": "V"
+      },
+      "gate_resistance_on": {
+        "value": 2.0,
+        "unit": "Ohm"
+      },
+      "gate_resistance_off": {
+        "value": 2.0,
+        "unit": "Ohm"
+      },
+      "switching_frequency": {
+        "value": 100000.0,
+        "unit": "Hz"
+      },
+      "pulse_width": null,
+      "duty_cycle": null,
+      "gate_state": "unknown",
+      "extensions": []
+    },
+    "stress": {
+      "switch_id": "S1",
+      "bridge": "primary",
+      "source": "summary_metrics",
+      "periods": 4.0,
+      "switching_frequency": 100000.0,
+      "current_rms": 9.668959690918307,
+      "current_avg": 6.248403830159674,
+      "current_peak_forward": 14.30989804025739,
+      "current_peak_reverse": -14.25752371747512,
+      "conduction_fraction": 0.49978949528066835,
+      "forward_charge_per_cycle": 6.469821292729787e-05,
+      "reverse_charge_per_cycle": -2.22732781064642e-06,
+      "turn_off_currents": [
+        14.256048393379237,
+        14.256073440368558,
+        14.256098272725174,
+        14.256122892586681
+      ],
+      "turn_on_currents": [
+        7.999937483979576e-05,
+        7.999937484228974e-05,
+        7.999937484476234e-05,
+        7.999937484721379e-05
+      ],
+      "zvs_turn_on": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "blocking_voltages": [
+        800.0097299108231,
+        800.0097299358679,
+        800.0097299606981,
+        800.0097299853159
+      ],
+      "v_ds_max": 800.0142521814387,
+      "waveform": null,
+      "dataset_sha256": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873",
+      "summary_valid": true,
+      "notes": []
+    },
+    "components": [
+      {
+        "name": "conduction_loss_forward",
+        "value": null,
+        "unit": "W",
+        "available": false,
+        "method": "not separable from summary metrics",
+        "flags": [],
+        "energies_per_event": [],
+        "evidence": [
+          "wolfspeed_c3m0075120k:voltage_drop:2"
+        ]
+      },
+      {
+        "name": "conduction_loss_reverse",
+        "value": null,
+        "unit": "W",
+        "available": false,
+        "method": "not separable from summary metrics",
+        "flags": [],
+        "energies_per_event": [],
+        "evidence": [
+          "wolfspeed_c3m0075120k:voltage_drop:2"
+        ]
+      },
+      {
+        "name": "conduction_loss",
+        "value": 10.401561830202134,
+        "unit": "W",
+        "available": true,
+        "method": "rms_equivalent_secant_resistance: v(Tj, I_rms)/I_rms * I_rms^2 from the gate-on voltage_drop tensor",
+        "flags": [
+          "guard_rows_dropped:junction_temperature",
+          "method:rms_equivalent_resistance"
+        ],
+        "energies_per_event": [],
+        "evidence": [
+          "wolfspeed_c3m0075120k:voltage_drop:2"
+        ]
+      },
+      {
+        "name": "turn_off_loss",
+        "value": 5.953002324314374,
+        "unit": "W",
+        "available": true,
+        "method": "f_sw * sum(Eoff(Tj, Vdc, I_off) * k_rg) / periods; Rg: plecs_formula",
+        "flags": [
+          "rg_scaling:plecs_formula",
+          "guard_rows_dropped:junction_temperature",
+          "interpolated:current"
+        ],
+        "energies_per_event": [
+          5.95298817052552e-05,
+          5.952997660463904e-05,
+          5.9530070690810906e-05,
+          5.9530163971869835e-05
+        ],
+        "evidence": [
+          "wolfspeed_c3m0075120k:Eoff:1"
+        ]
+      },
+      {
+        "name": "turn_on_loss",
+        "value": 0.0,
+        "unit": "W",
+        "available": true,
+        "method": "ZVS on every event (waveform current condition): 0 W",
+        "flags": [
+          "zvs_turn_on_assumed_lossless"
+        ],
+        "energies_per_event": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "evidence": []
+      },
+      {
+        "name": "switching_loss",
+        "value": 5.953002324314374,
+        "unit": "W",
+        "available": true,
+        "method": "turn_off_loss + turn_on_loss",
+        "flags": [],
+        "energies_per_event": [],
+        "evidence": [
+          "wolfspeed_c3m0075120k:Eoff:1"
+        ]
+      },
+      {
+        "name": "total_loss",
+        "value": 16.35456415451651,
+        "unit": "W",
+        "available": true,
+        "method": "conduction_loss + turn_off_loss + turn_on_loss",
+        "flags": [],
+        "energies_per_event": [],
+        "evidence": [
+          "wolfspeed_c3m0075120k:Eoff:1",
+          "wolfspeed_c3m0075120k:voltage_drop:2"
+        ]
+      }
+    ],
+    "total_loss": 16.35456415451651,
+    "complete": true,
+    "records": [
+      {
+        "id": "wolfspeed_c3m0075120k:S1:conduction_loss",
+        "name": "conduction_loss",
+        "quantity": {
+          "value": 10.401561830202134,
+          "unit": "W"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "guard_rows_dropped:junction_temperature",
+            "method:rms_equivalent_resistance"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:turn_off_loss",
+        "name": "turn_off_loss",
+        "quantity": {
+          "value": 5.953002324314374,
+          "unit": "W"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "rg_scaling:plecs_formula",
+            "guard_rows_dropped:junction_temperature",
+            "interpolated:current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:turn_off_energy_per_period",
+        "name": "turn_off_energy_per_period",
+        "quantity": {
+          "value": 5.9530023243143746e-05,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "rg_scaling:plecs_formula",
+            "guard_rows_dropped:junction_temperature",
+            "interpolated:current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:turn_on_loss",
+        "name": "turn_on_loss",
+        "quantity": {
+          "value": 0.0,
+          "unit": "W"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "zvs_turn_on_assumed_lossless"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:turn_on_energy_per_period",
+        "name": "turn_on_energy_per_period",
+        "quantity": {
+          "value": 0.0,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "zvs_turn_on_assumed_lossless"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:switching_loss",
+        "name": "switching_loss",
+        "quantity": {
+          "value": 5.953002324314374,
+          "unit": "W"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "wolfspeed_c3m0075120k:S1:total_loss",
+        "name": "total_loss",
+        "quantity": {
+          "value": 16.35456415451651,
+          "unit": "W"
+        },
+        "provenance": {
+          "origin": "physics_derived",
+          "source_ids": [
+            "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+          ],
+          "lifecycle": "derived",
+          "dependencies": [
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:2",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:voltage_drop:3",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "wolfspeed_c3m0075120k:Eoff:1",
+              "version": "1",
+              "checksum": null
+            },
+            {
+              "id": "dab-switch-loss",
+              "version": "1.0",
+              "checksum": null
+            },
+            {
+              "id": "waveform-dataset:f1d558d08cd76917",
+              "version": "1",
+              "checksum": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873"
+            }
+          ],
+          "recipe_id": "dab-switch-loss",
+          "recipe_version": "1.0",
+          "freshness": "current",
+          "source_locators": []
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": {
+            "value": 100000.0,
+            "unit": "Hz"
+          },
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "coverage": [
+      {
+        "quantity": "conduction_voltage_drop_at_tj",
+        "status": "interpolated",
+        "detail": "junction_temperature 398.15 K between source points 298.15 and 423.15",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "conduction_waveform_integral",
+        "status": "approximated",
+        "detail": "Summary metrics only: conduction loss uses the secant on-resistance at I_rms; reverse-current intervals are assumed channel-conducted (synchronous rectification)",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "dead_time_body_diode_conduction",
+        "status": "not_evaluated",
+        "detail": "No gate timing in summary metrics; dead-time third-quadrant conduction is not evaluated",
+        "affects": [
+          "conduction_loss_reverse"
+        ]
+      },
+      {
+        "quantity": "rg_dependence_Eoff",
+        "status": "approximated",
+        "detail": "Manufacturer PLECS formula 'E/(0.0778)*(0.0001*(Rgoff^2)+0.0046*Rgoff+0.0778)' scales the table by 1.1234 at 2.0 Ohm",
+        "affects": [
+          "Eoff"
+        ]
+      },
+      {
+        "quantity": "Eoff_at_operating_point",
+        "status": "interpolated",
+        "detail": "current 14.256 A between source points 10.36 and 15.4",
+        "affects": [
+          "turn_off_loss"
+        ]
+      },
+      {
+        "quantity": "Eoff_at_operating_point",
+        "status": "interpolated",
+        "detail": "current 14.2561 A between source points 10.36 and 15.4",
+        "affects": [
+          "turn_off_loss"
+        ]
+      },
+      {
+        "quantity": "turn_on_loss_under_zvs",
+        "status": "approximated",
+        "detail": "All turn-on events satisfy the ZVS condition (waveform current condition); turn-on loss set to zero. Residual loss from incomplete Coss charge transfer needs Coss/Eoss/Qoss, which are unavailable",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "coss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "Eoss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "qoss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "vds_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "id_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "tj_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "rds_on_vs_tj",
+        "status": "approximated",
+        "detail": "No Rds(on) scalar records; on-resistance follows the voltage_drop tensor at the evaluated temperature",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "gate_voltage_dependence",
+        "status": "unavailable",
+        "detail": "Tensors carry no gate-voltage condition; the requested gate drive (15.0 V / -4.0 V) is not represented",
+        "affects": [
+          "conduction_loss",
+          "turn_off_loss",
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "reverse_recovery",
+        "status": "unavailable",
+        "detail": "No Qrr/Err evidence; diode recovery energy during hard commutation is not evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "measured_evidence",
+        "status": "unavailable",
+        "detail": "All tensors originate from manufacturer_model; no laboratory measurement backs the evaluated losses",
+        "affects": [
+          "conduction_loss",
+          "turn_off_loss",
+          "turn_on_loss"
+        ]
+      }
+    ],
+    "warnings": [],
+    "evidence_origins": {
+      "wolfspeed_c3m0075120k:voltage_drop:2": "manufacturer_model",
+      "wolfspeed_c3m0075120k:voltage_drop:3": "manufacturer_model",
+      "wolfspeed_c3m0075120k:Eoff:1": "manufacturer_model"
+    },
+    "recipe": {
+      "id": "dab-switch-loss",
+      "version": "1.0"
+    }
+  },
+  "thermal": {
+    "rth_junction_to_case": 1.0512000000000001,
+    "rth_case_to_sink": 0.1,
+    "rth_sink_to_ambient": 0.5,
+    "ambient_temperature": 313.15,
+    "steady_state_at_evaluated_loss": {
+      "id": "wolfspeed_c3m0075120k:S1:junction_temperature",
+      "name": "junction_temperature",
+      "quantity": {
+        "value": 340.15465633193764,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "physics_derived",
+        "source_ids": [
+          "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+        ],
+        "lifecycle": "derived",
+        "dependencies": [
+          {
+            "id": "wolfspeed_c3m0075120k:thermal:0",
+            "version": "1",
+            "checksum": null
+          },
+          {
+            "id": "steady-state-junction-temperature",
+            "version": "1.0",
+            "checksum": null
+          }
+        ],
+        "recipe_id": "steady-state-junction-temperature",
+        "recipe_version": "1.0",
+        "freshness": "current",
+        "source_locators": []
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 322.9627384927099,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "steady_state",
+          "user_supplied_case_to_sink_resistance"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    "electro_thermal_fixed_point": {
+      "converged": true,
+      "junction_temperature": 335.9553713972836,
+      "loss": 13.811392561339403,
+      "iterations": [
+        {
+          "iteration": 1,
+          "tj_in": 398.15,
+          "loss": 16.35456415451651,
+          "tj_out": 340.15465633193764,
+          "change": -57.99534366806233
+        },
+        {
+          "iteration": 2,
+          "tj_in": 357.55325943235636,
+          "loss": 14.677903688871261,
+          "tj_out": 337.3861545710642,
+          "change": -20.16710486129216
+        },
+        {
+          "iteration": 3,
+          "tj_in": 343.4362860294518,
+          "loss": 14.104197012093913,
+          "tj_out": 336.43885010636944,
+          "change": -6.997435923082378
+        },
+        {
+          "iteration": 4,
+          "tj_in": 338.5380808832941,
+          "loss": 13.911594040969891,
+          "tj_out": 336.12082408044944,
+          "change": -2.4172568028446904
+        },
+        {
+          "iteration": 5,
+          "tj_in": 336.84600112130283,
+          "loss": 13.845059549291033,
+          "tj_out": 336.01096232778934,
+          "change": -0.8350387935134904
+        },
+        {
+          "iteration": 6,
+          "tj_in": 336.2614739658434,
+          "loss": 13.822075279852573,
+          "tj_out": 335.97301070209255,
+          "change": -0.28846326375082754
+        },
+        {
+          "iteration": 7,
+          "tj_in": 336.0595496812178,
+          "loss": 13.814135388402434,
+          "tj_out": 335.95990035333006,
+          "change": -0.0996493278877324
+        },
+        {
+          "iteration": 8,
+          "tj_in": 335.9897951516964,
+          "loss": 13.811392561339403,
+          "tj_out": 335.9553713972836,
+          "change": -0.034423754412785
+        }
+      ],
+      "criterion": "|Tj_out - Tj_in| < 0.05 K",
+      "relaxation": 0.7,
+      "reason": null
+    },
+    "foster_equivalent": {
+      "id": "wolfspeed_c3m0075120k:thermal:0:foster",
+      "topology": "Foster",
+      "elements": [
+        {
+          "resistance": {
+            "value": 0.01363012820791663,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.0005067701687617651,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.037052734497717524,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.001834206293882266,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.5154451475711329,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.005299852286523523,
+            "unit": "J/K"
+          }
+        },
+        {
+          "resistance": {
+            "value": 0.4850719897232313,
+            "unit": "K/W"
+          },
+          "capacitance": {
+            "value": 0.3488522312975143,
+            "unit": "J/K"
+          }
+        }
+      ],
+      "provenance": {
+        "origin": "physics_derived",
+        "source_ids": [
+          "source:9eeef9a94f77c0ee82ebad416dae64ff1e798867f8c767bd39dcff227a193e84"
+        ],
+        "lifecycle": "derived",
+        "dependencies": [
+          {
+            "id": "wolfspeed_c3m0075120k:thermal:0",
+            "version": "1",
+            "checksum": null
+          },
+          {
+            "id": "cauer-to-foster-eigen",
+            "version": "1.0",
+            "checksum": null
+          }
+        ],
+        "recipe_id": "cauer-to-foster-eigen",
+        "recipe_version": "1.0",
+        "freshness": "current",
+        "source_locators": []
+      },
+      "from_node": "junction",
+      "to_node": "case"
+    }
+  }
+}

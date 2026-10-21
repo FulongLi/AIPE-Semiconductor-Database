@@ -1,0 +1,69 @@
+{
+  "candidate_id": "candidate_infineon_imza120r040m2h",
+  "manufacturer": "Infineon",
+  "part_number": "IMZA120R040M2H",
+  "package": "PG-TO247-4-U02",
+  "family": "CoolSiC G2",
+  "status": "active and preferred (product page)",
+  "description": null,
+  "datasheet": {
+    "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-imza120r040m2h-datasheet-en.pdf",
+    "revision": "Rev. 1.20",
+    "date": "2026-07-23",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/",
+  "models": {
+    "formats": [
+      "PLECS",
+      "SPICE"
+    ],
+    "availability": "PLECS model listed on the product page; SPICE per Infineon AN_2020_17; per-part file, licence text and login status not verified.",
+    "licence_note": "Gated documents need a myInfineon account; licence wording not read.",
+    "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qfr": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "capacitance.qoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "Qrr row (datasheet gives Qfr instead)",
+    "Eoss/Qoss test voltage (not transcribed)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -55.0,
+      "unit": "degC"
+    },
+    "short_circuit_withstand_time": {
+      "value": 2.0,
+      "unit": "us"
+    }
+  },
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

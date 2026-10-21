@@ -1,0 +1,833 @@
+{
+  "schema": "aipe-prioritised-measurement-request/0.1",
+  "request": {
+    "schema_version": "3.0.0",
+    "id": "request:dab:wolfspeed_c3m0030090k:S5",
+    "device_id": "wolfspeed_c3m0030090k",
+    "physical_sample_id": null,
+    "test_plan_items": [
+      {
+        "id": "static-iv-channel",
+        "protocol": {
+          "id": "AIPE-STATIC",
+          "version": "1.0",
+          "category": "static_conduction",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "on",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "drain_current",
+            "unit": "A",
+            "values": [
+              8.0,
+              16.0,
+              24.0,
+              33.0,
+              41.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              348.15,
+              398.15,
+              423.15,
+              448.15
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "voltage_drop"
+        ],
+        "repetitions": 3,
+        "notes": "Gate-on output characteristic over the actual current range of S5 (I_rms 19.7 A, peak 32.6 A); pulsed measurement to hold Tj.",
+        "requirements": [
+          "Pulsed drain current to keep self-heating below 1 K per point.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "rds-on-vs-tj",
+        "protocol": {
+          "id": "AIPE-STATIC",
+          "version": "1.0",
+          "category": "static_conduction",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 20.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "on",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              348.15,
+              398.15,
+              423.15,
+              448.15
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "rds_on"
+        ],
+        "repetitions": 3,
+        "notes": "On-resistance versus junction temperature at the RMS switch current; the record has no Rds(on) scalar and the evaluation at 125 degC relies on the voltage_drop tensor between manufacturer temperature points.",
+        "requirements": [
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "dpt-eoff-eon",
+        "protocol": {
+          "id": "AIPE-DPT",
+          "version": "1.0",
+          "category": "dpt",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "dc_bus_voltage",
+            "unit": "V",
+            "values": [
+              200.0,
+              300.0,
+              400.0,
+              440.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "drain_current",
+            "unit": "A",
+            "values": [
+              8.0,
+              16.0,
+              24.0,
+              33.0,
+              41.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "gate_resistance_on",
+            "unit": "Ohm",
+            "values": [
+              1.0,
+              2.0,
+              2.5,
+              4.7,
+              10.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "gate_resistance_off",
+            "unit": "Ohm",
+            "values": [
+              1.0,
+              2.0,
+              2.5,
+              4.7,
+              10.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              398.15,
+              423.15
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "Eon",
+          "Eoff",
+          "dv_dt",
+          "di_dt",
+          "Vds_peak"
+        ],
+        "repetitions": 5,
+        "notes": "Double-pulse Eoff/Eon around the actual commutation point of S5: 400 V, 32.5 A turn-off current, requested Rg 2.5 / 2.5 Ohm. The complementary device of the same type is the freewheeling element (DAB bridge leg).",
+        "requirements": [
+          "Same-type complementary switch as freewheeling device; record dead time and gate driver.",
+          "Deskew current and voltage probes; document integration windows per AIPE-DPT.",
+          "Double-pulse and static tests at DC-bus voltage involve lethal voltages and stored energy; a reviewed safety procedure, interlocks and discharge means are prerequisites."
+        ],
+        "draft": true
+      },
+      {
+        "id": "reverse-conduction-body-diode",
+        "protocol": {
+          "id": "AIPE-REVERSE",
+          "version": "1.0",
+          "category": "reverse_conduction",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "off",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "drain_current",
+            "unit": "A",
+            "values": [
+              -41.0,
+              -33.0,
+              -24.0,
+              -16.0,
+              -8.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              348.15,
+              398.15,
+              423.15,
+              448.15
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "voltage_drop"
+        ],
+        "repetitions": 3,
+        "notes": "Third-quadrant characteristic, gate off: body-diode/third-quadrant drop during dead time; negative drain current is source-to-drain.",
+        "requirements": [
+          "Pulsed measurement; record the gate bias used.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "reverse-conduction-synchronous",
+        "protocol": {
+          "id": "AIPE-REVERSE",
+          "version": "1.0",
+          "category": "reverse_conduction",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "on",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "drain_current",
+            "unit": "A",
+            "values": [
+              -41.0,
+              -33.0,
+              -24.0,
+              -16.0,
+              -8.0
+            ],
+            "range": null
+          },
+          {
+            "parameter": "junction_temperature",
+            "unit": "K",
+            "values": [
+              298.15,
+              348.15,
+              398.15,
+              423.15,
+              448.15
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "voltage_drop"
+        ],
+        "repetitions": 3,
+        "notes": "Third-quadrant characteristic, gate on: channel reverse conduction (synchronous rectification); negative drain current is source-to-drain.",
+        "requirements": [
+          "Pulsed measurement; record the gate bias used.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "coss-eoss",
+        "protocol": {
+          "id": "AIPE-CAP",
+          "version": "1.0",
+          "category": "capacitance",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "drain_source_voltage",
+            "unit": "V",
+            "values": [
+              20.0,
+              40.0,
+              60.0,
+              80.0,
+              100.0,
+              120.0,
+              140.0,
+              160.0,
+              180.0,
+              200.0,
+              220.0,
+              240.0,
+              260.0,
+              280.0,
+              300.0,
+              320.0,
+              340.0,
+              360.0,
+              380.0,
+              400.0,
+              420.0,
+              440.0
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "coss",
+          "Eoss",
+          "qoss"
+        ],
+        "repetitions": 3,
+        "notes": "Nonlinear output capacitance, stored energy and charge up to 110 % of the bus voltage for the charge-based ZVS check (current condition met: True) and the Coss-related turn-on residual.",
+        "requirements": [
+          "Small-signal C-V plus large-signal charge method; state both.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "zth-junction-case",
+        "protocol": {
+          "id": "AIPE-THERMAL",
+          "version": "1.0",
+          "category": "thermal",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "sweep_axes": [
+          {
+            "parameter": "pulse_width",
+            "unit": "s",
+            "values": [
+              0.00001,
+              0.00003,
+              0.0001,
+              0.0003,
+              0.001,
+              0.003,
+              0.01,
+              0.03,
+              0.1,
+              0.3,
+              1.0
+            ],
+            "range": null
+          }
+        ],
+        "requested_metrics": [
+          "thermal_impedance"
+        ],
+        "repetitions": 3,
+        "notes": "Transient thermal impedance junction-to-case to validate the manufacturer Cauer network (present) used for Tj; use a temperature-sensitive electrical parameter calibrated per sample.",
+        "requirements": [
+          "Controlled case temperature; report the TSEP calibration.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      },
+      {
+        "id": "package-thermal-interface",
+        "protocol": {
+          "id": "AIPE-THERMAL",
+          "version": "1.0",
+          "category": "thermal",
+          "definition": null
+        },
+        "fixed_conditions": {
+          "junction_temperature": null,
+          "case_temperature": {
+            "value": 348.15,
+            "unit": "K"
+          },
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "sweep_axes": [],
+        "requested_metrics": [
+          "rth_jc",
+          "rth_cs"
+        ],
+        "repetitions": 3,
+        "notes": "Steady-state junction-to-case and case-to-sink resistance with the intended thermal interface material and mounting force; the screening uses a user-supplied Rth(c-s).",
+        "requirements": [
+          "State TIM, mounting torque/force and heat-sink flatness.",
+          "No measurement is executed automatically; every item is a draft for laboratory review."
+        ],
+        "draft": true
+      }
+    ],
+    "access": {
+      "license": null,
+      "redistribution_allowed": null,
+      "commercial_use_allowed": null,
+      "visibility": "unknown",
+      "owner": null,
+      "category": "unknown"
+    }
+  },
+  "priorities": [
+    {
+      "item_id": "rds-on-vs-tj",
+      "engineering_question": "How does the on-resistance scale with junction temperature at the operating current?",
+      "expected_design_benefit": 0.706,
+      "benefit_basis": "conduction loss share; Rds(on)(Tj) drives the electro-thermal fixed point",
+      "current_uncertainty": 0.6,
+      "uncertainty_basis": "approximation of manufacturer model data, unmeasured",
+      "score": 0.4236,
+      "uncertainty_target": "rds_on +/-3 % (k=2) per temperature",
+      "rank": 1
+    },
+    {
+      "item_id": "coss-eoss",
+      "engineering_question": "Is the commutation charge available during the dead time sufficient for complete ZVS, and what residual turn-on loss remains?",
+      "expected_design_benefit": 0.4,
+      "benefit_basis": "ZVS current condition is met in the waveform but cannot be verified without Coss/Qoss; turn-on loss is assumed zero",
+      "current_uncertainty": 1.0,
+      "uncertainty_basis": "no evidence in the record",
+      "score": 0.4,
+      "uncertainty_target": "coss +/-5 %, Eoss/qoss +/-5 % (k=2)",
+      "rank": 2
+    },
+    {
+      "item_id": "static-iv-channel",
+      "engineering_question": "What is the channel voltage drop at the operating currents and temperatures?",
+      "expected_design_benefit": 0.706,
+      "benefit_basis": "conduction loss is 71% of the evaluated total",
+      "current_uncertainty": 0.45,
+      "uncertainty_basis": "manufacturer model interpolated between source points, unmeasured",
+      "score": 0.3177,
+      "uncertainty_target": "voltage_drop +/-2 % (k=2) per point",
+      "rank": 3
+    },
+    {
+      "item_id": "reverse-conduction-synchronous",
+      "engineering_question": "What is the reverse (source-to-drain) voltage drop with the gate off and on?",
+      "expected_design_benefit": 0.6764,
+      "benefit_basis": "conduction share times the reverse charge fraction 96% of the conducted charge (summary metrics cannot separate the reverse term)",
+      "current_uncertainty": 0.45,
+      "uncertainty_basis": "manufacturer model interpolated between source points, unmeasured",
+      "score": 0.3044,
+      "uncertainty_target": "voltage_drop +/-2 % (k=2) per point",
+      "rank": 4
+    },
+    {
+      "item_id": "package-thermal-interface",
+      "engineering_question": "What are the actual package and interface thermal resistances for the chosen mounting?",
+      "expected_design_benefit": 0.283,
+      "benefit_basis": "headroom 60.9 K to the design limit over a 85 K span; Rth(c-s) is a user assumption",
+      "current_uncertainty": 1.0,
+      "uncertainty_basis": "no evidence in the record",
+      "score": 0.283,
+      "uncertainty_target": "rth_jc, rth_cs +/-10 % (k=2)",
+      "rank": 5
+    },
+    {
+      "item_id": "reverse-conduction-body-diode",
+      "engineering_question": "What is the reverse (source-to-drain) voltage drop with the gate off and on?",
+      "expected_design_benefit": 0.2029,
+      "benefit_basis": "conduction share times the reverse charge fraction 96% of the conducted charge (summary metrics cannot separate the reverse term); dead-time body-diode intervals are a fraction of the reverse intervals",
+      "current_uncertainty": 0.9,
+      "uncertainty_basis": "term not evaluated",
+      "score": 0.1826,
+      "uncertainty_target": "voltage_drop +/-2 % (k=2) per point",
+      "rank": 6
+    },
+    {
+      "item_id": "dpt-eoff-eon",
+      "engineering_question": "What are the turn-off (and hard turn-on) energies at the actual bus voltage, commutation current, junction temperature and gate resistances?",
+      "expected_design_benefit": 0.294,
+      "benefit_basis": "switching loss is 29% of the evaluated total; gate-resistance dependence comes from a manufacturer formula or is absent",
+      "current_uncertainty": 0.6,
+      "uncertainty_basis": "approximation of manufacturer model data, unmeasured",
+      "score": 0.1764,
+      "uncertainty_target": "Eoff/Eon +/-5 % (k=2) per point; dv/dt +/-10 %",
+      "rank": 7
+    },
+    {
+      "item_id": "zth-junction-case",
+      "engineering_question": "Does the junction-to-case thermal impedance match the manufacturer network used for the junction-temperature estimate?",
+      "expected_design_benefit": 0.283,
+      "benefit_basis": "headroom 60.9 K to the design limit over a 85 K span",
+      "current_uncertainty": 0.6,
+      "uncertainty_basis": "approximation of manufacturer model data, unmeasured",
+      "score": 0.1698,
+      "uncertainty_target": "Zth(t) +/-10 % (k=2) per pulse width",
+      "rank": 8
+    }
+  ],
+  "context": {
+    "device_id": "wolfspeed_c3m0030090k",
+    "device_revision": 1,
+    "switch_id": "S5",
+    "operating_point": {
+      "junction_temperature": {
+        "value": 398.15,
+        "unit": "K"
+      },
+      "dc_bus_voltage": {
+        "value": 400.0,
+        "unit": "V"
+      },
+      "gate_voltage_on": {
+        "value": 15.0,
+        "unit": "V"
+      },
+      "gate_voltage_off": {
+        "value": -4.0,
+        "unit": "V"
+      },
+      "gate_resistance_on": {
+        "value": 2.5,
+        "unit": "Ohm"
+      },
+      "gate_resistance_off": {
+        "value": 2.5,
+        "unit": "Ohm"
+      },
+      "switching_frequency": {
+        "value": 100000.0,
+        "unit": "Hz"
+      },
+      "gate_state": "unknown",
+      "extensions": []
+    },
+    "loss_breakdown_W": {
+      "conduction_loss": 13.916127790824621,
+      "turn_off_loss": 5.794091316347992,
+      "turn_on_loss": 0.0,
+      "switching_loss": 5.794091316347992,
+      "total_loss": 19.710219107172612
+    },
+    "coverage": [
+      {
+        "quantity": "conduction_voltage_drop_at_tj",
+        "status": "interpolated",
+        "detail": "junction_temperature 398.15 K between source points 298.15 and 423.15",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "conduction_waveform_integral",
+        "status": "approximated",
+        "detail": "Summary metrics only: conduction loss uses the secant on-resistance at I_rms; reverse-current intervals are assumed channel-conducted (synchronous rectification)",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "dead_time_body_diode_conduction",
+        "status": "not_evaluated",
+        "detail": "No gate timing in summary metrics; dead-time third-quadrant conduction is not evaluated",
+        "affects": [
+          "conduction_loss_reverse"
+        ]
+      },
+      {
+        "quantity": "rg_dependence_Eoff",
+        "status": "approximated",
+        "detail": "Manufacturer PLECS formula 'E/(-8e-8*2.5^2+0.0238e-3*2.5+0.0264e-3)*(-8e-8*Rgoff^2+0.0238e-3*Rgoff+0.0264e-3)' scales the table by 1.0000 at 2.5 Ohm",
+        "affects": [
+          "Eoff"
+        ]
+      },
+      {
+        "quantity": "Eoff_at_operating_point",
+        "status": "interpolated",
+        "detail": "current 32.5156 A between source points 27.5 and 35",
+        "affects": [
+          "turn_off_loss"
+        ]
+      },
+      {
+        "quantity": "Eoff_at_operating_point",
+        "status": "interpolated",
+        "detail": "current 32.5155 A between source points 27.5 and 35",
+        "affects": [
+          "turn_off_loss"
+        ]
+      },
+      {
+        "quantity": "turn_on_loss_under_zvs",
+        "status": "approximated",
+        "detail": "All turn-on events satisfy the ZVS condition (waveform current condition); turn-on loss set to zero. Residual loss from incomplete Coss charge transfer needs Coss/Eoss/Qoss, which are unavailable",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "coss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "Eoss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "qoss",
+        "status": "unavailable",
+        "detail": "Not in the record; charge-based ZVS verification and Coss-related turn-on residuals cannot be evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "vds_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "id_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "tj_max",
+        "status": "unavailable",
+        "detail": "No rating record; voltage/current derating and junction limit checks need a datasheet or candidate record",
+        "affects": [
+          "suitability"
+        ]
+      },
+      {
+        "quantity": "rds_on_vs_tj",
+        "status": "approximated",
+        "detail": "No Rds(on) scalar records; on-resistance follows the voltage_drop tensor at the evaluated temperature",
+        "affects": [
+          "conduction_loss"
+        ]
+      },
+      {
+        "quantity": "gate_voltage_dependence",
+        "status": "unavailable",
+        "detail": "Tensors carry no gate-voltage condition; the requested gate drive (15.0 V / -4.0 V) is not represented",
+        "affects": [
+          "conduction_loss",
+          "turn_off_loss",
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "reverse_recovery",
+        "status": "unavailable",
+        "detail": "No Qrr/Err evidence; diode recovery energy during hard commutation is not evaluated",
+        "affects": [
+          "turn_on_loss"
+        ]
+      },
+      {
+        "quantity": "measured_evidence",
+        "status": "unavailable",
+        "detail": "All tensors originate from manufacturer_model; no laboratory measurement backs the evaluated losses",
+        "affects": [
+          "conduction_loss",
+          "turn_off_loss",
+          "turn_on_loss"
+        ]
+      }
+    ],
+    "waveform_dataset_sha256": "f1d558d08cd7691785ab0131f0743710ad28cbf6c6a8f7cb4f0e6deb549d4873",
+    "prioritisation": "score = expected_design_benefit * current_uncertainty"
+  },
+  "safety": [
+    "No measurement is executed automatically; every item is a draft for laboratory review.",
+    "Double-pulse and static tests at DC-bus voltage involve lethal voltages and stored energy; a reviewed safety procedure, interlocks and discharge means are prerequisites.",
+    "Junction-temperature sweeps above 150 degC need the datasheet maximum confirmed first."
+  ]
+}

@@ -108,7 +108,9 @@ changing domain types. The current interface accepts bytes, not streaming upload
 PLECS model references carry bindings: curve IDs, source scales, methods, formulas,
 variables and comments. Export rebuilds from canonical tensors, not V1 JSON or raw XML.
 Recognized four-axis expressions establish unit semantics; unknown custom tables are
-rejected. Missing legacy lookup tables prevent complete export. No formula is executed.
+rejected. Missing legacy lookup tables prevent complete export. Exporters never execute
+formulas; only the loss service evaluates the stored gate-resistance scaling expression,
+through a restricted arithmetic grammar that rejects `lookup()` and any other call.
 
 MATLAB export includes a V3 struct and lossless canonical JSON string, since MATLAB
 empty arrays cannot distinguish every null/empty case. The schema is independent of MAT.
@@ -119,7 +121,11 @@ Reliability types cover power/thermal cycling, HTRB/HTGB, short-circuit, avalanc
 aging, failure-rate and mission-profile metrics. MarketObservation is an independent
 time series with quantity/currency/stock/lead-time/source; prices are not device constants.
 
-Coverage, invalidation, bounded 1D interpolation, coverage comparison and thermal DC
-resistance are implemented. LossEvaluator, ModelFitter, WaveformProcessor, MarketRepository
-and datasheet/SPICE importers are contracts. No production solver, filtering, lifetime
-prediction or full module transient model is implied.
+Coverage, invalidation, bounded 1D and N-D interpolation with an explicit envelope
+policy, coverage comparison, Cauer/Foster thermal responses, an electro-thermal fixed
+point, a DAB switch-position `LossEvaluator`, a datasheet transcription importer for
+unreviewed candidates, evidence-tiered DAB screening and prioritised measurement requests
+are implemented (see `docs/dab-loss-screening.md`). ModelFitter, WaveformProcessor,
+MarketRepository and SPICE importers are contracts. No production solver, filtering,
+lifetime prediction or full module transient model is implied. Candidate records live in
+`data/candidates/` with `candidate_` IDs and never in the canonical corpus.

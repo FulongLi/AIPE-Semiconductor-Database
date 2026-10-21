@@ -1,0 +1,86 @@
+{
+  "candidate_id": "candidate_wolfspeed_c4ms047120k",
+  "manufacturer": "Wolfspeed",
+  "part_number": "C4MS047120K",
+  "package": "TO-247-4",
+  "family": "C4MS (Gen 4)",
+  "status": "Active",
+  "description": null,
+  "datasheet": {
+    "url": "https://assets.wolfspeed.com/uploads/2025/11/Wolfspeed_C4MS047120K_data_sheet.pdf",
+    "revision": "Rev. 2",
+    "date": "2025-12",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.wolfspeed.com/products/power/sic-mosfets/1200v-c4ms-discrete-silicon-carbide-mosfets/c4ms047120k/",
+  "models": {
+    "formats": [
+      "LTspice",
+      "PLECS",
+      "SpeedFit"
+    ],
+    "availability": "Listed on the manufacturer LTspice/PLECS models page; no login stated.",
+    "licence_note": "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction).",
+    "url": "https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qrr": "manufacturer_specified",
+    "reverse_conduction.trr": "manufacturer_specified",
+    "reverse_conduction.irrm": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "rth_jc maximum (not transcribed)",
+    "gate voltages for the Qg row (not transcribed)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -40.0,
+      "unit": "degC"
+    },
+    "vds_transient_max": {
+      "value": 1300.0,
+      "unit": "V"
+    }
+  },
+  "notes": [
+    "Switching test \"L 25 nH\" is printed without stating whether it is load or stray inductance."
+  ],
+  "canonical_link": {
+    "device_id": "wolfspeed_c4ms047120k",
+    "revision": 1,
+    "uri": "urn:aipe:semiconductor:wolfspeed_c4ms047120k:revision:1",
+    "provides": [
+      "conduction:voltage_drop tensor wolfspeed_c4ms047120k:voltage_drop:2",
+      "switching:Eon tensor wolfspeed_c4ms047120k:Eon:0",
+      "switching:Eoff tensor wolfspeed_c4ms047120k:Eoff:1",
+      "switching:Eon tensor wolfspeed_c4ms047120k:Eon:gate_resistance",
+      "switching:Eoff tensor wolfspeed_c4ms047120k:Eoff:gate_resistance",
+      "reverse_conduction:voltage_drop tensor wolfspeed_c4ms047120k:voltage_drop:3",
+      "thermal:Cauer network wolfspeed_c4ms047120k:thermal:0"
+    ]
+  },
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

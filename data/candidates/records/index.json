@@ -1,0 +1,240 @@
+{
+  "schema": "aipe-candidate-index/0.1",
+  "status": "unreviewed candidates; not canonical evidence",
+  "candidates": [
+    {
+      "candidate_id": "candidate_wolfspeed_c3m0040120k",
+      "manufacturer": "Wolfspeed",
+      "part_number": "C3M0040120K",
+      "records": 27,
+      "absent": [
+        "rth_jc maximum (datasheet prints the typical value only)",
+        "Eoss test voltage (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_c3m0040120k"
+    },
+    {
+      "candidate_id": "candidate_wolfspeed_c4ms047120k",
+      "manufacturer": "Wolfspeed",
+      "part_number": "C4MS047120K",
+      "records": 30,
+      "absent": [
+        "rth_jc maximum (not transcribed)",
+        "gate voltages for the Qg row (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_c4ms047120k"
+    },
+    {
+      "candidate_id": "candidate_wolfspeed_c3m0025065k",
+      "manufacturer": "Wolfspeed",
+      "part_number": "C3M0025065K",
+      "records": 27,
+      "absent": [
+        "rth_jc maximum (not transcribed)",
+        "gate voltages for the Qg row (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_c3m0025065k"
+    },
+    {
+      "candidate_id": "candidate_infineon_imza120r040m2h",
+      "manufacturer": "Infineon",
+      "part_number": "IMZA120R040M2H",
+      "records": 38,
+      "absent": [
+        "Qrr row (datasheet gives Qfr instead)",
+        "Eoss/Qoss test voltage (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_infineon_imbg120r040m2h",
+      "manufacturer": "Infineon",
+      "part_number": "IMBG120R040M2H",
+      "records": 37,
+      "absent": [
+        "rds_on maximum at 25 degC (not printed)",
+        "Qrr row (datasheet gives Qfr instead)",
+        "gate voltage for the ID row and Qg row conditions (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_infineon_imza65r027m1h",
+      "manufacturer": "Infineon",
+      "part_number": "IMZA65R027M1H",
+      "records": 24,
+      "absent": [
+        "Eon/Eoff (not tabulated; only td/tr/tf at 400 V, 38.3 A, RG ext 1.8 Ohm)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_onsemi_nth4l022n120m3s",
+      "manufacturer": "onsemi",
+      "part_number": "NTH4L022N120M3S",
+      "records": 24,
+      "absent": [
+        "Eoss (not tabulated)",
+        "Eon/Eoff at elevated junction temperature (25 degC row only)",
+        "rth_jc typical (max only)",
+        "distributor price (only an onsemi reference price of USD 10.0065 is shown on the product page; not a distributor quote)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_onsemi_nth4l023n065m3s",
+      "manufacturer": "onsemi",
+      "part_number": "NTH4L023N065M3S",
+      "records": 29,
+      "absent": [
+        "Eoss (not transcribed)",
+        "rth_jc statistic (typ/max not stated)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_microchip_msc040sma120b4",
+      "manufacturer": "Microchip",
+      "part_number": "MSC040SMA120B4",
+      "records": 26,
+      "absent": [
+        "rds_on at elevated temperature (normalised curve only, not tabulated)",
+        "Eoss/Qoss (curve only)",
+        "Eon/Eoff at elevated junction temperature (25 degC row only)",
+        "price (not retrieved; product page blocked)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_microchip_msc035sma070b4",
+      "manufacturer": "Microchip",
+      "part_number": "MSC035SMA070B4",
+      "records": 26,
+      "absent": [
+        "rds_on at elevated temperature (not tabulated)",
+        "Eoss/Qoss (not transcribed)",
+        "junction temperature of the Eon/Eoff row (not stated in the research note)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_rohm_sct4036kr",
+      "manufacturer": "ROHM",
+      "part_number": "SCT4036KR",
+      "records": 26,
+      "absent": [
+        "Eoss (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_rohm_sct4045dr",
+      "manufacturer": "ROHM",
+      "part_number": "SCT4045DR",
+      "records": 26,
+      "absent": [
+        "Eoss (not transcribed)",
+        "junction temperature of the Eon/Eoff row (not stated in the research note)",
+        "gate voltage of the VSD row (not stated)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_stmicroelectronics_sct040w120g3-4",
+      "manufacturer": "STMicroelectronics",
+      "part_number": "SCT040W120G3-4",
+      "records": 24,
+      "absent": [
+        "Eoss (not transcribed)",
+        "rth_jc statistic (typ/max not stated)",
+        "Eon/Eoff at junction temperature (printed at case temperature 25 degC only)",
+        "price (eStore out of stock, none displayed)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_stmicroelectronics_sct040w65g3-4",
+      "manufacturer": "STMicroelectronics",
+      "part_number": "SCT040W65G3-4",
+      "records": 24,
+      "absent": [
+        "simulation models (none listed)",
+        "Eoss (not transcribed)",
+        "rth_jc statistic (typ/max not stated)",
+        "junction temperature of the Eon/Eoff row (not stated in the research note)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_wolfspeed_cbb021m12fm3",
+      "manufacturer": "Wolfspeed",
+      "part_number": "CBB021M12FM3",
+      "records": 32,
+      "absent": [
+        "rth_jc (baseplate-less module; datasheet gives Rth(J-HS) with TIM instead)",
+        "Eoss (not transcribed)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_cbb021m12fm3"
+    },
+    {
+      "candidate_id": "candidate_infineon_ff45mr12w1m1_b11",
+      "manufacturer": "Infineon",
+      "part_number": "FF45MR12W1M1_B11",
+      "records": 2,
+      "absent": [
+        "datasheet (not retrievable)",
+        "id_max, tj_max, Eon/Eoff, capacitances, gate charge, VSD, thermal resistance (all not retrieved)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_onsemi_nxh020p120mnf1",
+      "manufacturer": "onsemi",
+      "part_number": "NXH020P120MNF1",
+      "records": 28,
+      "absent": [
+        "Qrr (not tabulated)",
+        "recommended gate voltages (only the +25/-15 V rating and the -5/18 V test condition are printed)",
+        "distributor price (only an onsemi reference price of USD 111.9437 is shown; not a distributor quote)"
+      ],
+      "canonical_link": null
+    },
+    {
+      "candidate_id": "candidate_wolfspeed_c3m0075120k",
+      "manufacturer": "Wolfspeed",
+      "part_number": "C3M0075120K",
+      "records": 4,
+      "absent": [
+        "Wolfspeed datasheet values (not transcribed; only TI-cited figures)",
+        "tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_c3m0075120k"
+    },
+    {
+      "candidate_id": "candidate_wolfspeed_c3m0030090k",
+      "manufacturer": "Wolfspeed",
+      "part_number": "C3M0030090K",
+      "records": 4,
+      "absent": [
+        "Wolfspeed datasheet values (not transcribed; only TI-cited figures)",
+        "tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)",
+        "price (not retrieved)"
+      ],
+      "canonical_link": "wolfspeed_c3m0030090k"
+    }
+  ]
+}

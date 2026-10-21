@@ -1,0 +1,1170 @@
+# Structured transcription of the AIPE 10 kW DAB SiC device shortlist (datasheet-sourced).
+# Reviewable candidate input for aipe_devices.importers.datasheet; NOT canonical evidence.
+# Every value below is transcribed as printed in the cited manufacturer document (or, for the
+# two TI reference-design parts, as cited by Texas Instruments). Nothing is estimated.
+schema: aipe-datasheet-transcription/0.1
+title: SiC MOSFET shortlist for the 10 kW DAB (800 V / 400 V, 100 kHz)
+collected_on: "2026-10-21"
+transcribed_from: repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md
+conventions:
+  - Values are transcribed as printed; units are the printed units and the importer converts to SI.
+  - Temperatures are printed in degC; the importer stores K. TC is case_temperature, TJ/Tvj is junction_temperature, THS is heatsink_temperature.
+  - VSD points are printed as positive source-drain voltages at a positive source current; the importer stores the canonical third-quadrant convention (negative drain current, negative voltage drop) and keeps the printed value in source locators.
+  - A printed single external gate resistance "RG" is stored as both gate_resistance_on and gate_resistance_off and flagged single_gate_resistance_printed.
+  - The symbol L in switching test conditions is stored as test_inductance; whether it is the load or stray inductance is only known when the datasheet says so.
+  - Conditions written once for a datasheet row (gate voltage, current, 25 degC) are carried to the row's typ/max variants and flagged conditions_inherited_from_row.
+  - absent lists quantities the datasheet does not print or that were not retrieved; they must stay absent, never estimated.
+  - basis is manufacturer_specified unless a value comes only from a product page (product_page) or a third-party document (third_party_cited).
+devices:
+  # ------------------------------------------------------------------ Wolfspeed discretes
+  - part_number: C3M0040120K
+    manufacturer: Wolfspeed
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4
+    family: C3M (Gen 3)
+    status: Active
+    product_page: https://www.wolfspeed.com/products/power/sic-mosfets/1200v-silicon-carbide-mosfets/c3m0040120k/
+    datasheet:
+      url: https://assets.wolfspeed.com/uploads/2023/08/Wolfspeed_C3M0040120K_data_sheet.pdf
+      revision: Rev. 03
+      date: 2024-09
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 66, unit: A, conditions: {case_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}}}
+        - {value: 48, unit: A, conditions: {case_temperature: {value: 100, unit: degC}, gate_voltage_on: {value: 15, unit: V}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 40, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.3, unit: A}}}
+        - {value: 53.5, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.3, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 68, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.3, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 99, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+      qgs: {value: 34, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+      qgd: {value: 28, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+    capacitance:
+      ciss: {value: 2900, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      coss: {value: 103, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      crss: {value: 5, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      eoss: {value: 60, unit: uJ, note: voltage condition not transcribed in the research note}
+    switching:
+      Eon:
+        - {value: 243, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 99, unit: uH}}, flags: [freewheeling:external_sic_schottky_diode]}
+        - {value: 611, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 99, unit: uH}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 104, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 99, unit: uH}}, flags: [freewheeling:external_sic_schottky_diode]}
+        - {value: 99, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 33.3, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 99, unit: uH}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 5.5, unit: V, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 20, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+        - {value: 4.9, unit: V, conditions: {junction_temperature: {value: 175, unit: degC}, source_current: {value: 20, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+      qrr: {value: 850, unit: nC, conditions: {drain_current: {value: 33.3, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 7725, unit: A/us}, junction_temperature: {value: 175, unit: degC}}, note: research note says verify against the PDF before use}
+      trr: {value: 17, unit: ns, conditions: {drain_current: {value: 33.3, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 7725, unit: A/us}, junction_temperature: {value: 175, unit: degC}}, note: research note says verify against the PDF before use}
+      irrm: {value: 79, unit: A, conditions: {drain_current: {value: 33.3, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 7725, unit: A/us}, junction_temperature: {value: 175, unit: degC}}, note: research note says verify against the PDF before use}
+    thermal:
+      rth_jc: {value: 0.46, unit: degC/W, statistic: typical}
+    gate_drive:
+      vgs_on_recommended: {value: 15, unit: V}
+      vgs_off_recommended: {value: -4, unit: V}
+      rg_internal: {value: 3.5, unit: Ohm}
+    models:
+      formats: [LTspice, PLECS, SpeedFit]
+      availability: Listed on the manufacturer LTspice/PLECS models page; no login stated.
+      licence_note: "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction)."
+      url: https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/
+    informational:
+      tj_min: {value: -40, unit: degC}
+    absent:
+      - rth_jc maximum (datasheet prints the typical value only)
+      - Eoss test voltage (not transcribed)
+      - price (not retrieved)
+    notes:
+      - Qrr/trr/IRRM row flagged by the research step as needing verification against the PDF.
+
+  - part_number: C4MS047120K
+    manufacturer: Wolfspeed
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4
+    family: C4MS (Gen 4)
+    status: Active
+    product_page: https://www.wolfspeed.com/products/power/sic-mosfets/1200v-c4ms-discrete-silicon-carbide-mosfets/c4ms047120k/
+    datasheet:
+      url: https://assets.wolfspeed.com/uploads/2025/11/Wolfspeed_C4MS047120K_data_sheet.pdf
+      revision: Rev. 2
+      date: 2025-12
+    ratings:
+      vds_max: {value: 1200, unit: V, note: 1300 V transient rating for less than 100 h is printed separately}
+      id_max:
+        - {value: 50, unit: A, conditions: {case_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}}}
+        - {value: 37, unit: A, conditions: {case_temperature: {value: 100, unit: degC}, gate_voltage_on: {value: 18, unit: V}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 47, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}}
+        - {value: 61, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 89, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 53, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 21, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 68, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}}}
+      qgs: {value: 18, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}}}
+      qgd: {value: 18, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}}}
+    capacitance:
+      ciss: {value: 1640, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      coss: {value: 57, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      crss: {value: 3, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      eoss: {value: 37, unit: uJ, conditions: {drain_source_voltage: {value: 800, unit: V}}, note: printed as 0-800 V}
+    switching:
+      Eon:
+        - {value: 216, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 2, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 25, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 242, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 2, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 25, unit: nH}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 28, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 2, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 25, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 30, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 2, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 25, unit: nH}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 5.2, unit: V, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 10.5, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+        - {value: 4.6, unit: V, conditions: {junction_temperature: {value: 175, unit: degC}, source_current: {value: 10.5, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+      qrr: {value: 449, unit: nC, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 12.6, unit: A/ns}, junction_temperature: {value: 175, unit: degC}}}
+      trr: {value: 12, unit: ns, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 12.6, unit: A/ns}, junction_temperature: {value: 175, unit: degC}}}
+      irrm: {value: 65, unit: A, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 12.6, unit: A/ns}, junction_temperature: {value: 175, unit: degC}}}
+    thermal:
+      rth_jc: {value: 0.62, unit: degC/W, statistic: typical}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended:
+        - {value: -5, unit: V, statistic: minimum}
+        - {value: 0, unit: V, statistic: maximum}
+      rg_internal: {value: 2.8, unit: Ohm}
+    models:
+      formats: [LTspice, PLECS, SpeedFit]
+      availability: Listed on the manufacturer LTspice/PLECS models page; no login stated.
+      licence_note: "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction)."
+      url: https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/
+    informational:
+      tj_min: {value: -40, unit: degC}
+      vds_transient_max: {value: 1300, unit: V}
+    absent:
+      - rth_jc maximum (not transcribed)
+      - gate voltages for the Qg row (not transcribed)
+      - price (not retrieved)
+    notes:
+      - Switching test "L 25 nH" is printed without stating whether it is load or stray inductance.
+
+  - part_number: C3M0025065K
+    manufacturer: Wolfspeed
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4
+    family: C3M (Gen 3)
+    status: Active
+    product_page: https://www.wolfspeed.com/products/power/sic-mosfets/650v-silicon-carbide-mosfets/c3m0025065k/
+    datasheet:
+      url: https://assets.wolfspeed.com/uploads/2024/01/Wolfspeed_C3M0025065K_data_sheet.pdf
+      revision: Rev. 03
+      date: 2024-09
+    ratings:
+      vds_max: {value: 650, unit: V}
+      id_max:
+        - {value: 97, unit: A, conditions: {case_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}}}
+        - {value: 70, unit: A, conditions: {case_temperature: {value: 100, unit: degC}, gate_voltage_on: {value: 15, unit: V}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 25, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.5, unit: A}}}
+        - {value: 34, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.5, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 33, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 33.5, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 112, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}}}
+      qgs: {value: 34, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}}}
+      qgd: {value: 33, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}}}
+    capacitance:
+      ciss: {value: 2980, unit: pF, conditions: {gate_voltage_off: {value: 0, unit: V}, measurement_frequency: {value: 1, unit: MHz}}, note: VDS printed as a 0-600 V sweep}
+      coss: {value: 178, unit: pF, conditions: {gate_voltage_off: {value: 0, unit: V}, measurement_frequency: {value: 1, unit: MHz}}, note: VDS printed as a 0-600 V sweep}
+      crss: {value: 12, unit: pF, conditions: {gate_voltage_off: {value: 0, unit: V}, measurement_frequency: {value: 1, unit: MHz}}, note: VDS printed as a 0-600 V sweep}
+      eoss: {value: 37, unit: uJ, conditions: {drain_source_voltage: {value: 600, unit: V}}}
+    switching:
+      Eon:
+        - {value: 121, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 59, unit: uH}}, flags: [freewheeling:body_diode]}
+        - {value: 73, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 59, unit: uH}}, flags: [freewheeling:external_sic_schottky_diode]}
+      Eoff:
+        - {value: 53, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 59, unit: uH}}, flags: [freewheeling:body_diode]}
+        - {value: 82, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 33.5, unit: A}, gate_resistance: {value: 2.5, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 59, unit: uH}}, flags: [freewheeling:external_sic_schottky_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 5.0, unit: V, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 16.8, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+        - {value: 4.5, unit: V, conditions: {junction_temperature: {value: 175, unit: degC}, source_current: {value: 16.8, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+      qrr: {value: 453, unit: nC, conditions: {drain_current: {value: 33.5, unit: A}, dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 745, unit: A/us}, junction_temperature: {value: 175, unit: degC}}}
+      trr: {value: 16, unit: ns, conditions: {drain_current: {value: 33.5, unit: A}, dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 745, unit: A/us}, junction_temperature: {value: 175, unit: degC}}}
+      irrm: {value: 54, unit: A, conditions: {drain_current: {value: 33.5, unit: A}, dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 745, unit: A/us}, junction_temperature: {value: 175, unit: degC}}}
+    thermal:
+      rth_jc: {value: 0.46, unit: degC/W, statistic: typical}
+    gate_drive:
+      vgs_on_recommended: {value: 15, unit: V}
+      vgs_off_recommended: {value: -4, unit: V}
+      rg_internal: {value: 1.3, unit: Ohm}
+    models:
+      formats: [LTspice, PLECS, SpeedFit]
+      availability: Listed on the manufacturer LTspice/PLECS models page; no login stated.
+      licence_note: "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction)."
+      url: https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/
+    informational:
+      tj_min: {value: -40, unit: degC}
+    absent:
+      - rth_jc maximum (not transcribed)
+      - gate voltages for the Qg row (not transcribed)
+      - price (not retrieved)
+
+  # ------------------------------------------------------------------ Infineon
+  - part_number: IMZA120R040M2H
+    manufacturer: Infineon
+    technology: SiC_MOSFET
+    integration: discrete
+    package: PG-TO247-4-U02
+    family: CoolSiC G2
+    status: active and preferred (product page)
+    product_page: https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/
+    datasheet:
+      url: https://www.infineon.com/assets/row/public/documents/24/49/infineon-imza120r040m2h-datasheet-en.pdf
+      revision: Rev. 1.20
+      date: "2026-07-23"
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 48, unit: A, conditions: {case_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}}}
+        - {value: 34, unit: A, conditions: {case_temperature: {value: 100, unit: degC}, gate_voltage_on: {value: 18, unit: V}}}
+      tj_max: {value: 175, unit: degC, note: 200 degC overload for at most 100 h is printed separately}
+    conduction:
+      rds_on:
+        - {value: 40, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 18, unit: A}}}
+        - {value: 51, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 18, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 49, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 18, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 66, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 18, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 81, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 18, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 94, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 18, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 39, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}}
+      qgs: {value: 8, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}, note: printed as QGS(pl)}
+      qgd: {value: 10, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}}
+    capacitance:
+      ciss: {value: 1310, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      coss: {value: 55, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      crss: {value: 5, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      eoss: {value: 23, unit: uJ, note: voltage condition not transcribed in the research note}
+      qoss: {value: 85, unit: nC, note: voltage condition not transcribed in the research note}
+    switching:
+      Eon:
+        - {value: 109, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 200, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 100, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 193, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 45, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 67, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 23, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 23, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 18, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 12, unit: nH}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 4.2, unit: V, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 18, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+        - {value: 5.5, unit: V, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 18, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+        - {value: 4.05, unit: V, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, source_current: {value: 18, unit: A}, gate_voltage_off: {value: 0, unit: V}}, flags: [conditions_inherited_from_row]}
+      qfr:
+        - {value: 0.16, unit: uC, conditions: {junction_temperature: {value: 25, unit: degC}}, note: includes QC}
+        - {value: 0.38, unit: uC, conditions: {junction_temperature: {value: 175, unit: degC}}, note: includes QC}
+    thermal:
+      rth_jc:
+        - {value: 0.53, unit: K/W, statistic: typical}
+        - {value: 0.69, unit: K/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended:
+        - {value: -5, unit: V, statistic: minimum}
+        - {value: 0, unit: V, statistic: maximum}
+      rg_internal: {value: 6.5, unit: Ohm}
+    models:
+      formats: [PLECS, SPICE]
+      availability: PLECS model listed on the product page; SPICE per Infineon AN_2020_17; per-part file, licence text and login status not verified.
+      licence_note: Gated documents need a myInfineon account; licence wording not read.
+      url: https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/
+    informational:
+      tj_min: {value: -55, unit: degC}
+      short_circuit_withstand_time: {value: 2, unit: us}
+    absent:
+      - Qrr row (datasheet gives Qfr instead)
+      - Eoss/Qoss test voltage (not transcribed)
+      - price (not retrieved)
+
+  - part_number: IMBG120R040M2H
+    manufacturer: Infineon
+    technology: SiC_MOSFET
+    integration: discrete
+    package: PG-TO263-7-U01 (D2PAK-7)
+    family: CoolSiC G2
+    status: active (product page)
+    product_page: https://www.infineon.com/part/IMBG120R040M2H
+    datasheet:
+      url: https://www.infineon.com/assets/row/public/documents/60/49/infineon-imbg120r040m2h-datasheet-en.pdf?fileId=8ac78c8c8d1b852e018d2200102020d0
+      revision: Rev. 1.50
+      date: "2026-07-23"
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 52, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 36, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC, note: 200 degC overload is printed separately}
+    conduction:
+      rds_on:
+        - {value: 39.6, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17.5, unit: A}}}
+        - {value: 49.4, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 17.5, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 81, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17.5, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 105, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17.5, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 94, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17.5, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 39, unit: nC, flags: [conditions_not_transcribed]}
+      qgs: {value: 8.5, unit: nC, flags: [conditions_not_transcribed], note: printed as QGS(pl)}
+      qgd: {value: 10.4, unit: nC, flags: [conditions_not_transcribed]}
+    capacitance:
+      ciss: {value: 1310, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      coss: {value: 55, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      crss: {value: 4.7, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      eoss: {value: 23, unit: uJ, note: voltage condition not transcribed in the research note}
+      qoss: {value: 85.2, unit: nC, note: voltage condition not transcribed in the research note}
+    switching:
+      Eon:
+        - {value: 113, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 222, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 129, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 277, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 24, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 35, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode_at_0V]}
+        - {value: 23, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode]}
+        - {value: 23, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 17.5, unit: A}, gate_resistance: {value: 2.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 175, unit: degC}, test_inductance: {value: 15, unit: nH}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 4.2, unit: V, statistic: typical, conditions: {source_current: {value: 17.5, unit: A}, junction_temperature: {value: 25, unit: degC}}, flags: [conditions_inherited_from_row]}
+        - {value: 5.5, unit: V, statistic: maximum, conditions: {source_current: {value: 17.5, unit: A}, junction_temperature: {value: 25, unit: degC}}, flags: [conditions_inherited_from_row]}
+        - {value: 4.05, unit: V, statistic: typical, conditions: {source_current: {value: 17.5, unit: A}, junction_temperature: {value: 175, unit: degC}}, flags: [conditions_inherited_from_row]}
+      qfr:
+        - {value: 0.57, unit: uC, conditions: {junction_temperature: {value: 25, unit: degC}}}
+        - {value: 0.73, unit: uC, conditions: {junction_temperature: {value: 175, unit: degC}}}
+    thermal:
+      rth_jc:
+        - {value: 0.46, unit: K/W, statistic: typical}
+        - {value: 0.6, unit: K/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended:
+        - {value: -5, unit: V, statistic: minimum}
+        - {value: 0, unit: V, statistic: maximum}
+      rg_internal: {value: 6.5, unit: Ohm}
+    models:
+      formats: [PLECS, SPICE]
+      availability: PLECS model listed on the product page; SPICE per Infineon AN_2020_17; per-part file, licence text and login status not verified.
+      licence_note: Gated documents need a myInfineon account; licence wording not read.
+      url: https://www.infineon.com/part/IMBG120R040M2H
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - rds_on maximum at 25 degC (not printed)
+      - Qrr row (datasheet gives Qfr instead)
+      - gate voltage for the ID row and Qg row conditions (not transcribed)
+      - price (not retrieved)
+
+  - part_number: IMZA65R027M1H
+    manufacturer: Infineon
+    technology: SiC_MOSFET
+    integration: discrete
+    package: PG-TO247-4
+    family: CoolSiC 650 V G1 (M1 trench)
+    status: indexed as "not for new design" (verify on the product page)
+    product_page: https://www.infineon.com/part/IMZA65R027M1H
+    datasheet:
+      url: https://www.infineon.com/dgdl/Infineon-IMZA65R027M1H-DataSheet-v02_00-EN.pdf?fileId=5546d4626f229553016f85d997f90532
+      revision: Rev. 2.2
+      date: "2025-01-20"
+    ratings:
+      vds_max: {value: 650, unit: V}
+      id_max:
+        - {value: 60, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 48, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 27, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 38.3, unit: A}}}
+        - {value: 34, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 38.3, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 38, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 38.3, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 63, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 38.3, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}}
+      qgs: {value: 17, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 38.3, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}, note: printed as QGS(pl)}
+      qgd: {value: 14, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 38.3, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}}
+    capacitance:
+      ciss: {value: 2131, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 250, unit: kHz}}}
+      crss: {value: 22, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 250, unit: kHz}}}
+      coss:
+        - {value: 244, unit: pF, statistic: typical, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 250, unit: kHz}}}
+        - {value: 317, unit: pF, statistic: maximum, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 250, unit: kHz}}}
+      eoss: {value: 22.2, unit: uJ, conditions: {drain_source_voltage: {value: 400, unit: V}}}
+      qoss: {value: 147, unit: nC, conditions: {drain_source_voltage: {value: 400, unit: V}}}
+    reverse_conduction:
+      vsd: {value: 4.0, unit: V, conditions: {source_current: {value: 38.3, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+      qfr: {value: 239, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 1000, unit: A/us}}, note: includes Qoss}
+      tfr: {value: 102, unit: ns, conditions: {dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 1000, unit: A/us}}}
+      ifrm: {value: 10.6, unit: A, conditions: {dc_bus_voltage: {value: 400, unit: V}, di_dt: {value: 1000, unit: A/us}}}
+    thermal:
+      rth_jc: {value: 0.66, unit: degC/W, statistic: maximum, note: value read from the max column}
+    gate_drive:
+      vgs_on_recommended: {value: 18, unit: V}
+      vgs_off_recommended: {value: 0, unit: V}
+      rg_internal: {value: 3.0, unit: Ohm}
+    models:
+      formats: [PLECS, PSpice]
+      availability: PLECS model listed; PSpice L0/L1/L3 models mentioned in the Infineon community forum; per-part file not verified.
+      licence_note: Licence wording not read.
+      url: https://www.infineon.com/part/IMZA65R027M1H
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - Eon/Eoff (not tabulated; only td/tr/tf at 400 V, 38.3 A, RG ext 1.8 Ohm)
+      - price (not retrieved)
+    notes:
+      - Product page indexed as "not for new design"; verify before shortlisting.
+
+  # ------------------------------------------------------------------ onsemi
+  - part_number: NTH4L022N120M3S
+    manufacturer: onsemi
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4L
+    family: EliteSiC M3S (planar)
+    status: active (product page)
+    product_page: https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l022n120m3s
+    datasheet:
+      url: https://www.onsemi.com/pdf/datasheet/nth4l022n120m3s-d.pdf
+      revision: Rev. 9
+      date: 2024-09
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 89, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 62, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 22, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 40, unit: A}}}
+        - {value: 30, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 40, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 44, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 40, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 137, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+      qgs: {value: 15, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+      qgd: {value: 34, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+    capacitance:
+      ciss: {value: 3175, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 146, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 14, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+    switching:
+      Eon:
+        - {value: 490, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_resistance: {value: 4.5, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 221, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_resistance: {value: 4.5, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd: {value: 4.5, unit: V, conditions: {source_current: {value: 40, unit: A}, gate_voltage_off: {value: -3, unit: V}}}
+      qrr: {value: 138, unit: nC, conditions: {drain_current: {value: 40, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+      trr: {value: 22, unit: ns, conditions: {drain_current: {value: 40, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+      irrm: {value: 13, unit: A, conditions: {drain_current: {value: 40, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+    thermal:
+      rth_jc: {value: 0.43, unit: degC/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended: {value: 18, unit: V}
+      vgs_off_recommended:
+        - {value: -5, unit: V, statistic: minimum}
+        - {value: 0, unit: V, statistic: maximum}
+      rg_internal: {value: 1.5, unit: Ohm}
+    models:
+      formats: [PLECS, SPICE]
+      availability: PLECS Model Generator and Elite Power Simulator require a MyON login; SPICE ZIP published per AND90315 on the product page; login requirement and licence text not confirmed.
+      licence_note: Licence text not confirmed.
+      url: https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l022n120m3s
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - Eoss (not tabulated)
+      - Eon/Eoff at elevated junction temperature (25 degC row only)
+      - rth_jc typical (max only)
+      - distributor price (only an onsemi reference price of USD 10.0065 is shown on the product page; not a distributor quote)
+
+  - part_number: NTH4L023N065M3S
+    manufacturer: onsemi
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4L
+    family: EliteSiC M3S
+    status: active (product page)
+    product_page: https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l023n065m3s
+    datasheet:
+      url: https://www.onsemi.com/pdf/datasheet/nth4l023n065m3s-d.pdf
+      revision: Rev. 10
+      date: 2026-09
+    ratings:
+      vds_max: {value: 650, unit: V}
+      id_max:
+        - {value: 67, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 47, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 23, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}}
+        - {value: 33, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 34, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 29, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 69, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+      qgs: {value: 19, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+      qgd: {value: 18, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}}}
+    capacitance:
+      ciss: {value: 1952, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 153, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 13, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+    switching:
+      Eon:
+        - {value: 51, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 4.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+        - {value: 51, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 4.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 175, unit: degC}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 29, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 4.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+        - {value: 45, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 4.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 175, unit: degC}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 4.5, unit: V, statistic: typical, conditions: {source_current: {value: 20, unit: A}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [conditions_inherited_from_row]}
+        - {value: 6.0, unit: V, statistic: maximum, conditions: {source_current: {value: 20, unit: A}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [conditions_inherited_from_row]}
+        - {value: 4.2, unit: V, statistic: typical, conditions: {source_current: {value: 20, unit: A}, gate_voltage_off: {value: -3, unit: V}, junction_temperature: {value: 175, unit: degC}}, flags: [conditions_inherited_from_row]}
+      qrr: {value: 97, unit: nC, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+      trr: {value: 19, unit: ns, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+      irrm: {value: 11, unit: A, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+    thermal:
+      rth_jc: {value: 0.61, unit: degC/W}
+    gate_drive:
+      vgs_on_recommended: {value: 18, unit: V}
+      vgs_off_recommended:
+        - {value: -5, unit: V, statistic: minimum}
+        - {value: 0, unit: V, statistic: maximum}
+      rg_internal: {value: 4.0, unit: Ohm}
+    models:
+      formats: [PLECS, SPICE]
+      availability: PLECS Model Generator and Elite Power Simulator require a MyON login; SPICE ZIP published per AND90315 on the product page; login requirement and licence text not confirmed.
+      licence_note: Licence text not confirmed.
+      url: https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l023n065m3s
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - Eoss (not transcribed)
+      - rth_jc statistic (typ/max not stated)
+      - price (not retrieved)
+
+  # ------------------------------------------------------------------ Microchip
+  - part_number: MSC040SMA120B4
+    manufacturer: Microchip
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4 (source sense)
+    family: mSiC
+    status: product page returned HTTP 403 to automated fetch
+    datasheet:
+      url: https://ww1.microchip.com/downloads/aemDocuments/documents/sic/ProductDocuments/DataSheets/MSC040SMA120B4-SiC-MOSFET-Datasheet.pdf
+      revision: DS00005283A
+      date: "2024"
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 71, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 50, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 40, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 40, unit: A}}}
+        - {value: 50, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 40, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 45, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 40, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 137, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgs: {value: 29, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgd: {value: 31, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+    capacitance:
+      ciss: {value: 1962, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+      coss: {value: 164, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+      crss: {value: 11, unit: pF, conditions: {drain_source_voltage: {value: 1000, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+    switching:
+      Eon:
+        - {value: 464, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance: {value: 8, unit: Ohm}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+      Eoff:
+        - {value: 149, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance: {value: 8, unit: Ohm}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}}, flags: [freewheeling:body_diode]}
+    reverse_conduction:
+      vsd:
+        - {value: 3.9, unit: V, conditions: {source_current: {value: 40, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+        - {value: 4.1, unit: V, statistic: typical, conditions: {source_current: {value: 40, unit: A}, gate_voltage_off: {value: -5, unit: V}}, flags: [conditions_inherited_from_row]}
+        - {value: 5.0, unit: V, statistic: maximum, conditions: {source_current: {value: 40, unit: A}, gate_voltage_off: {value: -5, unit: V}}, flags: [conditions_inherited_from_row]}
+      qrr: {value: 358, unit: nC, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: -4500, unit: A/us}}}
+      trr: {value: 28, unit: ns, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: -4500, unit: A/us}}}
+      irrm: {value: 30, unit: A, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: -4500, unit: A/us}}}
+    thermal:
+      rth_jc:
+        - {value: 0.31, unit: degC/W, statistic: typical}
+        - {value: 0.4, unit: degC/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended: {value: 20, unit: V}
+      vgs_off_recommended: {value: -5, unit: V}
+      rg_internal: {value: 1.2, unit: Ohm, note: printed as gate ESR}
+    models:
+      formats: [SPICE, PLECS]
+      availability: Provided after a licence agreement form; automated fetch blocked (HTTP 403); licence wording not read. Microchip support states it cannot support LTspice due to Analog Devices restrictions.
+      licence_note: Licence agreement form required; wording not read.
+      url: https://www.microchip.com/en-us/products/power-management/silicon-carbide-sic-devices-and-power-modules/design-resources/sic-spice-and-plecs-component-models-license-agreement
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - rds_on at elevated temperature (normalised curve only, not tabulated)
+      - Eoss/Qoss (curve only)
+      - Eon/Eoff at elevated junction temperature (25 degC row only)
+      - price (not retrieved; product page blocked)
+
+  - part_number: MSC035SMA070B4
+    manufacturer: Microchip
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4
+    family: mSiC
+    status: product page not retrieved (site blocked automated fetch)
+    datasheet:
+      url: https://ww1.microchip.com/downloads/aemDocuments/documents/sic/ProductDocuments/DataSheets/MSC035SMA070B4-SiC-MOSFET-Datasheet.pdf
+      revision: DS00005333A
+      date: "2024"
+    ratings:
+      vds_max: {value: 700, unit: V}
+      id_max:
+        - {value: 75, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 53, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 35, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 30, unit: A}}}
+        - {value: 44, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 40, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 93, unit: nC, conditions: {dc_bus_voltage: {value: 470, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgs: {value: 25, unit: nC, conditions: {dc_bus_voltage: {value: 470, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgd: {value: 15, unit: nC, conditions: {dc_bus_voltage: {value: 470, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+    capacitance:
+      ciss: {value: 1806, unit: pF, conditions: {drain_source_voltage: {value: 700, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+      coss: {value: 220, unit: pF, conditions: {drain_source_voltage: {value: 700, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+      crss: {value: 17, unit: pF, conditions: {drain_source_voltage: {value: 700, unit: V}, measurement_frequency: {value: 200, unit: kHz}}}
+    switching:
+      Eon:
+        - {value: 159, unit: uJ, conditions: {dc_bus_voltage: {value: 470, unit: V}, drain_current: {value: 40, unit: A}, gate_resistance: {value: 4, unit: Ohm}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}, flags: [freewheeling:body_diode, junction_temperature_not_stated]}
+      Eoff:
+        - {value: 54, unit: uJ, conditions: {dc_bus_voltage: {value: 470, unit: V}, drain_current: {value: 40, unit: A}, gate_resistance: {value: 4, unit: Ohm}, gate_voltage_on: {value: 20, unit: V}, gate_voltage_off: {value: -5, unit: V}}, flags: [freewheeling:body_diode, junction_temperature_not_stated]}
+    reverse_conduction:
+      vsd:
+        - {value: 3.7, unit: V, conditions: {source_current: {value: 30, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+        - {value: 3.9, unit: V, statistic: typical, conditions: {source_current: {value: 30, unit: A}, gate_voltage_off: {value: -5, unit: V}}, flags: [conditions_inherited_from_row]}
+        - {value: 5.0, unit: V, statistic: maximum, conditions: {source_current: {value: 30, unit: A}, gate_voltage_off: {value: -5, unit: V}}, flags: [conditions_inherited_from_row]}
+      qrr: {value: 425, unit: nC, conditions: {drain_current: {value: 40, unit: A}, dc_bus_voltage: {value: 470, unit: V}, di_dt: {value: -9800, unit: A/us}}}
+      trr: {value: 14, unit: ns, conditions: {drain_current: {value: 40, unit: A}, dc_bus_voltage: {value: 470, unit: V}, di_dt: {value: -9800, unit: A/us}}}
+      irrm: {value: 51, unit: A, conditions: {drain_current: {value: 40, unit: A}, dc_bus_voltage: {value: 470, unit: V}, di_dt: {value: -9800, unit: A/us}}}
+    thermal:
+      rth_jc:
+        - {value: 0.38, unit: degC/W, statistic: typical}
+        - {value: 0.49, unit: degC/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended: {value: 20, unit: V}
+      vgs_off_recommended: {value: -5, unit: V}
+      rg_internal: {value: 1.13, unit: Ohm, note: printed as gate ESR}
+    models:
+      formats: [SPICE, PLECS]
+      availability: Provided after a licence agreement form; automated fetch blocked (HTTP 403); licence wording not read.
+      licence_note: Licence agreement form required; wording not read.
+      url: https://www.microchip.com/en-us/products/power-management/silicon-carbide-sic-devices-and-power-modules/design-resources/sic-spice-and-plecs-component-models-license-agreement
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - rds_on at elevated temperature (not tabulated)
+      - Eoss/Qoss (not transcribed)
+      - junction temperature of the Eon/Eoff row (not stated in the research note)
+      - price (not retrieved)
+
+  # ------------------------------------------------------------------ ROHM
+  - part_number: SCT4036KR
+    manufacturer: ROHM
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4L
+    family: 4th generation trench
+    status: Recommended (8-year longevity programme)
+    product_page: https://www.rohm.com/products/sic-power-devices/sic-mosfet/sct4036kr-product
+    datasheet:
+      url: https://fscdn.rohm.com/en/products/databook/datasheet/discrete/sic/mosfet/sct4036kr-e.pdf
+      revision: Rev.005
+      date: "2024-09-09"
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 43, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 30, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 36, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}}
+        - {value: 47, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 72, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 21, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 91, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+      qgs: {value: 20, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+      qgd: {value: 24, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+    capacitance:
+      ciss: {value: 2335, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 70, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 5, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      co_er: {value: 84, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}}}
+    switching:
+      Eon:
+        - {value: 239, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 3.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 250, unit: uH}}, flags: [includes_diode_recovery]}
+      Eoff:
+        - {value: 26, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 21, unit: A}, gate_resistance: {value: 3.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 250, unit: uH}}}
+    reverse_conduction:
+      vsd: {value: 3.3, unit: V, conditions: {source_current: {value: 21, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+      qrr: {value: 140, unit: nC, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 3700, unit: A/us}}}
+      trr: {value: 9.2, unit: ns, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 3700, unit: A/us}}}
+      irrm: {value: 31, unit: A, conditions: {drain_current: {value: 21, unit: A}, dc_bus_voltage: {value: 800, unit: V}, di_dt: {value: 3700, unit: A/us}}}
+    thermal:
+      rth_jc:
+        - {value: 0.65, unit: K/W, statistic: typical}
+        - {value: 0.85, unit: K/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended: {value: 0, unit: V}
+      rg_internal: {value: 1, unit: Ohm}
+    models:
+      formats: [PSIM, LTspice, PLECS]
+      availability: PSIM model confirmed; LTspice/PLECS models offered via the product page (not seen); unencrypted SPICE on request; no login stated.
+      licence_note: ROHM Design Models page terms; wording not transcribed.
+      url: https://www.rohm.com/support/design-model
+    absent:
+      - Eoss (not transcribed)
+      - price (not retrieved)
+    notes:
+      - Eon includes the diode recovery energy as printed.
+
+  - part_number: SCT4045DR
+    manufacturer: ROHM
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4L
+    family: 4th generation trench
+    status: active (product page)
+    product_page: https://www.rohm.com/products/sic-power-devices/sic-mosfet/sct4045dr-product
+    datasheet:
+      url: https://fscdn.rohm.com/en/products/databook/datasheet/discrete/sic/mosfet/sct4045dr-e.pdf
+      revision: Rev.005
+      date: "2024-09-09"
+    ratings:
+      vds_max: {value: 750, unit: V}
+      id_max:
+        - {value: 34, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}}
+        - {value: 24, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}}
+      tj_max: {value: 175, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 45, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17, unit: A}}}
+        - {value: 59, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 77, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 17, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 63, unit: nC, conditions: {dc_bus_voltage: {value: 500, unit: V}, drain_current: {value: 17, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+      qgs: {value: 14, unit: nC, conditions: {dc_bus_voltage: {value: 500, unit: V}, drain_current: {value: 17, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+      qgd: {value: 19, unit: nC, conditions: {dc_bus_voltage: {value: 500, unit: V}, drain_current: {value: 17, unit: A}, gate_voltage_on: {value: 18, unit: V}}}
+    capacitance:
+      ciss: {value: 1460, unit: pF, conditions: {drain_source_voltage: {value: 500, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 69, unit: pF, conditions: {drain_source_voltage: {value: 500, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 5, unit: pF, conditions: {drain_source_voltage: {value: 500, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      co_er: {value: 90, unit: pF, conditions: {drain_source_voltage: {value: 500, unit: V}}}
+    switching:
+      Eon:
+        - {value: 112, unit: uJ, conditions: {dc_bus_voltage: {value: 500, unit: V}, drain_current: {value: 17, unit: A}, gate_resistance: {value: 3.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}, flags: [junction_temperature_not_stated]}
+      Eoff:
+        - {value: 17, unit: uJ, conditions: {dc_bus_voltage: {value: 500, unit: V}, drain_current: {value: 17, unit: A}, gate_resistance: {value: 3.3, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: 0, unit: V}}, flags: [junction_temperature_not_stated]}
+    reverse_conduction:
+      vsd: {value: 3.3, unit: V, conditions: {source_current: {value: 17, unit: A}}}
+      qrr: {value: 89, unit: nC, conditions: {drain_current: {value: 17, unit: A}, dc_bus_voltage: {value: 500, unit: V}, di_dt: {value: 2900, unit: A/us}}}
+      trr: {value: 9.3, unit: ns, conditions: {drain_current: {value: 17, unit: A}, dc_bus_voltage: {value: 500, unit: V}, di_dt: {value: 2900, unit: A/us}}}
+      irrm: {value: 19, unit: A, conditions: {drain_current: {value: 17, unit: A}, dc_bus_voltage: {value: 500, unit: V}, di_dt: {value: 2900, unit: A/us}}}
+    thermal:
+      rth_jc:
+        - {value: 0.98, unit: K/W, statistic: typical}
+        - {value: 1.3, unit: K/W, statistic: maximum}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended: {value: 0, unit: V}
+      rg_internal: {value: 4, unit: Ohm}
+    models:
+      formats: [PSIM, LTspice, PLECS]
+      availability: PSIM model confirmed; LTspice/PLECS models offered via the product page (not seen); unencrypted SPICE on request; no login stated.
+      licence_note: ROHM Design Models page terms; wording not transcribed.
+      url: https://www.rohm.com/support/design-model
+    absent:
+      - Eoss (not transcribed)
+      - junction temperature of the Eon/Eoff row (not stated in the research note)
+      - gate voltage of the VSD row (not stated)
+      - price (not retrieved)
+
+  # ------------------------------------------------------------------ STMicroelectronics
+  - part_number: SCT040W120G3-4
+    manufacturer: STMicroelectronics
+    technology: SiC_MOSFET
+    integration: discrete
+    package: HiP247-4
+    family: 3rd generation
+    status: Active (eStore out of stock, no price displayed)
+    product_page: https://www.st.com/en/power-transistors/sct040w120g3-4.html
+    datasheet:
+      url: https://www.st.com/resource/en/datasheet/sct040w120g3-4.pdf
+      revision: DS14406 Rev 1
+      date: 2023-08
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max:
+        - {value: 40, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}, note: package-limited}
+        - {value: 40, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}, note: package-limited}
+      tj_max: {value: 200, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 40, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 16, unit: A}}}
+        - {value: 54, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 16, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 49, unit: mOhm, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 16, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 77, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 200, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 16, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 56, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 16, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgs: {value: 17, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 16, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgd: {value: 19, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 16, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+    capacitance:
+      ciss: {value: 1329, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 78, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 10, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+    switching:
+      Eon:
+        - {value: 273, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 16, unit: A}, gate_resistance: {value: 12, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, case_temperature: {value: 25, unit: degC}}}
+      Eoff:
+        - {value: 100, unit: uJ, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 16, unit: A}, gate_resistance: {value: 12, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, case_temperature: {value: 25, unit: degC}}}
+    reverse_conduction:
+      vsd: {value: 2.6, unit: V, conditions: {source_current: {value: 16, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+      qrr: {value: 100, unit: nC, conditions: {drain_current: {value: 16, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+      trr: {value: 16, unit: ns, conditions: {drain_current: {value: 16, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+      irrm: {value: 11, unit: A, conditions: {drain_current: {value: 16, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 800, unit: V}}}
+    thermal:
+      rth_jc: {value: 0.56, unit: degC/W}
+    gate_drive:
+      vgs_on_recommended: {value: 18, unit: V}
+      vgs_off_recommended: {value: -5, unit: V}
+      rg_internal: {value: 1.4, unit: Ohm}
+    models:
+      formats: [SPICE]
+      availability: SPICE model ZIP v1.0 dated 24 Aug 2023 listed on the product page.
+      licence_note: Licence wording not seen.
+      url: https://www.st.com/en/power-transistors/sct040w120g3-4.html
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - Eoss (not transcribed)
+      - rth_jc statistic (typ/max not stated)
+      - Eon/Eoff at junction temperature (printed at case temperature 25 degC only)
+      - price (eStore out of stock, none displayed)
+
+  - part_number: SCT040W65G3-4
+    manufacturer: STMicroelectronics
+    technology: SiC_MOSFET
+    integration: discrete
+    package: HiP247-4
+    family: 3rd generation
+    status: Active
+    product_page: https://www.st.com/en/power-transistors/sct040w65g3-4.html
+    datasheet:
+      url: https://www.st.com/resource/en/datasheet/sct040w65g3-4.pdf
+      revision: DS14582 Rev 1
+      date: 2024-01
+    ratings:
+      vds_max: {value: 650, unit: V}
+      id_max:
+        - {value: 30, unit: A, conditions: {case_temperature: {value: 25, unit: degC}}, note: package-limited}
+        - {value: 30, unit: A, conditions: {case_temperature: {value: 100, unit: degC}}, note: package-limited}
+      tj_max: {value: 200, unit: degC}
+    conduction:
+      rds_on:
+        - {value: 45, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}}
+        - {value: 63, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 60, unit: mOhm, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 61, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 200, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 20, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 37.5, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgs: {value: 11.3, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+      qgd: {value: 13.1, unit: nC, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 30, unit: A}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}}
+    capacitance:
+      ciss: {value: 860, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 92, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 13, unit: pF, conditions: {drain_source_voltage: {value: 400, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+    switching:
+      Eon:
+        - {value: 82, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 15, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}, flags: [junction_temperature_not_stated]}
+      Eoff:
+        - {value: 75, unit: uJ, conditions: {dc_bus_voltage: {value: 400, unit: V}, drain_current: {value: 20, unit: A}, gate_resistance: {value: 15, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}}, flags: [junction_temperature_not_stated]}
+    reverse_conduction:
+      vsd: {value: 2.8, unit: V, conditions: {source_current: {value: 20, unit: A}, gate_voltage_off: {value: 0, unit: V}}}
+      qrr: {value: 83, unit: nC, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+      trr: {value: 16, unit: ns, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+      irrm: {value: 9, unit: A, conditions: {drain_current: {value: 20, unit: A}, di_dt: {value: 1000, unit: A/us}, dc_bus_voltage: {value: 400, unit: V}}}
+    thermal:
+      rth_jc: {value: 0.73, unit: degC/W}
+    gate_drive:
+      vgs_on_recommended: {value: 18, unit: V}
+      vgs_off_recommended: {value: -5, unit: V}
+      rg_internal: {value: 1.4, unit: Ohm}
+    models:
+      formats: []
+      availability: No simulation model listed on the product page.
+      licence_note: Not applicable (no model listed).
+      url: https://www.st.com/en/power-transistors/sct040w65g3-4.html
+    informational:
+      tj_min: {value: -55, unit: degC}
+    absent:
+      - simulation models (none listed)
+      - Eoss (not transcribed)
+      - rth_jc statistic (typ/max not stated)
+      - junction temperature of the Eon/Eoff row (not stated in the research note)
+      - price (not retrieved)
+
+  # ------------------------------------------------------------------ Modules
+  - part_number: CBB021M12FM3
+    manufacturer: Wolfspeed
+    aliases: [CBB021M12FM3T]
+    technology: SiC_MOSFET
+    integration: module
+    package: WolfPACK FM (62.8 x 33.8 mm, press-fit, NTC, optional pre-applied TIM)
+    family: WolfPACK full-bridge, Gen 3 dies
+    description: Full-bridge module; electrical values are per switch position.
+    status: Active
+    product_page: https://www.wolfspeed.com/products/power/sic-power-modules/wolfspeed-wolfpack-sic-power-modules-family/cbb021m12fm3/
+    datasheet:
+      url: https://assets.wolfspeed.com/uploads/2023/05/Wolfspeed_CBB021M12FM3_data_sheet.pdf
+      revision: Rev. 5
+      date: 2026-06
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max: {value: 50, unit: A, conditions: {gate_voltage_on: {value: 15, unit: V}, heatsink_temperature: {value: 50, unit: degC}}, note: package-limited}
+      pd_max: {value: 109, unit: W}
+      tj_max: {value: 150, unit: degC, note: operating maximum; 175 degC intermittent is printed separately}
+    conduction:
+      rds_on:
+        - {value: 21.0, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 30, unit: A}}, note: per switch position}
+        - {value: 28.9, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row], note: per switch position}
+        - {value: 32.8, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row], note: per switch position}
+        - {value: 38.0, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 175, unit: degC}, gate_voltage_on: {value: 15, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row], note: per switch position}
+        - {value: 18.4, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 18, unit: V}, drain_current: {value: 30, unit: A}}, flags: [conditions_inherited_from_row], note: per switch position}
+    gate_charge:
+      qg_total: {value: 162, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+      qgs: {value: 49, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+      qgd: {value: 50, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, drain_current: {value: 40, unit: A}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}}}
+    capacitance:
+      ciss: {value: 5.4, unit: nF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      coss: {value: 0.20, unit: nF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+      crss: {value: 17, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 100, unit: kHz}}}
+    switching:
+      Eon:
+        - {value: 0.5, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+        - {value: 0.6, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 125, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+        - {value: 0.7, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 150, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+      Eoff:
+        - {value: 0.04, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 25, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+        - {value: 0.06, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 125, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+        - {value: 0.07, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 30, unit: A}, gate_resistance_on: {value: 2.0, unit: Ohm}, gate_resistance_off: {value: 0, unit: Ohm}, gate_voltage_on: {value: 15, unit: V}, gate_voltage_off: {value: -4, unit: V}, junction_temperature: {value: 150, unit: degC}, test_inductance: {value: 22.7, unit: uH}}}
+    reverse_conduction:
+      vsd:
+        - {value: 4.9, unit: V, conditions: {junction_temperature: {value: 25, unit: degC}, source_current: {value: 30, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+        - {value: 4.4, unit: V, conditions: {junction_temperature: {value: 150, unit: degC}, source_current: {value: 30, unit: A}, gate_voltage_off: {value: -4, unit: V}}}
+      qrr: {value: 0.9, unit: uC, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 600, unit: V}, di_dt: {value: 8, unit: A/ns}, junction_temperature: {value: 150, unit: degC}}}
+      trr: {value: 19, unit: ns, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 600, unit: V}, di_dt: {value: 8, unit: A/ns}, junction_temperature: {value: 150, unit: degC}}}
+      irrm: {value: 74, unit: A, conditions: {drain_current: {value: 30, unit: A}, dc_bus_voltage: {value: 600, unit: V}, di_dt: {value: 8, unit: A/ns}, junction_temperature: {value: 150, unit: degC}}}
+    thermal:
+      rth_jhs: {value: 1.15, unit: degC/W, note: "per FET, junction to heat sink with the pre-applied TIM; baseplate-less module without an RthJC"}
+    gate_drive:
+      vgs_on_recommended:
+        - {value: 15, unit: V, statistic: minimum}
+        - {value: 18, unit: V, statistic: maximum}
+      vgs_off_recommended: {value: -4, unit: V}
+      rg_internal: {value: 3.3, unit: Ohm}
+    package_parasitics:
+      lstray: {value: 14.2, unit: nH}
+    models:
+      formats: [LTspice, PLECS, SPICE, RC-thermal]
+      availability: LTspice/PLECS on the models page; module SPICE documented in PRD-07913 and RC thermal models in PRD-09035.
+      licence_note: "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction)."
+      url: https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/
+    informational:
+      tj_min: {value: -40, unit: degC}
+      tj_intermittent_max: {value: 175, unit: degC}
+    absent:
+      - rth_jc (baseplate-less module; datasheet gives Rth(J-HS) with TIM instead)
+      - Eoss (not transcribed)
+      - price (not retrieved)
+
+  - part_number: FF45MR12W1M1_B11
+    manufacturer: Infineon
+    technology: SiC_MOSFET
+    integration: module
+    package: Easy 1B (PressFIT, NTC)
+    family: CoolSiC Easy 1B half-bridge
+    description: Half-bridge module; datasheet PDF not retrievable (indexed link 404, page client-rendered).
+    status: product page reachable; datasheet not retrieved
+    product_page: https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/
+    ratings:
+      vds_max: {value: 1200, unit: V, basis: product_page}
+    conduction:
+      rds_on: {value: 45, unit: mOhm, basis: product_page, flags: [conditions_not_stated]}
+    models:
+      formats: [PLECS]
+      availability: PLECS models listed for the Easy family; a community reply says some SiC module SPICE models are NDA-only.
+      licence_note: SPICE reported NDA-only per forum; not verified.
+      url: https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/
+    absent:
+      - datasheet (not retrievable)
+      - id_max, tj_max, Eon/Eoff, capacitances, gate charge, VSD, thermal resistance (all not retrieved)
+      - price (not retrieved)
+
+  - part_number: NXH020P120MNF1
+    manufacturer: onsemi
+    aliases: [NXH020P120MNF1PG, NXH020P120MNF1PTG]
+    technology: SiC_MOSFET
+    integration: module
+    package: F1 PIM18 (33.8 x 42.5 mm, press-fit, NTC, optional TIM)
+    family: EliteSiC M1 half-bridge
+    description: Half-bridge module; electrical values are per switch.
+    status: active (product page)
+    product_page: https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1
+    datasheet:
+      url: https://www.onsemi.com/download/data-sheet/pdf/nxh020p120mnf1-d.pdf
+      revision: Rev. 0
+      date: 2023-09
+    ratings:
+      vds_max: {value: 1200, unit: V}
+      id_max: {value: 51, unit: A, conditions: {case_temperature: {value: 80, unit: degC}, junction_temperature: {value: 175, unit: degC}}}
+      pd_max: {value: 211, unit: W}
+      tj_max: {value: 150, unit: degC, note: operating maximum; 175 degC absolute maximum is printed separately}
+      v_isolation_rms: {value: 4800, unit: V}
+    conduction:
+      rds_on:
+        - {value: 20, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}}
+        - {value: 30, unit: mOhm, statistic: maximum, conditions: {junction_temperature: {value: 25, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 28, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 125, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}, flags: [conditions_inherited_from_row]}
+        - {value: 31, unit: mOhm, statistic: typical, conditions: {junction_temperature: {value: 150, unit: degC}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}, flags: [conditions_inherited_from_row]}
+    gate_charge:
+      qg_total: {value: 213.5, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}}
+      qgs: {value: 50, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}}
+      qgd: {value: 61.2, unit: nC, conditions: {dc_bus_voltage: {value: 800, unit: V}, gate_voltage_on: {value: 20, unit: V}, drain_current: {value: 50, unit: A}}}
+    capacitance:
+      ciss: {value: 2420, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      crss: {value: 19, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      coss: {value: 193, unit: pF, conditions: {drain_source_voltage: {value: 800, unit: V}, measurement_frequency: {value: 1, unit: MHz}}}
+      eoss: {value: 124, unit: uJ, conditions: {drain_source_voltage: {value: 800, unit: V}}, note: printed as 0-800 V}
+    switching:
+      Eon:
+        - {value: 0.38, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 50, unit: A}, gate_resistance: {value: 2.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}}}
+        - {value: 0.49, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 50, unit: A}, gate_resistance: {value: 2.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 150, unit: degC}}}
+      Eoff:
+        - {value: 0.16, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 50, unit: A}, gate_resistance: {value: 2.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 25, unit: degC}}}
+        - {value: 0.16, unit: mJ, conditions: {dc_bus_voltage: {value: 600, unit: V}, drain_current: {value: 50, unit: A}, gate_resistance: {value: 2.7, unit: Ohm}, gate_voltage_on: {value: 18, unit: V}, gate_voltage_off: {value: -5, unit: V}, junction_temperature: {value: 150, unit: degC}}}
+    reverse_conduction:
+      vsd:
+        - {value: 3.93, unit: V, statistic: typical, conditions: {source_current: {value: 50, unit: A}, junction_temperature: {value: 25, unit: degC}}}
+        - {value: 6, unit: V, statistic: maximum, conditions: {source_current: {value: 50, unit: A}, junction_temperature: {value: 25, unit: degC}}, flags: [conditions_inherited_from_row]}
+        - {value: 3.39, unit: V, statistic: typical, conditions: {source_current: {value: 50, unit: A}, junction_temperature: {value: 150, unit: degC}}, flags: [conditions_inherited_from_row]}
+    thermal:
+      rth_jc: {value: 0.4495, unit: degC/W, statistic: typical, note: per switch}
+      rth_jhs: {value: 0.7971, unit: degC/W, note: printed as RthJH (junction to heat sink)}
+    gate_drive:
+      vgs_rating_max: {value: 25, unit: V}
+      vgs_rating_min: {value: -15, unit: V}
+      rg_internal: {value: 1.1, unit: Ohm}
+    models:
+      formats: [PLECS]
+      availability: PLECS Model Generator and Elite Power Simulator require a MyON login.
+      licence_note: Licence text not confirmed.
+      url: https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1
+    informational:
+      tj_min: {value: -40, unit: degC}
+      tj_absolute_max: {value: 175, unit: degC}
+    absent:
+      - Qrr (not tabulated)
+      - recommended gate voltages (only the +25/-15 V rating and the -5/18 V test condition are printed)
+      - distributor price (only an onsemi reference price of USD 111.9437 is shown; not a distributor quote)
+
+  # ------------------------------------------------------------------ TI reference-design parts (third-party cited)
+  - part_number: C3M0075120K
+    manufacturer: Wolfspeed
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4 (Kelvin source)
+    family: C3M (Gen 3)
+    description: Primary-bridge device of the TI TIDA-010054 reference design. Values are cited by TI, not read from the Wolfspeed datasheet; the canonical AIPE record supplies the manufacturer PLECS tensors.
+    status: used in TIDA-010054 (TI design guide TIDUES0 Rev F)
+    cited_by:
+      kind: paper
+      name: Texas Instruments TIDUES0 Rev F design guide, TIDA-010054 (BOM Q8/Q9/Q12/Q13; sections 2.3.5.6, 3.1)
+      url: https://www.ti.com/lit/pdf/tidues0
+      locator: repos/AIPE-Workflows/examples/dab-10kw/references/tida-010054-fact-sheet.md sections 2 and 4
+    ratings:
+      vds_max: {value: 1200, unit: V, basis: third_party_cited}
+      id_max: {value: 30, unit: A, basis: third_party_cited, flags: [conditions_not_stated]}
+    conduction:
+      rds_on: {value: 75, unit: mOhm, basis: third_party_cited, flags: [conditions_not_stated]}
+    thermal:
+      rth_jc: {value: 1.1, unit: K/W, basis: third_party_cited, flags: [statistic_not_stated]}
+    absent:
+      - Wolfspeed datasheet values (not transcribed; only TI-cited figures)
+      - tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)
+      - price (not retrieved)
+    notes:
+      - TI drives this part with RG 2 Ohm on/off and +15/-4 V (reference-design choice, not a device specification).
+      - The canonical record wolfspeed_c3m0075120k carries manufacturer PLECS conduction, Eon/Eoff and Cauer thermal tensors.
+
+  - part_number: C3M0030090K
+    manufacturer: Wolfspeed
+    technology: SiC_MOSFET
+    integration: discrete
+    package: TO-247-4
+    family: C3M (Gen 3)
+    description: Secondary-bridge device of the TI TIDA-010054 reference design. Values are cited by TI, not read from the Wolfspeed datasheet; the canonical AIPE record supplies the manufacturer PLECS tensors.
+    status: used in TIDA-010054 (TI design guide TIDUES0 Rev F)
+    cited_by:
+      kind: paper
+      name: Texas Instruments TIDUES0 Rev F design guide, TIDA-010054 (BOM Q6/Q7/Q10/Q11; sections 2.3.5.6, 3.1)
+      url: https://www.ti.com/lit/pdf/tidues0
+      locator: repos/AIPE-Workflows/examples/dab-10kw/references/tida-010054-fact-sheet.md sections 2 and 4
+    ratings:
+      vds_max: {value: 900, unit: V, basis: third_party_cited}
+      id_max: {value: 63, unit: A, basis: third_party_cited, flags: [conditions_not_stated]}
+    conduction:
+      rds_on: {value: 30, unit: mOhm, basis: third_party_cited, flags: [conditions_not_stated]}
+    thermal:
+      rth_jc: {value: 0.48, unit: K/W, basis: third_party_cited, flags: [statistic_not_stated]}
+    absent:
+      - Wolfspeed datasheet values (not transcribed; only TI-cited figures)
+      - tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)
+      - price (not retrieved)
+    notes:
+      - TI drives this part with RG 2 Ohm on/off and +15/-4 V (reference-design choice, not a device specification).
+      - The canonical record wolfspeed_c3m0030090k carries manufacturer PLECS conduction, Eon/Eoff and Cauer thermal tensors.

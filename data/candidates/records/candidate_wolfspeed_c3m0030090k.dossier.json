@@ -1,0 +1,49 @@
+{
+  "candidate_id": "candidate_wolfspeed_c3m0030090k",
+  "manufacturer": "Wolfspeed",
+  "part_number": "C3M0030090K",
+  "package": "TO-247-4",
+  "family": "C3M (Gen 3)",
+  "status": "used in TIDA-010054 (TI design guide TIDUES0 Rev F)",
+  "description": "Secondary-bridge device of the TI TIDA-010054 reference design. Values are cited by TI, not read from the Wolfspeed datasheet; the canonical AIPE record supplies the manufacturer PLECS tensors.",
+  "datasheet": null,
+  "cited_by": {
+    "kind": "paper",
+    "name": "Texas Instruments TIDUES0 Rev F design guide, TIDA-010054 (BOM Q6/Q7/Q10/Q11; sections 2.3.5.6, 3.1)",
+    "url": "https://www.ti.com/lit/pdf/tidues0",
+    "locator": "repos/AIPE-Workflows/examples/dab-10kw/references/tida-010054-fact-sheet.md sections 2 and 4"
+  },
+  "product_page": null,
+  "models": null,
+  "field_basis": {
+    "ratings.vds_max": "third_party_cited",
+    "ratings.id_max": "third_party_cited",
+    "conduction.rds_on": "third_party_cited",
+    "thermal.rth_jc": "third_party_cited"
+  },
+  "absent": [
+    "Wolfspeed datasheet values (not transcribed; only TI-cited figures)",
+    "tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)",
+    "price (not retrieved)"
+  ],
+  "informational": {},
+  "notes": [
+    "TI drives this part with RG 2 Ohm on/off and +15/-4 V (reference-design choice, not a device specification).",
+    "The canonical record wolfspeed_c3m0030090k carries manufacturer PLECS conduction, Eon/Eoff and Cauer thermal tensors."
+  ],
+  "canonical_link": {
+    "device_id": "wolfspeed_c3m0030090k",
+    "revision": 1,
+    "uri": "urn:aipe:semiconductor:wolfspeed_c3m0030090k:revision:1",
+    "provides": [
+      "conduction:voltage_drop tensor wolfspeed_c3m0030090k:voltage_drop:2",
+      "switching:Eon tensor wolfspeed_c3m0030090k:Eon:0",
+      "switching:Eoff tensor wolfspeed_c3m0030090k:Eoff:1",
+      "reverse_conduction:voltage_drop tensor wolfspeed_c3m0030090k:voltage_drop:3",
+      "thermal:Cauer network wolfspeed_c3m0030090k:thermal:0"
+    ]
+  },
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

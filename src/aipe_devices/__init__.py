@@ -3,4 +3,4 @@
 from .domain.device import PowerSemiconductorDevice
 
 __all__ = ["PowerSemiconductorDevice"]
-__version__ = "3.0.0"
+__version__ = "3.1.0"

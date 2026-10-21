@@ -1,4 +1,25 @@
-from enum import StrEnum
+"""Controlled vocabularies. ``StrEnum`` is backported so the package runs on Python 3.10."""
+
+import sys
+
+if sys.version_info >= (3, 11):
+    from enum import StrEnum
+else:  # pragma: no cover - exercised only by the Python 3.10 interpreter
+    from enum import Enum
+
+    class StrEnum(str, Enum):
+        """Minimal ``enum.StrEnum`` backport: members are strings and ``str()`` is the value."""
+
+        def __new__(cls, value, *args, **kwargs):
+            if not isinstance(value, str):
+                raise TypeError(f"{value!r} is not a string")
+            return super().__new__(cls, value, *args, **kwargs)
+
+        def __str__(self):
+            return str(self.value)
+
+        def _generate_next_value_(name, start, count, last_values):
+            return name.lower()
 
 
 class Technology(StrEnum):

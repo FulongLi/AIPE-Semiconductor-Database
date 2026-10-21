@@ -1,0 +1,231 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_infineon_ff45mr12w1m1_b11",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Infineon",
+    "part_number": "FF45MR12W1M1_B11",
+    "family_id": "CoolSiC Easy 1B half-bridge",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "module",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_infineon_ff45mr12w1m1_b11:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:infineon_ff45mr12w1m1_b11"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:product_page"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "Easy 1B (PressFIT, NTC)",
+    "components": [],
+    "parasitics": [],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "product-page:infineon_ff45mr12w1m1_b11",
+      "kind": "manufacturer",
+      "name": "Infineon product page FF45MR12W1M1_B11",
+      "artifact": null,
+      "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Infineon",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:datasheet (not retrievable)",
+      "absent:id_max, tj_max, Eon/Eoff, capacitances, gate charge, VSD, thermal resistance (all not retrieved)",
+      "absent:price (not retrieved)"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_ff45mr12w1m1_b11:rds_on:2",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.045,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "product-page:infineon_ff45mr12w1m1_b11"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 45.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.045,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_not_stated",
+            "basis:product_page"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_infineon_ff45mr12w1m1_b11:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:infineon_ff45mr12w1m1_b11"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "PLECS"
+        ],
+        "availability": "PLECS models listed for the Easy family; a community reply says some SiC module SPICE models are NDA-only.",
+        "licence_note": "SPICE reported NDA-only per forum; not verified.",
+        "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

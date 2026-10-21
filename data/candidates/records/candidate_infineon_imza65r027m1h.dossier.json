@@ -1,0 +1,66 @@
+{
+  "candidate_id": "candidate_infineon_imza65r027m1h",
+  "manufacturer": "Infineon",
+  "part_number": "IMZA65R027M1H",
+  "package": "PG-TO247-4",
+  "family": "CoolSiC 650 V G1 (M1 trench)",
+  "status": "indexed as \"not for new design\" (verify on the product page)",
+  "description": null,
+  "datasheet": {
+    "url": "https://www.infineon.com/dgdl/Infineon-IMZA65R027M1H-DataSheet-v02_00-EN.pdf?fileId=5546d4626f229553016f85d997f90532",
+    "revision": "Rev. 2.2",
+    "date": "2025-01-20",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.infineon.com/part/IMZA65R027M1H",
+  "models": {
+    "formats": [
+      "PLECS",
+      "PSpice"
+    ],
+    "availability": "PLECS model listed; PSpice L0/L1/L3 models mentioned in the Infineon community forum; per-part file not verified.",
+    "licence_note": "Licence wording not read.",
+    "url": "https://www.infineon.com/part/IMZA65R027M1H",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qfr": "manufacturer_specified",
+    "reverse_conduction.tfr": "manufacturer_specified",
+    "reverse_conduction.ifrm": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "capacitance.qoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "Eon/Eoff (not tabulated; only td/tr/tf at 400 V, 38.3 A, RG ext 1.8 Ohm)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -55.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [
+    "Product page indexed as \"not for new design\"; verify before shortlisting."
+  ],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

@@ -1,0 +1,69 @@
+{
+  "candidate_id": "candidate_onsemi_nxh020p120mnf1",
+  "manufacturer": "onsemi",
+  "part_number": "NXH020P120MNF1",
+  "package": "F1 PIM18 (33.8 x 42.5 mm, press-fit, NTC, optional TIM)",
+  "family": "EliteSiC M1 half-bridge",
+  "status": "active (product page)",
+  "description": "Half-bridge module; electrical values are per switch.",
+  "datasheet": {
+    "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh020p120mnf1-d.pdf",
+    "revision": "Rev. 0",
+    "date": "2023-09",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1",
+  "models": {
+    "formats": [
+      "PLECS"
+    ],
+    "availability": "PLECS Model Generator and Elite Power Simulator require a MyON login.",
+    "licence_note": "Licence text not confirmed.",
+    "url": "https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.pd_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "ratings.v_isolation_rms": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_rating_max": "manufacturer_specified",
+    "gate_drive.vgs_rating_min": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified",
+    "thermal.rth_jhs": "manufacturer_specified"
+  },
+  "absent": [
+    "Qrr (not tabulated)",
+    "recommended gate voltages (only the +25/-15 V rating and the -5/18 V test condition are printed)",
+    "distributor price (only an onsemi reference price of USD 111.9437 is shown; not a distributor quote)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -40.0,
+      "unit": "degC"
+    },
+    "tj_absolute_max": {
+      "value": 175.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}
