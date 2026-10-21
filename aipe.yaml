@@ -6,7 +6,7 @@
   "domains": [
     "power-electronics"
   ],
-  "description": "Canonical V3 power semiconductor records with SI curves, source rights, evidence lineage and a conservative Core candidate adapter.",
+  "description": "Canonical V3 power semiconductor records with SI curves, source rights, evidence lineage, a conservative Core candidate adapter, DAB switch loss evaluation on actual waveform stress, evidence-tiered device screening, datasheet candidate import and prioritised measurement requests.",
   "status": "active",
   "maturity": "usable",
   "repository": "https://github.com/FulongLi/AIPE-Semiconductor-Database",
@@ -14,7 +14,11 @@
   "capabilities": [
     "semiconductor-data",
     "semiconductor-query",
-    "semiconductor-core-candidate-export"
+    "semiconductor-core-candidate-export",
+    "semiconductor-loss-evaluation",
+    "semiconductor-dab-screening",
+    "semiconductor-measurement-requests",
+    "candidate-device-import"
   ],
   "inputs": [
     {
@@ -24,6 +28,14 @@
     {
       "name": "raw-device-evidence",
       "description": "Manufacturer models, explicit import mappings and measurement packages."
+    },
+    {
+      "name": "waveform-summary",
+      "description": "AIPE DAB waveform summary (aipe-dab-waveform-summary/0.1) or sampled switch waveforms (HDF5) providing actual switch stress."
+    },
+    {
+      "name": "datasheet-transcription",
+      "description": "Structured as-printed datasheet transcription (aipe-datasheet-transcription/0.1, YAML/JSON) for reviewable candidate records."
     }
   ],
   "outputs": [
@@ -35,6 +47,22 @@
       "name": "core-candidate",
       "description": "Candidate identity and source evidence for Engineering State 0.1.0.",
       "schema": "https://raw.githubusercontent.com/FulongLi/AIPE-Core/v0.1.0/schemas/semiconductor.schema.json"
+    },
+    {
+      "name": "dab-loss-evaluation",
+      "description": "Per-switch conduction/turn-off/turn-on loss records (physics_derived) with tensor lineage and a coverage list of unavailable quantities (aipe-dab-loss-evaluation/0.1)."
+    },
+    {
+      "name": "dab-screening-report",
+      "description": "Evidence-tiered per-bridge device ranking with electrical, loss, thermal and confidence breakdown (aipe-dab-screening/0.1)."
+    },
+    {
+      "name": "prioritised-measurement-request",
+      "description": "Draft MeasurementRequest items with engineering questions, uncertainty targets and benefit x uncertainty priorities (aipe-prioritised-measurement-request/0.1)."
+    },
+    {
+      "name": "candidate-device-record",
+      "description": "Unreviewed schema 3.0.0 candidate records with datasheet URL evidence, absent-field flags and canonical links; never canonical."
     }
   ],
   "dependencies": [
@@ -56,7 +84,11 @@
       "capabilities": [
         "semiconductor-data-query",
         "data-validation",
-        "core-candidate-export"
+        "core-candidate-export",
+        "dab-loss-evaluation",
+        "dab-device-screening",
+        "measurement-request-generation",
+        "candidate-device-import"
       ],
       "licence_class": "open_source",
       "optional": false,
@@ -71,7 +103,8 @@
       ],
       "url": "https://www.python.org/",
       "limitations": [
-        "Physical models require separate validation."
+        "Physical models require separate validation.",
+        "Loss evaluation uses manufacturer model/datasheet data; no measured evidence backs it."
       ]
     },
     {
@@ -123,18 +156,30 @@
     "evidence": [
       "tests/unit/test_core_export.py",
       "tests/integration/test_repository_corpus.py",
+      "tests/unit/test_nd_interpolation.py",
+      "tests/unit/test_dab_losses.py",
+      "tests/unit/test_thermal.py",
+      "tests/unit/test_datasheet_importer.py",
+      "tests/unit/test_dab_screening.py",
+      "tests/unit/test_measurement_requests.py",
+      "tests/integration/test_dab_cli.py",
+      "tests/integration/test_dab_examples.py",
       ".github/workflows/tests.yml"
     ],
     "limitations": [
       "Identity/source mapping only; detailed ratings and curves stay in V3 records.",
       "Manufacturer model data is not converted into measured evidence.",
-      "Existing code and data rights remain NOASSERTION; see LICENSING.md."
+      "Existing code and data rights remain NOASSERTION; see LICENSING.md.",
+      "DAB losses derive from manufacturer PLECS tensors and datasheet points; ZVS turn-on loss is zero by assumption without Coss/Eoss evidence.",
+      "Candidate device records are unreviewed datasheet transcriptions and are not canonical evidence."
     ]
   },
   "documentation": [
     "README.md",
+    "docs/dab-loss-screening.md",
     "docs/core-integration.md",
     "docs/architecture.md",
-    "LICENSING.md"
+    "LICENSING.md",
+    "data/candidates/README.md"
   ]
 }

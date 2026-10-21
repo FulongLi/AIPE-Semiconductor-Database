@@ -1,0 +1,78 @@
+{
+  "candidate_id": "candidate_wolfspeed_c3m0025065k",
+  "manufacturer": "Wolfspeed",
+  "part_number": "C3M0025065K",
+  "package": "TO-247-4",
+  "family": "C3M (Gen 3)",
+  "status": "Active",
+  "description": null,
+  "datasheet": {
+    "url": "https://assets.wolfspeed.com/uploads/2024/01/Wolfspeed_C3M0025065K_data_sheet.pdf",
+    "revision": "Rev. 03",
+    "date": "2024-09",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.wolfspeed.com/products/power/sic-mosfets/650v-silicon-carbide-mosfets/c3m0025065k/",
+  "models": {
+    "formats": [
+      "LTspice",
+      "PLECS",
+      "SpeedFit"
+    ],
+    "availability": "Listed on the manufacturer LTspice/PLECS models page; no login stated.",
+    "licence_note": "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction).",
+    "url": "https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qrr": "manufacturer_specified",
+    "reverse_conduction.trr": "manufacturer_specified",
+    "reverse_conduction.irrm": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "rth_jc maximum (not transcribed)",
+    "gate voltages for the Qg row (not transcribed)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -40.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": {
+    "device_id": "wolfspeed_c3m0025065k",
+    "revision": 1,
+    "uri": "urn:aipe:semiconductor:wolfspeed_c3m0025065k:revision:1",
+    "provides": [
+      "conduction:voltage_drop tensor wolfspeed_c3m0025065k:voltage_drop:2",
+      "switching:Eon tensor wolfspeed_c3m0025065k:Eon:0",
+      "switching:Eoff tensor wolfspeed_c3m0025065k:Eoff:1",
+      "reverse_conduction:voltage_drop tensor wolfspeed_c3m0025065k:voltage_drop:3",
+      "thermal:Cauer network wolfspeed_c3m0025065k:thermal:0"
+    ]
+  },
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

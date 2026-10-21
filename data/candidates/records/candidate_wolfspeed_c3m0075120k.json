@@ -1,0 +1,334 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_wolfspeed_c3m0075120k",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Wolfspeed",
+    "part_number": "C3M0075120K",
+    "family_id": "C3M (Gen 3)",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_wolfspeed_c3m0075120k:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "citation:wolfspeed_c3m0075120k"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:third_party_cited"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_wolfspeed_c3m0075120k:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 30.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "citation:wolfspeed_c3m0075120k"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 30.0,
+            "original_unit": "A",
+            "canonical_value": 30.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "conditions_not_stated",
+          "basis:third_party_cited"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "TO-247-4 (Kelvin source)",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_wolfspeed_c3m0075120k:rth_jc:4",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 1.1,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "citation:wolfspeed_c3m0075120k"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 1,
+              "original_value": 1.1,
+              "original_unit": "K/W",
+              "canonical_value": 1.1,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "statistic_not_stated",
+            "basis:third_party_cited"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "citation:wolfspeed_c3m0075120k",
+      "kind": "paper",
+      "name": "Texas Instruments TIDUES0 Rev F design guide, TIDA-010054 (BOM Q8/Q9/Q12/Q13; sections 2.3.5.6, 3.1)",
+      "artifact": null,
+      "url": "https://www.ti.com/lit/pdf/tidues0",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": null,
+        "category": "unknown"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "canonical:wolfspeed_c3m0075120k",
+      "kind": "AIPE",
+      "name": "AIPE canonical record wolfspeed_c3m0075120k revision 1",
+      "artifact": null,
+      "url": "urn:aipe:semiconductor:wolfspeed_c3m0075120k:revision:1",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": null,
+        "category": "aipe"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:Wolfspeed datasheet values (not transcribed; only TI-cited figures)",
+      "absent:tj_max, Eon/Eoff, capacitances, gate charge, VSD, Qrr (not cited by TI)",
+      "absent:price (not retrieved)",
+      "linked_canonical:wolfspeed_c3m0075120k",
+      "values_cited_by_third_party"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_c3m0075120k:rds_on:3",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.075,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "citation:wolfspeed_c3m0075120k"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 75.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.075,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_not_stated",
+            "basis:third_party_cited"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

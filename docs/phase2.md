@@ -187,8 +187,9 @@ tabular schemas are not implemented. Unsupported/ambiguous fields remain unresol
 Production spreadsheets are never fixtures. Current source-axis ambiguities in the
 Wolfspeed corpus remain visible and are rejected by exact visualization slicing.
 
-No MAT/TDMS/PDF/image extraction, tensor interpolation, full DPT processing, device
-selection, lifetime solver, live market API, lab hardware control or production web
-frontend is included. Recommended next work: a review UI for mapping overrides and
+No MAT/TDMS/PDF/image extraction, full DPT processing, lifetime solver, live market API,
+lab hardware control or production web frontend is included. Tensor interpolation, DAB
+loss evaluation, device screening and measurement requests arrived in 3.1.0; see
+[the DAB guide](dab-loss-screening.md). Recommended next work: a review UI for mapping overrides and
 coverage, a thin plot adapter for specs, more explicitly specified tabular schemas,
 and reviewed operating envelopes before application-level suitability claims.

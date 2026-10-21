@@ -1,0 +1,1684 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_stmicroelectronics_sct040w120g3-4",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "STMicroelectronics",
+    "part_number": "SCT040W120G3-4",
+    "family_id": "3rd generation",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_stmicroelectronics_sct040w120g3-4:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:stmicroelectronics_sct040w120g3-4"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_stmicroelectronics_sct040w120g3-4:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 40.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:stmicroelectronics_sct040w120g3-4"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 40.0,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:package-limited"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_stmicroelectronics_sct040w120g3-4:id_max:3",
+      "name": "id_max",
+      "quantity": {
+        "value": 40.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:stmicroelectronics_sct040w120g3-4"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 2,
+            "original_value": 40.0,
+            "original_unit": "A",
+            "canonical_value": 40.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 373.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:package-limited"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_stmicroelectronics_sct040w120g3-4:tj_max:4",
+      "name": "tj_max",
+      "quantity": {
+        "value": 473.15,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:stmicroelectronics_sct040w120g3-4"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "tj_max",
+            "row": 1,
+            "original_value": 200.0,
+            "original_unit": "degC",
+            "canonical_value": 473.15,
+            "canonical_unit": "K"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "HiP247-4",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rth_jc:24",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 0.56,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 1,
+              "original_value": 0.56,
+              "original_unit": "degC/W",
+              "canonical_value": 0.56,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "datasheet:stmicroelectronics_sct040w120g3-4",
+      "kind": "manufacturer",
+      "name": "STMicroelectronics datasheet SCT040W120G3-4 DS14406 Rev 1 (2023-08)",
+      "artifact": null,
+      "url": "https://www.st.com/resource/en/datasheet/sct040w120g3-4.pdf",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "STMicroelectronics",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "product-page:stmicroelectronics_sct040w120g3-4",
+      "kind": "manufacturer",
+      "name": "STMicroelectronics product page SCT040W120G3-4",
+      "artifact": null,
+      "url": "https://www.st.com/en/power-transistors/sct040w120g3-4.html",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "STMicroelectronics",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:Eoss (not transcribed)",
+      "absent:rth_jc statistic (typ/max not stated)",
+      "absent:Eon/Eoff at junction temperature (printed at case temperature 25 degC only)",
+      "absent:price (eStore out of stock, none displayed)"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rds_on:5",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.04,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 40.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.04,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rds_on:6",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.054,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 2,
+              "original_value": 54.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.054,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rds_on:7",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.049,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 3,
+              "original_value": 49.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.049,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rds_on:8",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.077,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 4,
+              "original_value": 77.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.077,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 473.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:Eon:13",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00027299999999999997,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 1,
+              "original_value": 273.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.00027299999999999997,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 12.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 12.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:Eoff:14",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00009999999999999999,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 1,
+              "original_value": 100.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.00009999999999999999,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 12.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 12.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:ciss:15",
+        "name": "ciss",
+        "quantity": {
+          "value": 1.329e-9,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "ciss",
+              "row": 1,
+              "original_value": 1329.0,
+              "original_unit": "pF",
+              "canonical_value": 1.329e-9,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:coss:16",
+        "name": "coss",
+        "quantity": {
+          "value": 7.8e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "coss",
+              "row": 1,
+              "original_value": 78.0,
+              "original_unit": "pF",
+              "canonical_value": 7.8e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:crss:17",
+        "name": "crss",
+        "quantity": {
+          "value": 1e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "crss",
+              "row": 1,
+              "original_value": 10.0,
+              "original_unit": "pF",
+              "canonical_value": 1e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:qg_total:18",
+        "name": "qg_total",
+        "quantity": {
+          "value": 5.6000000000000005e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qg_total",
+              "row": 1,
+              "original_value": 56.0,
+              "original_unit": "nC",
+              "canonical_value": 5.6000000000000005e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:qgs:19",
+        "name": "qgs",
+        "quantity": {
+          "value": 1.7e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgs",
+              "row": 1,
+              "original_value": 17.0,
+              "original_unit": "nC",
+              "canonical_value": 1.7e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:qgd:20",
+        "name": "qgd",
+        "quantity": {
+          "value": 1.9e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgd",
+              "row": 1,
+              "original_value": 19.0,
+              "original_unit": "nC",
+              "canonical_value": 1.9e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:vgs_on_recommended:21",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 1,
+              "original_value": 18.0,
+              "original_unit": "V",
+              "canonical_value": 18.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:vgs_off_recommended:22",
+        "name": "vgs_off_recommended",
+        "quantity": {
+          "value": -5.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_off_recommended",
+              "row": 1,
+              "original_value": -5.0,
+              "original_unit": "V",
+              "canonical_value": -5.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:rg_internal:23",
+        "name": "rg_internal",
+        "quantity": {
+          "value": 1.4,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "rg_internal",
+              "row": 1,
+              "original_value": 1.4,
+              "original_unit": "Ohm",
+              "canonical_value": 1.4,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:voltage_drop:9",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -2.6,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 1,
+              "original_value": 2.6,
+              "original_unit": "V",
+              "canonical_value": -2.6,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:Qrr:10",
+        "name": "Qrr",
+        "quantity": {
+          "value": 1.0000000000000001e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "qrr",
+              "row": 1,
+              "original_value": 100.0,
+              "original_unit": "nC",
+              "canonical_value": 1.0000000000000001e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 1000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:trr:11",
+        "name": "trr",
+        "quantity": {
+          "value": 1.6e-8,
+          "unit": "s"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "trr",
+              "row": 1,
+              "original_value": 16.0,
+              "original_unit": "ns",
+              "canonical_value": 1.6e-8,
+              "canonical_unit": "s"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 1000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_stmicroelectronics_sct040w120g3-4:Irrm:12",
+        "name": "Irrm",
+        "quantity": {
+          "value": 11.0,
+          "unit": "A"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:stmicroelectronics_sct040w120g3-4"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "irrm",
+              "row": 1,
+              "original_value": 11.0,
+              "original_unit": "A",
+              "canonical_value": 11.0,
+              "canonical_unit": "A"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 16.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 1000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_stmicroelectronics_sct040w120g3-4:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:stmicroelectronics_sct040w120g3-4"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "SPICE"
+        ],
+        "availability": "SPICE model ZIP v1.0 dated 24 Aug 2023 listed on the product page.",
+        "licence_note": "Licence wording not seen.",
+        "url": "https://www.st.com/en/power-transistors/sct040w120g3-4.html",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

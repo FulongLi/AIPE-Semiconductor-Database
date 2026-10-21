@@ -1,0 +1,2319 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_wolfspeed_cbb021m12fm3",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Wolfspeed",
+    "part_number": "CBB021M12FM3",
+    "family_id": "WolfPACK full-bridge, Gen 3 dies",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": [
+      "CBB021M12FM3T"
+    ]
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "module",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_wolfspeed_cbb021m12fm3:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:wolfspeed_cbb021m12fm3"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_wolfspeed_cbb021m12fm3:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 50.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:wolfspeed_cbb021m12fm3"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 50.0,
+            "original_unit": "A",
+            "canonical_value": 50.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": {
+          "value": 15.0,
+          "unit": "V"
+        },
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": [
+          {
+            "name": "heatsink_temperature",
+            "quantity": {
+              "value": 323.15,
+              "unit": "K"
+            }
+          }
+        ]
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:package-limited"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_wolfspeed_cbb021m12fm3:pd_max:3",
+      "name": "pd_max",
+      "quantity": {
+        "value": 109.0,
+        "unit": "W"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:wolfspeed_cbb021m12fm3"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "pd_max",
+            "row": 1,
+            "original_value": 109.0,
+            "original_unit": "W",
+            "canonical_value": 109.0,
+            "canonical_unit": "W"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_wolfspeed_cbb021m12fm3:tj_max:4",
+      "name": "tj_max",
+      "quantity": {
+        "value": 423.15,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:wolfspeed_cbb021m12fm3"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "tj_max",
+            "row": 1,
+            "original_value": 150.0,
+            "original_unit": "degC",
+            "canonical_value": 423.15,
+            "canonical_unit": "K"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:operating maximum; 175 degC intermittent is printed separately"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "WolfPACK FM (62.8 x 33.8 mm, press-fit, NTC, optional pre-applied TIM)",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rth_jhs:31",
+        "name": "rth_jhs",
+        "quantity": {
+          "value": 1.15,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jhs",
+              "row": 1,
+              "original_value": 1.15,
+              "original_unit": "degC/W",
+              "canonical_value": 1.15,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:per FET, junction to heat sink with the pre-applied TIM; baseplate-less module without an RthJC"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:lstray:32",
+        "name": "lstray",
+        "quantity": {
+          "value": 1.42e-8,
+          "unit": "H"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "package_parasitics",
+              "column": "lstray",
+              "row": 1,
+              "original_value": 14.2,
+              "original_unit": "nH",
+              "canonical_value": 1.42e-8,
+              "canonical_unit": "H"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "datasheet:wolfspeed_cbb021m12fm3",
+      "kind": "manufacturer",
+      "name": "Wolfspeed datasheet CBB021M12FM3 Rev. 5 (2026-06)",
+      "artifact": null,
+      "url": "https://assets.wolfspeed.com/uploads/2023/05/Wolfspeed_CBB021M12FM3_data_sheet.pdf",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Wolfspeed",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "product-page:wolfspeed_cbb021m12fm3",
+      "kind": "manufacturer",
+      "name": "Wolfspeed product page CBB021M12FM3",
+      "artifact": null,
+      "url": "https://www.wolfspeed.com/products/power/sic-power-modules/wolfspeed-wolfpack-sic-power-modules-family/cbb021m12fm3/",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Wolfspeed",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "canonical:wolfspeed_cbb021m12fm3",
+      "kind": "AIPE",
+      "name": "AIPE canonical record wolfspeed_cbb021m12fm3 revision 1",
+      "artifact": null,
+      "url": "urn:aipe:semiconductor:wolfspeed_cbb021m12fm3:revision:1",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": null,
+        "category": "aipe"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:rth_jc (baseplate-less module; datasheet gives Rth(J-HS) with TIM instead)",
+      "absent:Eoss (not transcribed)",
+      "absent:price (not retrieved)",
+      "linked_canonical:wolfspeed_cbb021m12fm3"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rds_on:5",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.021,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 21.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.021,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:per switch position"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rds_on:6",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.0289,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 2,
+              "original_value": 28.9,
+              "original_unit": "mOhm",
+              "canonical_value": 0.0289,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "note:per switch position"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rds_on:7",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.032799999999999996,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 3,
+              "original_value": 32.8,
+              "original_unit": "mOhm",
+              "canonical_value": 0.032799999999999996,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "note:per switch position"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rds_on:8",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.038,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 4,
+              "original_value": 38.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.038,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "note:per switch position"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rds_on:9",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.0184,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 5,
+              "original_value": 18.4,
+              "original_unit": "mOhm",
+              "canonical_value": 0.0184,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "note:per switch position"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eon:15",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.0005,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 1,
+              "original_value": 0.5,
+              "original_unit": "mJ",
+              "canonical_value": 0.0005,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eon:16",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.0006,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 2,
+              "original_value": 0.6,
+              "original_unit": "mJ",
+              "canonical_value": 0.0006,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eon:17",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.0007,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 3,
+              "original_value": 0.7,
+              "original_unit": "mJ",
+              "canonical_value": 0.0007,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eoff:18",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00004,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 1,
+              "original_value": 0.04,
+              "original_unit": "mJ",
+              "canonical_value": 0.00004,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eoff:19",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00006,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 2,
+              "original_value": 0.06,
+              "original_unit": "mJ",
+              "canonical_value": 0.00006,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Eoff:20",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00007000000000000001,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 3,
+              "original_value": 0.07,
+              "original_unit": "mJ",
+              "canonical_value": 0.00007000000000000001,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.0,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 0.0,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 0.0000227,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:ciss:21",
+        "name": "ciss",
+        "quantity": {
+          "value": 5.4e-9,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "ciss",
+              "row": 1,
+              "original_value": 5.4,
+              "original_unit": "nF",
+              "canonical_value": 5.4e-9,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:coss:22",
+        "name": "coss",
+        "quantity": {
+          "value": 2.0000000000000003e-10,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "coss",
+              "row": 1,
+              "original_value": 0.2,
+              "original_unit": "nF",
+              "canonical_value": 2.0000000000000003e-10,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:crss:23",
+        "name": "crss",
+        "quantity": {
+          "value": 1.7e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "crss",
+              "row": 1,
+              "original_value": 17.0,
+              "original_unit": "pF",
+              "canonical_value": 1.7e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:qg_total:24",
+        "name": "qg_total",
+        "quantity": {
+          "value": 1.6200000000000002e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qg_total",
+              "row": 1,
+              "original_value": 162.0,
+              "original_unit": "nC",
+              "canonical_value": 1.6200000000000002e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 40.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:qgs:25",
+        "name": "qgs",
+        "quantity": {
+          "value": 4.9e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgs",
+              "row": 1,
+              "original_value": 49.0,
+              "original_unit": "nC",
+              "canonical_value": 4.9e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 40.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:qgd:26",
+        "name": "qgd",
+        "quantity": {
+          "value": 5.0000000000000004e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgd",
+              "row": 1,
+              "original_value": 50.0,
+              "original_unit": "nC",
+              "canonical_value": 5.0000000000000004e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 40.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:vgs_on_recommended:27",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 15.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 1,
+              "original_value": 15.0,
+              "original_unit": "V",
+              "canonical_value": 15.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "minimum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:vgs_on_recommended:28",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 2,
+              "original_value": 18.0,
+              "original_unit": "V",
+              "canonical_value": 18.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:vgs_off_recommended:29",
+        "name": "vgs_off_recommended",
+        "quantity": {
+          "value": -4.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_off_recommended",
+              "row": 1,
+              "original_value": -4.0,
+              "original_unit": "V",
+              "canonical_value": -4.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:rg_internal:30",
+        "name": "rg_internal",
+        "quantity": {
+          "value": 3.3,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "rg_internal",
+              "row": 1,
+              "original_value": 3.3,
+              "original_unit": "Ohm",
+              "canonical_value": 3.3,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:voltage_drop:10",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -4.9,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 1,
+              "original_value": 4.9,
+              "original_unit": "V",
+              "canonical_value": -4.9,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:voltage_drop:11",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -4.4,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 2,
+              "original_value": 4.4,
+              "original_unit": "V",
+              "canonical_value": -4.4,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": -4.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Qrr:12",
+        "name": "Qrr",
+        "quantity": {
+          "value": 9e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "qrr",
+              "row": 1,
+              "original_value": 0.9,
+              "original_unit": "uC",
+              "canonical_value": 9e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 8000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:trr:13",
+        "name": "trr",
+        "quantity": {
+          "value": 1.9e-8,
+          "unit": "s"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "trr",
+              "row": 1,
+              "original_value": 19.0,
+              "original_unit": "ns",
+              "canonical_value": 1.9e-8,
+              "canonical_unit": "s"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 8000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_wolfspeed_cbb021m12fm3:Irrm:14",
+        "name": "Irrm",
+        "quantity": {
+          "value": 74.0,
+          "unit": "A"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:wolfspeed_cbb021m12fm3"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "irrm",
+              "row": 1,
+              "original_value": 74.0,
+              "original_unit": "A",
+              "canonical_value": 74.0,
+              "canonical_unit": "A"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 30.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 8000000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_wolfspeed_cbb021m12fm3:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:wolfspeed_cbb021m12fm3"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "LTspice",
+          "PLECS",
+          "SPICE",
+          "RC-thermal"
+        ],
+        "availability": "LTspice/PLECS on the models page; module SPICE documented in PRD-07913 and RC thermal models in PRD-09035.",
+        "licence_note": "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction).",
+        "url": "https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

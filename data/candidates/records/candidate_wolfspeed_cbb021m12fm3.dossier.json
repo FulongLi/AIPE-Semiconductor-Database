@@ -1,0 +1,84 @@
+{
+  "candidate_id": "candidate_wolfspeed_cbb021m12fm3",
+  "manufacturer": "Wolfspeed",
+  "part_number": "CBB021M12FM3",
+  "package": "WolfPACK FM (62.8 x 33.8 mm, press-fit, NTC, optional pre-applied TIM)",
+  "family": "WolfPACK full-bridge, Gen 3 dies",
+  "status": "Active",
+  "description": "Full-bridge module; electrical values are per switch position.",
+  "datasheet": {
+    "url": "https://assets.wolfspeed.com/uploads/2023/05/Wolfspeed_CBB021M12FM3_data_sheet.pdf",
+    "revision": "Rev. 5",
+    "date": "2026-06",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.wolfspeed.com/products/power/sic-power-modules/wolfspeed-wolfpack-sic-power-modules-family/cbb021m12fm3/",
+  "models": {
+    "formats": [
+      "LTspice",
+      "PLECS",
+      "SPICE",
+      "RC-thermal"
+    ],
+    "availability": "LTspice/PLECS on the models page; module SPICE documented in PRD-07913 and RC thermal models in PRD-09035.",
+    "licence_note": "Wolfspeed Terms of Use permit personal, non-commercial download/display/print; other copying, distribution or publication requires written consent (redistribution restriction).",
+    "url": "https://www.wolfspeed.com/tools-and-support/power/ltspice-and-plecs-models/",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.pd_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qrr": "manufacturer_specified",
+    "reverse_conduction.trr": "manufacturer_specified",
+    "reverse_conduction.irrm": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jhs": "manufacturer_specified",
+    "package_parasitics.lstray": "manufacturer_specified"
+  },
+  "absent": [
+    "rth_jc (baseplate-less module; datasheet gives Rth(J-HS) with TIM instead)",
+    "Eoss (not transcribed)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -40.0,
+      "unit": "degC"
+    },
+    "tj_intermittent_max": {
+      "value": 175.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": {
+    "device_id": "wolfspeed_cbb021m12fm3",
+    "revision": 1,
+    "uri": "urn:aipe:semiconductor:wolfspeed_cbb021m12fm3:revision:1",
+    "provides": [
+      "conduction:voltage_drop tensor wolfspeed_cbb021m12fm3:voltage_drop:2",
+      "switching:Eon tensor wolfspeed_cbb021m12fm3:Eon:0",
+      "switching:Eoff tensor wolfspeed_cbb021m12fm3:Eoff:1",
+      "reverse_conduction:voltage_drop tensor wolfspeed_cbb021m12fm3:voltage_drop:3",
+      "thermal:Cauer network wolfspeed_cbb021m12fm3:thermal:0"
+    ]
+  },
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

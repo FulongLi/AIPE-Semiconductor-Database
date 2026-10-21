@@ -1,0 +1,2678 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_infineon_imza120r040m2h",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "Infineon",
+    "part_number": "IMZA120R040M2H",
+    "family_id": "CoolSiC G2",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_infineon_imza120r040m2h:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:infineon_imza120r040m2h"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_infineon_imza120r040m2h:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 48.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:infineon_imza120r040m2h"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 48.0,
+            "original_unit": "A",
+            "canonical_value": 48.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_infineon_imza120r040m2h:id_max:3",
+      "name": "id_max",
+      "quantity": {
+        "value": 34.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:infineon_imza120r040m2h"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 2,
+            "original_value": 34.0,
+            "original_unit": "A",
+            "canonical_value": 34.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 373.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_infineon_imza120r040m2h:tj_max:4",
+      "name": "tj_max",
+      "quantity": {
+        "value": 448.15,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:infineon_imza120r040m2h"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "tj_max",
+            "row": 1,
+            "original_value": 175.0,
+            "original_unit": "degC",
+            "canonical_value": 448.15,
+            "canonical_unit": "K"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:200 degC overload for at most 100 h is printed separately"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "PG-TO247-4-U02",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:rth_jc:37",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 0.53,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 1,
+              "original_value": 0.53,
+              "original_unit": "K/W",
+              "canonical_value": 0.53,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rth_jc:38",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 0.69,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 2,
+              "original_value": 0.69,
+              "original_unit": "K/W",
+              "canonical_value": 0.69,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "datasheet:infineon_imza120r040m2h",
+      "kind": "manufacturer",
+      "name": "Infineon datasheet IMZA120R040M2H Rev. 1.20 (2026-07-23)",
+      "artifact": null,
+      "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-imza120r040m2h-datasheet-en.pdf",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Infineon",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "product-page:infineon_imza120r040m2h",
+      "kind": "manufacturer",
+      "name": "Infineon product page IMZA120R040M2H",
+      "artifact": null,
+      "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "Infineon",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:Qrr row (datasheet gives Qfr instead)",
+      "absent:Eoss/Qoss test voltage (not transcribed)",
+      "absent:price (not retrieved)"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:5",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.04,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 40.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.04,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:6",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.051000000000000004,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 2,
+              "original_value": 51.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.051000000000000004,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:7",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.049,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 3,
+              "original_value": 49.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.049,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:8",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.066,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 4,
+              "original_value": 66.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.066,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 15.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:9",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.081,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 5,
+              "original_value": 81.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.081,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rds_on:10",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.094,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 6,
+              "original_value": 94.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.094,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eon:16",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00010899999999999999,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 1,
+              "original_value": 109.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.00010899999999999999,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode_at_0V",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eon:17",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00019999999999999998,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 2,
+              "original_value": 200.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.00019999999999999998,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode_at_0V",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eon:18",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00009999999999999999,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 3,
+              "original_value": 100.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.00009999999999999999,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eon:19",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.000193,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 4,
+              "original_value": 193.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000193,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eoff:20",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.000044999999999999996,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 1,
+              "original_value": 45.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000044999999999999996,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode_at_0V",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eoff:21",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.000067,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 2,
+              "original_value": 67.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000067,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode_at_0V",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eoff:22",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.000023,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 3,
+              "original_value": 23.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000023,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eoff:23",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.000023,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 4,
+              "original_value": 23.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000023,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "test_inductance",
+              "quantity": {
+                "value": 1.2000000000000002e-8,
+                "unit": "H"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "freewheeling:body_diode",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:ciss:24",
+        "name": "ciss",
+        "quantity": {
+          "value": 1.31e-9,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "ciss",
+              "row": 1,
+              "original_value": 1310.0,
+              "original_unit": "pF",
+              "canonical_value": 1.31e-9,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:coss:25",
+        "name": "coss",
+        "quantity": {
+          "value": 5.5e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "coss",
+              "row": 1,
+              "original_value": 55.0,
+              "original_unit": "pF",
+              "canonical_value": 5.5e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:crss:26",
+        "name": "crss",
+        "quantity": {
+          "value": 5e-12,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "crss",
+              "row": 1,
+              "original_value": 5.0,
+              "original_unit": "pF",
+              "canonical_value": 5e-12,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 100000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Eoss:27",
+        "name": "Eoss",
+        "quantity": {
+          "value": 0.000023,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "eoss",
+              "row": 1,
+              "original_value": 23.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000023,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:voltage condition not transcribed in the research note"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:qoss:28",
+        "name": "qoss",
+        "quantity": {
+          "value": 8.500000000000001e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "qoss",
+              "row": 1,
+              "original_value": 85.0,
+              "original_unit": "nC",
+              "canonical_value": 8.500000000000001e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:voltage condition not transcribed in the research note"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:qg_total:29",
+        "name": "qg_total",
+        "quantity": {
+          "value": 3.9000000000000005e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qg_total",
+              "row": 1,
+              "original_value": 39.0,
+              "original_unit": "nC",
+              "canonical_value": 3.9000000000000005e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:qgs:30",
+        "name": "qgs",
+        "quantity": {
+          "value": 8e-9,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgs",
+              "row": 1,
+              "original_value": 8.0,
+              "original_unit": "nC",
+              "canonical_value": 8e-9,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:printed as QGS(pl)"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:qgd:31",
+        "name": "qgd",
+        "quantity": {
+          "value": 1e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgd",
+              "row": 1,
+              "original_value": 10.0,
+              "original_unit": "nC",
+              "canonical_value": 1e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:vgs_on_recommended:32",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 15.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 1,
+              "original_value": 15.0,
+              "original_unit": "V",
+              "canonical_value": 15.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "minimum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:vgs_on_recommended:33",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 2,
+              "original_value": 18.0,
+              "original_unit": "V",
+              "canonical_value": 18.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:vgs_off_recommended:34",
+        "name": "vgs_off_recommended",
+        "quantity": {
+          "value": -5.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_off_recommended",
+              "row": 1,
+              "original_value": -5.0,
+              "original_unit": "V",
+              "canonical_value": -5.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "minimum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:vgs_off_recommended:35",
+        "name": "vgs_off_recommended",
+        "quantity": {
+          "value": 0.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_off_recommended",
+              "row": 2,
+              "original_value": 0.0,
+              "original_unit": "V",
+              "canonical_value": 0.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:rg_internal:36",
+        "name": "rg_internal",
+        "quantity": {
+          "value": 6.5,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "rg_internal",
+              "row": 1,
+              "original_value": 6.5,
+              "original_unit": "Ohm",
+              "canonical_value": 6.5,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_infineon_imza120r040m2h:voltage_drop:11",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -4.2,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 1,
+              "original_value": 4.2,
+              "original_unit": "V",
+              "canonical_value": -4.2,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:voltage_drop:12",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -5.5,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 2,
+              "original_value": 5.5,
+              "original_unit": "V",
+              "canonical_value": -5.5,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:voltage_drop:13",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -4.05,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 3,
+              "original_value": 4.05,
+              "original_unit": "V",
+              "canonical_value": -4.05,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -18.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Qfr:14",
+        "name": "Qfr",
+        "quantity": {
+          "value": 1.6e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "qfr",
+              "row": 1,
+              "original_value": 0.16,
+              "original_unit": "uC",
+              "canonical_value": 1.6e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:includes QC"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_infineon_imza120r040m2h:Qfr:15",
+        "name": "Qfr",
+        "quantity": {
+          "value": 3.7999999999999996e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:infineon_imza120r040m2h"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "qfr",
+              "row": 2,
+              "original_value": 0.38,
+              "original_unit": "uC",
+              "canonical_value": 3.7999999999999996e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 448.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:includes QC"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_infineon_imza120r040m2h:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:infineon_imza120r040m2h"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "PLECS",
+          "SPICE"
+        ],
+        "availability": "PLECS model listed on the product page; SPICE per Infineon AN_2020_17; per-part file, licence text and login status not verified.",
+        "licence_note": "Gated documents need a myInfineon account; licence wording not read.",
+        "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/discretes/imza120r040m2h/",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

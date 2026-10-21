@@ -1,0 +1,66 @@
+{
+  "candidate_id": "candidate_onsemi_nth4l022n120m3s",
+  "manufacturer": "onsemi",
+  "part_number": "NTH4L022N120M3S",
+  "package": "TO-247-4L",
+  "family": "EliteSiC M3S (planar)",
+  "status": "active (product page)",
+  "description": null,
+  "datasheet": {
+    "url": "https://www.onsemi.com/pdf/datasheet/nth4l022n120m3s-d.pdf",
+    "revision": "Rev. 9",
+    "date": "2024-09",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l022n120m3s",
+  "models": {
+    "formats": [
+      "PLECS",
+      "SPICE"
+    ],
+    "availability": "PLECS Model Generator and Elite Power Simulator require a MyON login; SPICE ZIP published per AND90315 on the product page; login requirement and licence text not confirmed.",
+    "licence_note": "Licence text not confirmed.",
+    "url": "https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic/silicon-carbide-sic-mosfets/nth4l022n120m3s",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qrr": "manufacturer_specified",
+    "reverse_conduction.trr": "manufacturer_specified",
+    "reverse_conduction.irrm": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "Eoss (not tabulated)",
+    "Eon/Eoff at elevated junction temperature (25 degC row only)",
+    "rth_jc typical (max only)",
+    "distributor price (only an onsemi reference price of USD 10.0065 is shown on the product page; not a distributor quote)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -55.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

@@ -1,0 +1,66 @@
+{
+  "candidate_id": "candidate_infineon_imbg120r040m2h",
+  "manufacturer": "Infineon",
+  "part_number": "IMBG120R040M2H",
+  "package": "PG-TO263-7-U01 (D2PAK-7)",
+  "family": "CoolSiC G2",
+  "status": "active (product page)",
+  "description": null,
+  "datasheet": {
+    "url": "https://www.infineon.com/assets/row/public/documents/60/49/infineon-imbg120r040m2h-datasheet-en.pdf?fileId=8ac78c8c8d1b852e018d2200102020d0",
+    "revision": "Rev. 1.50",
+    "date": "2026-07-23",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": "https://www.infineon.com/part/IMBG120R040M2H",
+  "models": {
+    "formats": [
+      "PLECS",
+      "SPICE"
+    ],
+    "availability": "PLECS model listed on the product page; SPICE per Infineon AN_2020_17; per-part file, licence text and login status not verified.",
+    "licence_note": "Gated documents need a myInfineon account; licence wording not read.",
+    "url": "https://www.infineon.com/part/IMBG120R040M2H",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qfr": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "capacitance.eoss": "manufacturer_specified",
+    "capacitance.qoss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "rds_on maximum at 25 degC (not printed)",
+    "Qrr row (datasheet gives Qfr instead)",
+    "gate voltage for the ID row and Qg row conditions (not transcribed)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -55.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

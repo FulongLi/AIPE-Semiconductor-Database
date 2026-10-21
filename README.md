@@ -52,7 +52,8 @@ cannot replace or remove manufacturer/measured evidence; append a new record.
 
 ## Install and test
 
-Python 3.11+ is required. Pydantic is the only core runtime dependency.
+Python 3.10+ is required (a `StrEnum` backport covers 3.10). Pydantic is the only core
+runtime dependency.
 
 ```bash
 python3 -m venv .venv
@@ -182,6 +183,31 @@ See [Phase-2 guide and examples](docs/phase2.md),
 [generated example outputs](examples/phase2/). The Explorer is an API/CLI foundation;
 no production GUI, implicit interpolation, or laboratory execution is included.
 
+## DAB loss evaluation, screening and measurement requests
+
+Version 3.1.0 adds a working `LossEvaluator` for a dual-active-bridge switch position,
+N-D tensor interpolation with an explicit operating-envelope policy (PLECS guard rows
+dropped, extrapolation only on request and flagged), Cauer/Foster thermal services with
+an electro-thermal fixed point, reviewable datasheet candidate records under
+`data/candidates/`, an evidence-tiered device screening and prioritised laboratory
+measurement requests. All of it consumes actual converter stress from the AIPE waveform
+summary (or the HDF5 waveform) and reports every unavailable quantity instead of
+estimating it.
+
+```bash
+aipe-devices dab-losses --device wolfspeed_c3m0075120k --summary runs/dab-l1-nominal-ic/summary.json --switch S1 --tj 398.15 --vdc 800 --fsw 100e3 --rg-on 2 --rg-off 2 --rth-cs 0.1 --rth-sa 0.5
+aipe-devices dab-screen --summary runs/dab-l1-nominal-ic/summary.json --rth-cs 0.1 --rth-sa 0.5
+aipe-devices measurement-requests --device wolfspeed_c3m0075120k --summary runs/dab-l1-nominal-ic/summary.json --switch S1 --tj 398.15 --vdc 800 --fsw 100e3 --rg-on 2 --rg-off 2
+aipe-devices import-candidates data/candidates/sic-dab-shortlist-2026-10-21.yaml --output data/candidates/records
+```
+
+For the nominal 10 kW run (800 V -> 400 V, 100 kHz) the primary C3M0075120K position
+evaluates to 10.4 W conduction + 5.95 W turn-off at 125 degC with ZVS turn-on, and the
+secondary C3M0030090K position to 13.9 W + 5.8 W. Candidate records are unreviewed
+datasheet transcriptions linked to canonical records where both exist; they never enter
+`data/canonical/`. See [the DAB guide](docs/dab-loss-screening.md),
+[generated outputs](examples/dab/) and [candidate rules](data/candidates/README.md).
+
 ## Limitations and roadmap
 
 - Source coverage is not engineering operating coverage. 900/1000 °C points remain
@@ -191,9 +217,11 @@ no production GUI, implicit interpolation, or laboratory execution is included.
   90 custom tables. Export requires explicit adapter bindings. Unknown custom-table
   semantics are rejected. No formula execution or simulator/XSD validation is claimed.
 - Ratings, capacitance, gate charge, SOA, reliability and internal module connectivity
-  generally remain unknown. Synthetic fixtures exercise other technology schemas only.
-- Basic 1D interpolation and thermal DC resistance are implemented. Converter loss,
-  fitting and waveform processing are extension contracts, not production solvers.
+  remain unknown in the canonical corpus; unreviewed datasheet candidates carry some of
+  them for 19 parts. Synthetic fixtures exercise other technology schemas only.
+- 1D and N-D linear interpolation, Cauer/Foster thermal responses and a DAB switch loss
+  evaluator are implemented on manufacturer model data; model fitting and generic
+  waveform processing remain extension contracts. No measured evidence backs any loss.
 - JSON persistence has atomic files and an exclusive writer lock. No distributed
   database, cloud backend or authorization engine is included.
 - No PDF digitization, SPICE parsing, laboratory control, lifetime prediction,
@@ -202,6 +230,6 @@ no production GUI, implicit interpolation, or laboratory execution is included.
 Future iterations should resolve source-axis ambiguities, add reviewed operating envelopes and
 multidimensional evaluations, validate exports in PLECS, implement DPT processing and
 artifact backends, and add measured/rating/capacitance datasets. See
-[architecture](docs/architecture.md), [audit](docs/audit.md),
+[architecture](docs/architecture.md), [DAB guide](docs/dab-loss-screening.md), [audit](docs/audit.md),
 [deliverables](docs/refactor-report.md), [breaking changes](CHANGELOG.md)
 and [licensing notes](LICENSING.md).

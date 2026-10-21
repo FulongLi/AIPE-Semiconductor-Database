@@ -1,0 +1,36 @@
+{
+  "candidate_id": "candidate_infineon_ff45mr12w1m1_b11",
+  "manufacturer": "Infineon",
+  "part_number": "FF45MR12W1M1_B11",
+  "package": "Easy 1B (PressFIT, NTC)",
+  "family": "CoolSiC Easy 1B half-bridge",
+  "status": "product page reachable; datasheet not retrieved",
+  "description": "Half-bridge module; datasheet PDF not retrievable (indexed link 404, page client-rendered).",
+  "datasheet": null,
+  "cited_by": null,
+  "product_page": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/",
+  "models": {
+    "formats": [
+      "PLECS"
+    ],
+    "availability": "PLECS models listed for the Easy family; a community reply says some SiC module SPICE models are NDA-only.",
+    "licence_note": "SPICE reported NDA-only per forum; not verified.",
+    "url": "https://www.infineon.com/cms/en/product/power/mosfet/silicon-carbide/modules/ff45mr12w1m1_b11/",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "product_page",
+    "conduction.rds_on": "product_page"
+  },
+  "absent": [
+    "datasheet (not retrievable)",
+    "id_max, tj_max, Eon/Eoff, capacitances, gate charge, VSD, thermal resistance (all not retrieved)",
+    "price (not retrieved)"
+  ],
+  "informational": {},
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

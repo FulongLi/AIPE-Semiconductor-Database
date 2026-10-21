@@ -1,0 +1,66 @@
+{
+  "candidate_id": "candidate_microchip_msc035sma070b4",
+  "manufacturer": "Microchip",
+  "part_number": "MSC035SMA070B4",
+  "package": "TO-247-4",
+  "family": "mSiC",
+  "status": "product page not retrieved (site blocked automated fetch)",
+  "description": null,
+  "datasheet": {
+    "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/sic/ProductDocuments/DataSheets/MSC035SMA070B4-SiC-MOSFET-Datasheet.pdf",
+    "revision": "DS00005333A",
+    "date": "2024",
+    "document_id": null
+  },
+  "cited_by": null,
+  "product_page": null,
+  "models": {
+    "formats": [
+      "SPICE",
+      "PLECS"
+    ],
+    "availability": "Provided after a licence agreement form; automated fetch blocked (HTTP 403); licence wording not read.",
+    "licence_note": "Licence agreement form required; wording not read.",
+    "url": "https://www.microchip.com/en-us/products/power-management/silicon-carbide-sic-devices-and-power-modules/design-resources/sic-spice-and-plecs-component-models-license-agreement",
+    "retrieved": false
+  },
+  "field_basis": {
+    "ratings.vds_max": "manufacturer_specified",
+    "ratings.id_max": "manufacturer_specified",
+    "ratings.tj_max": "manufacturer_specified",
+    "conduction.rds_on": "manufacturer_specified",
+    "reverse_conduction.vsd": "manufacturer_specified",
+    "reverse_conduction.qrr": "manufacturer_specified",
+    "reverse_conduction.trr": "manufacturer_specified",
+    "reverse_conduction.irrm": "manufacturer_specified",
+    "switching.Eon": "manufacturer_specified",
+    "switching.Eoff": "manufacturer_specified",
+    "capacitance.ciss": "manufacturer_specified",
+    "capacitance.coss": "manufacturer_specified",
+    "capacitance.crss": "manufacturer_specified",
+    "gate_charge.qg_total": "manufacturer_specified",
+    "gate_charge.qgs": "manufacturer_specified",
+    "gate_charge.qgd": "manufacturer_specified",
+    "gate_drive.vgs_on_recommended": "manufacturer_specified",
+    "gate_drive.vgs_off_recommended": "manufacturer_specified",
+    "gate_drive.rg_internal": "manufacturer_specified",
+    "thermal.rth_jc": "manufacturer_specified"
+  },
+  "absent": [
+    "rds_on at elevated temperature (not tabulated)",
+    "Eoss/Qoss (not transcribed)",
+    "junction temperature of the Eon/Eoff row (not stated in the research note)",
+    "price (not retrieved)"
+  ],
+  "informational": {
+    "tj_min": {
+      "value": -55.0,
+      "unit": "degC"
+    }
+  },
+  "notes": [],
+  "canonical_link": null,
+  "transcribed_from": "repos/AIPE-Workflows/examples/dab-10kw/references/sic-device-shortlist.md",
+  "collected_on": "2026-10-21",
+  "review_status": "unreviewed"
+}

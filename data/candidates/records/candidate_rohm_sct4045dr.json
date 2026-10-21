@@ -1,0 +1,1776 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_rohm_sct4045dr",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "ROHM",
+    "part_number": "SCT4045DR",
+    "family_id": "4th generation trench",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": []
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "discrete",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_rohm_sct4045dr:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 750.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:rohm_sct4045dr"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 750.0,
+            "original_unit": "V",
+            "canonical_value": 750.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_rohm_sct4045dr:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 34.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:rohm_sct4045dr"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 34.0,
+            "original_unit": "A",
+            "canonical_value": 34.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 298.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_rohm_sct4045dr:id_max:3",
+      "name": "id_max",
+      "quantity": {
+        "value": 24.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:rohm_sct4045dr"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 2,
+            "original_value": 24.0,
+            "original_unit": "A",
+            "canonical_value": 24.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": {
+          "value": 373.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_rohm_sct4045dr:tj_max:4",
+      "name": "tj_max",
+      "quantity": {
+        "value": 448.15,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:rohm_sct4045dr"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "tj_max",
+            "row": 1,
+            "original_value": 175.0,
+            "original_unit": "degC",
+            "canonical_value": 448.15,
+            "canonical_unit": "K"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "TO-247-4L",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_rohm_sct4045dr:rth_jc:25",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 0.98,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 1,
+              "original_value": 0.98,
+              "original_unit": "K/W",
+              "canonical_value": 0.98,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:rth_jc:26",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 1.3,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 2,
+              "original_value": 1.3,
+              "original_unit": "K/W",
+              "canonical_value": 1.3,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "datasheet:rohm_sct4045dr",
+      "kind": "manufacturer",
+      "name": "ROHM datasheet SCT4045DR Rev.005 (2024-09-09)",
+      "artifact": null,
+      "url": "https://fscdn.rohm.com/en/products/databook/datasheet/discrete/sic/mosfet/sct4045dr-e.pdf",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "ROHM",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "product-page:rohm_sct4045dr",
+      "kind": "manufacturer",
+      "name": "ROHM product page SCT4045DR",
+      "artifact": null,
+      "url": "https://www.rohm.com/products/sic-power-devices/sic-mosfet/sct4045dr-product",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "ROHM",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:Eoss (not transcribed)",
+      "absent:junction temperature of the Eon/Eoff row (not stated in the research note)",
+      "absent:gate voltage of the VSD row (not stated)",
+      "absent:price (not retrieved)"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_rohm_sct4045dr:rds_on:5",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.045,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 45.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.045,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:rds_on:6",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.059000000000000004,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 2,
+              "original_value": 59.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.059000000000000004,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:rds_on:7",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.077,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 3,
+              "original_value": 77.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.077,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_rohm_sct4045dr:Eon:12",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.000112,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 1,
+              "original_value": 112.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000112,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 3.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 3.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "junction_temperature_not_stated",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:Eoff:13",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.000017,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 1,
+              "original_value": 17.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000017,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": 0.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 3.3,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 3.3,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "junction_temperature_not_stated",
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_rohm_sct4045dr:ciss:14",
+        "name": "ciss",
+        "quantity": {
+          "value": 1.46e-9,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "ciss",
+              "row": 1,
+              "original_value": 1460.0,
+              "original_unit": "pF",
+              "canonical_value": 1.46e-9,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 500.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:coss:15",
+        "name": "coss",
+        "quantity": {
+          "value": 6.9e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "coss",
+              "row": 1,
+              "original_value": 69.0,
+              "original_unit": "pF",
+              "canonical_value": 6.9e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 500.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:crss:16",
+        "name": "crss",
+        "quantity": {
+          "value": 5e-12,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "crss",
+              "row": 1,
+              "original_value": 5.0,
+              "original_unit": "pF",
+              "canonical_value": 5e-12,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 500.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:co_er:17",
+        "name": "co_er",
+        "quantity": {
+          "value": 9e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "co_er",
+              "row": 1,
+              "original_value": 90.0,
+              "original_unit": "pF",
+              "canonical_value": 9e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 500.0,
+                "unit": "V"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_rohm_sct4045dr:qg_total:18",
+        "name": "qg_total",
+        "quantity": {
+          "value": 6.300000000000001e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qg_total",
+              "row": 1,
+              "original_value": 63.0,
+              "original_unit": "nC",
+              "canonical_value": 6.300000000000001e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:qgs:19",
+        "name": "qgs",
+        "quantity": {
+          "value": 1.4000000000000001e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgs",
+              "row": 1,
+              "original_value": 14.0,
+              "original_unit": "nC",
+              "canonical_value": 1.4000000000000001e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:qgd:20",
+        "name": "qgd",
+        "quantity": {
+          "value": 1.9e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgd",
+              "row": 1,
+              "original_value": 19.0,
+              "original_unit": "nC",
+              "canonical_value": 1.9e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:vgs_on_recommended:21",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 15.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 1,
+              "original_value": 15.0,
+              "original_unit": "V",
+              "canonical_value": 15.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "minimum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:vgs_on_recommended:22",
+        "name": "vgs_on_recommended",
+        "quantity": {
+          "value": 18.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_on_recommended",
+              "row": 2,
+              "original_value": 18.0,
+              "original_unit": "V",
+              "canonical_value": 18.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:vgs_off_recommended:23",
+        "name": "vgs_off_recommended",
+        "quantity": {
+          "value": 0.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_off_recommended",
+              "row": 1,
+              "original_value": 0.0,
+              "original_unit": "V",
+              "canonical_value": 0.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:rg_internal:24",
+        "name": "rg_internal",
+        "quantity": {
+          "value": 4.0,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "rg_internal",
+              "row": 1,
+              "original_value": 4.0,
+              "original_unit": "Ohm",
+              "canonical_value": 4.0,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_rohm_sct4045dr:voltage_drop:8",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -3.3,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 1,
+              "original_value": 3.3,
+              "original_unit": "V",
+              "canonical_value": -3.3,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:Qrr:9",
+        "name": "Qrr",
+        "quantity": {
+          "value": 8.9e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "qrr",
+              "row": 1,
+              "original_value": 89.0,
+              "original_unit": "nC",
+              "canonical_value": 8.9e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 2900000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:trr:10",
+        "name": "trr",
+        "quantity": {
+          "value": 9.3e-9,
+          "unit": "s"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "trr",
+              "row": 1,
+              "original_value": 9.3,
+              "original_unit": "ns",
+              "canonical_value": 9.3e-9,
+              "canonical_unit": "s"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 2900000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_rohm_sct4045dr:Irrm:11",
+        "name": "Irrm",
+        "quantity": {
+          "value": 19.0,
+          "unit": "A"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:rohm_sct4045dr"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "irrm",
+              "row": 1,
+              "original_value": 19.0,
+              "original_unit": "A",
+              "canonical_value": 19.0,
+              "canonical_unit": "A"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 500.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 17.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "di_dt",
+              "quantity": {
+                "value": 2900000000.0,
+                "unit": "A/s"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_rohm_sct4045dr:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:rohm_sct4045dr"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "PSIM",
+          "LTspice",
+          "PLECS"
+        ],
+        "availability": "PSIM model confirmed; LTspice/PLECS models offered via the product page (not seen); unencrypted SPICE on request; no login stated.",
+        "licence_note": "ROHM Design Models page terms; wording not transcribed.",
+        "url": "https://www.rohm.com/support/design-model",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}

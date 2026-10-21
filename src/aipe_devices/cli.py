@@ -96,7 +96,13 @@ def main(argv=None):
     explorer.add_argument("--fixed", default="{}", help="JSON object of exact SI slice coordinates")
     explorer.add_argument("--x")
     explorer.add_argument("--y")
+    from aipe_devices.cli_dab import DAB_COMMANDS, handle_dab_command, register_dab_commands
+
+    register_dab_commands(commands)
     args = parser.parse_args(argv)
+    if args.command in DAB_COMMANDS:
+        handle_dab_command(args)
+        return
     if args.command == "import-wolfspeed":
         report = import_wolfspeed(args.raw_root, args.repository)
         atomic_write(args.report, (json.dumps(report, indent=2) + "\n").encode())

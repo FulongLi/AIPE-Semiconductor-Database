@@ -4,17 +4,27 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aipe-devices"
-version = "3.0.0"
+version = "3.1.0"
 description = "Canonical power semiconductor data and evidence infrastructure"
 readme = "README.md"
 license-files = ["LICENSING.md"]
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = ["pydantic>=2.10,<3"]
 
 [project.optional-dependencies]
 matlab = ["scipy>=1.11"]
 library = ["openpyxl>=3.1,<4"]
-dev = ["pytest>=8", "ruff>=0.9", "build>=1", "scipy>=1.11", "openpyxl>=3.1,<4"]
+candidates = ["pyyaml>=6"]
+waveforms = ["h5py>=3.10"]
+dev = [
+    "pytest>=8",
+    "ruff>=0.9",
+    "build>=1",
+    "scipy>=1.11",
+    "openpyxl>=3.1,<4",
+    "pyyaml>=6",
+    "h5py>=3.10",
+]
 
 [project.scripts]
 aipe-devices = "aipe_devices.cli:main"
@@ -27,7 +37,7 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py310"
 line-length = 100
 
 [tool.ruff.lint]

@@ -1,0 +1,1927 @@
+{
+  "schema_version": "3.0.0",
+  "device_id": "candidate_onsemi_nxh020p120mnf1",
+  "revision": 1,
+  "identity": {
+    "manufacturer": "onsemi",
+    "part_number": "NXH020P120MNF1",
+    "family_id": "EliteSiC M1 half-bridge",
+    "part_id": null,
+    "revision_id": null,
+    "production_lot_id": null,
+    "physical_sample_id": null,
+    "aliases": [
+      "NXH020P120MNF1PG",
+      "NXH020P120MNF1PTG"
+    ]
+  },
+  "classification": {
+    "technology": "SiC_MOSFET",
+    "integration": "module",
+    "polarity": "unknown"
+  },
+  "ratings": [
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:vds_max:1",
+      "name": "vds_max",
+      "quantity": {
+        "value": 1200.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "vds_max",
+            "row": 1,
+            "original_value": 1200.0,
+            "original_unit": "V",
+            "canonical_value": 1200.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:id_max:2",
+      "name": "id_max",
+      "quantity": {
+        "value": 51.0,
+        "unit": "A"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "id_max",
+            "row": 1,
+            "original_value": 51.0,
+            "original_unit": "A",
+            "canonical_value": 51.0,
+            "canonical_unit": "A"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": {
+          "value": 448.15,
+          "unit": "K"
+        },
+        "case_temperature": {
+          "value": 353.15,
+          "unit": "K"
+        },
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:pd_max:3",
+      "name": "pd_max",
+      "quantity": {
+        "value": 211.0,
+        "unit": "W"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "pd_max",
+            "row": 1,
+            "original_value": 211.0,
+            "original_unit": "W",
+            "canonical_value": 211.0,
+            "canonical_unit": "W"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:tj_max:4",
+      "name": "tj_max",
+      "quantity": {
+        "value": 423.15,
+        "unit": "K"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "tj_max",
+            "row": 1,
+            "original_value": 150.0,
+            "original_unit": "degC",
+            "canonical_value": 423.15,
+            "canonical_unit": "K"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified",
+          "note:operating maximum; 175 degC absolute maximum is printed separately"
+        ],
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:v_isolation_rms:5",
+      "name": "v_isolation_rms",
+      "quantity": {
+        "value": 4800.0,
+        "unit": "V"
+      },
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "datasheet:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": [
+          {
+            "sheet": "ratings",
+            "column": "v_isolation_rms",
+            "row": 1,
+            "original_value": 4800.0,
+            "original_unit": "V",
+            "canonical_value": 4800.0,
+            "canonical_unit": "V"
+          }
+        ]
+      },
+      "condition": {
+        "junction_temperature": null,
+        "case_temperature": null,
+        "ambient_temperature": null,
+        "dc_bus_voltage": null,
+        "drain_current": null,
+        "collector_current": null,
+        "gate_voltage_on": null,
+        "gate_voltage_off": null,
+        "gate_resistance_on": null,
+        "gate_resistance_off": null,
+        "switching_frequency": null,
+        "pulse_width": null,
+        "duty_cycle": null,
+        "gate_state": "unknown",
+        "extensions": []
+      },
+      "statistic": "unspecified",
+      "uncertainty": null,
+      "quality": {
+        "flags": [
+          "basis:manufacturer_specified"
+        ],
+        "review_status": "unreviewed"
+      }
+    }
+  ],
+  "package": {
+    "name": "F1 PIM18 (33.8 x 42.5 mm, press-fit, NTC, optional TIM)",
+    "components": [],
+    "parasitics": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rth_jc:27",
+        "name": "rth_jc",
+        "quantity": {
+          "value": 0.4495,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jc",
+              "row": 1,
+              "original_value": 0.4495,
+              "original_unit": "degC/W",
+              "canonical_value": 0.4495,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:per switch"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rth_jhs:28",
+        "name": "rth_jhs",
+        "quantity": {
+          "value": 0.7971,
+          "unit": "K/W"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "thermal",
+              "column": "rth_jhs",
+              "row": 1,
+              "original_value": 0.7971,
+              "original_unit": "degC/W",
+              "canonical_value": 0.7971,
+              "canonical_unit": "K/W"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:printed as RthJH (junction to heat sink)"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "thermal_coupling": []
+  },
+  "provenance": [
+    {
+      "id": "datasheet:onsemi_nxh020p120mnf1",
+      "kind": "manufacturer",
+      "name": "onsemi datasheet NXH020P120MNF1 Rev. 0 (2023-09)",
+      "artifact": null,
+      "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh020p120mnf1-d.pdf",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "onsemi",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    },
+    {
+      "id": "product-page:onsemi_nxh020p120mnf1",
+      "kind": "manufacturer",
+      "name": "onsemi product page NXH020P120MNF1",
+      "artifact": null,
+      "url": "https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1",
+      "access": {
+        "license": null,
+        "redistribution_allowed": null,
+        "commercial_use_allowed": null,
+        "visibility": "public",
+        "owner": "onsemi",
+        "category": "manufacturer"
+      },
+      "import_metadata": null
+    }
+  ],
+  "quality": {
+    "flags": [
+      "candidate_not_canonical",
+      "datasheet_transcription",
+      "absent:Qrr (not tabulated)",
+      "absent:recommended gate voltages (only the +25/-15 V rating and the -5/18 V test condition are printed)",
+      "absent:distributor price (only an onsemi reference price of USD 111.9437 is shown; not a distributor quote)"
+    ],
+    "review_status": "unreviewed"
+  },
+  "conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rds_on:6",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.02,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 1,
+              "original_value": 20.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.02,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rds_on:7",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.03,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 2,
+              "original_value": 30.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.03,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rds_on:8",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.028,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 3,
+              "original_value": 28.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.028,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 398.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rds_on:9",
+        "name": "rds_on",
+        "quantity": {
+          "value": 0.031,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "conduction",
+              "column": "rds_on",
+              "row": 4,
+              "original_value": 31.0,
+              "original_unit": "mOhm",
+              "canonical_value": 0.031,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "switching": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:Eon:13",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00038,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 1,
+              "original_value": 0.38,
+              "original_unit": "mJ",
+              "canonical_value": 0.00038,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:Eon:14",
+        "name": "Eon",
+        "quantity": {
+          "value": 0.00049,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eon",
+              "row": 2,
+              "original_value": 0.49,
+              "original_unit": "mJ",
+              "canonical_value": 0.00049,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:Eoff:15",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00016,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 1,
+              "original_value": 0.16,
+              "original_unit": "mJ",
+              "canonical_value": 0.00016,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:Eoff:16",
+        "name": "Eoff",
+        "quantity": {
+          "value": 0.00016,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "switching",
+              "column": "Eoff",
+              "row": 2,
+              "original_value": 0.16,
+              "original_unit": "mJ",
+              "canonical_value": 0.00016,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 600.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 18.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": {
+            "value": -5.0,
+            "unit": "V"
+          },
+          "gate_resistance_on": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "gate_resistance_off": {
+            "value": 2.7,
+            "unit": "Ohm"
+          },
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "single_gate_resistance_printed"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "capacitance": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:ciss:17",
+        "name": "ciss",
+        "quantity": {
+          "value": 2.42e-9,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "ciss",
+              "row": 1,
+              "original_value": 2420.0,
+              "original_unit": "pF",
+              "canonical_value": 2.42e-9,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:crss:18",
+        "name": "crss",
+        "quantity": {
+          "value": 1.9e-11,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "crss",
+              "row": 1,
+              "original_value": 19.0,
+              "original_unit": "pF",
+              "canonical_value": 1.9e-11,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:coss:19",
+        "name": "coss",
+        "quantity": {
+          "value": 1.93e-10,
+          "unit": "F"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "coss",
+              "row": 1,
+              "original_value": 193.0,
+              "original_unit": "pF",
+              "canonical_value": 1.93e-10,
+              "canonical_unit": "F"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            },
+            {
+              "name": "measurement_frequency",
+              "quantity": {
+                "value": 1000000.0,
+                "unit": "Hz"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:Eoss:20",
+        "name": "Eoss",
+        "quantity": {
+          "value": 0.000124,
+          "unit": "J"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "capacitance",
+              "column": "eoss",
+              "row": 1,
+              "original_value": 124.0,
+              "original_unit": "uJ",
+              "canonical_value": 0.000124,
+              "canonical_unit": "J"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": [
+            {
+              "name": "drain_source_voltage",
+              "quantity": {
+                "value": 800.0,
+                "unit": "V"
+              }
+            }
+          ]
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "note:printed as 0-800 V"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "gate_charge": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:qg_total:21",
+        "name": "qg_total",
+        "quantity": {
+          "value": 2.1350000000000003e-7,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qg_total",
+              "row": 1,
+              "original_value": 213.5,
+              "original_unit": "nC",
+              "canonical_value": 2.1350000000000003e-7,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:qgs:22",
+        "name": "qgs",
+        "quantity": {
+          "value": 5.0000000000000004e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgs",
+              "row": 1,
+              "original_value": 50.0,
+              "original_unit": "nC",
+              "canonical_value": 5.0000000000000004e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:qgd:23",
+        "name": "qgd",
+        "quantity": {
+          "value": 6.12e-8,
+          "unit": "C"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_charge",
+              "column": "qgd",
+              "row": 1,
+              "original_value": 61.2,
+              "original_unit": "nC",
+              "canonical_value": 6.12e-8,
+              "canonical_unit": "C"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": {
+            "value": 800.0,
+            "unit": "V"
+          },
+          "drain_current": {
+            "value": 50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": {
+            "value": 20.0,
+            "unit": "V"
+          },
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:vgs_rating_max:24",
+        "name": "vgs_rating_max",
+        "quantity": {
+          "value": 25.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_rating_max",
+              "row": 1,
+              "original_value": 25.0,
+              "original_unit": "V",
+              "canonical_value": 25.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:vgs_rating_min:25",
+        "name": "vgs_rating_min",
+        "quantity": {
+          "value": -15.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "vgs_rating_min",
+              "row": 1,
+              "original_value": -15.0,
+              "original_unit": "V",
+              "canonical_value": -15.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:rg_internal:26",
+        "name": "rg_internal",
+        "quantity": {
+          "value": 1.1,
+          "unit": "Ohm"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "gate_drive",
+              "column": "rg_internal",
+              "row": 1,
+              "original_value": 1.1,
+              "original_unit": "Ohm",
+              "canonical_value": 1.1,
+              "canonical_unit": "Ohm"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": null,
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": null,
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "unspecified",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "reverse_conduction": {
+    "availability": "partial",
+    "scalars": [
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:voltage_drop:10",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -3.93,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 1,
+              "original_value": 3.93,
+              "original_unit": "V",
+              "canonical_value": -3.93,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:voltage_drop:11",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -6.0,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 2,
+              "original_value": 6.0,
+              "original_unit": "V",
+              "canonical_value": -6.0,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 298.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "maximum",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      },
+      {
+        "id": "candidate_onsemi_nxh020p120mnf1:voltage_drop:12",
+        "name": "voltage_drop",
+        "quantity": {
+          "value": -3.39,
+          "unit": "V"
+        },
+        "provenance": {
+          "origin": "manufacturer_datasheet",
+          "source_ids": [
+            "datasheet:onsemi_nxh020p120mnf1"
+          ],
+          "lifecycle": "validated",
+          "dependencies": [],
+          "recipe_id": null,
+          "recipe_version": null,
+          "freshness": "current",
+          "source_locators": [
+            {
+              "sheet": "reverse_conduction",
+              "column": "vsd",
+              "row": 3,
+              "original_value": 3.39,
+              "original_unit": "V",
+              "canonical_value": -3.39,
+              "canonical_unit": "V"
+            }
+          ]
+        },
+        "condition": {
+          "junction_temperature": {
+            "value": 423.15,
+            "unit": "K"
+          },
+          "case_temperature": null,
+          "ambient_temperature": null,
+          "dc_bus_voltage": null,
+          "drain_current": {
+            "value": -50.0,
+            "unit": "A"
+          },
+          "collector_current": null,
+          "gate_voltage_on": null,
+          "gate_voltage_off": null,
+          "gate_resistance_on": null,
+          "gate_resistance_off": null,
+          "switching_frequency": null,
+          "pulse_width": null,
+          "duty_cycle": null,
+          "gate_state": "unknown",
+          "extensions": []
+        },
+        "statistic": "typical",
+        "uncertainty": null,
+        "quality": {
+          "flags": [
+            "conditions_inherited_from_row",
+            "basis:manufacturer_specified",
+            "sign_convention:third_quadrant_negative_voltage_drop",
+            "sign_convention:source_current_stored_as_negative_drain_current"
+          ],
+          "review_status": "unreviewed"
+        }
+      }
+    ],
+    "curves": []
+  },
+  "thermal": [],
+  "soa": {
+    "availability": "unknown",
+    "scalars": [],
+    "curves": []
+  },
+  "reliability": [],
+  "models": [
+    {
+      "id": "candidate_onsemi_nxh020p120mnf1:manufacturer-models",
+      "format": "manufacturer_model_catalogue",
+      "provenance": {
+        "origin": "manufacturer_datasheet",
+        "source_ids": [
+          "product-page:onsemi_nxh020p120mnf1"
+        ],
+        "lifecycle": "validated",
+        "dependencies": [],
+        "recipe_id": null,
+        "recipe_version": null,
+        "freshness": "current",
+        "source_locators": []
+      },
+      "artifact": null,
+      "adapter_metadata": {
+        "formats": [
+          "PLECS"
+        ],
+        "availability": "PLECS Model Generator and Elite Power Simulator require a MyON login.",
+        "licence_note": "Licence text not confirmed.",
+        "url": "https://www.onsemi.com/products/discrete-power-modules/power-modules/silicon-carbide-sic-modules/nxh020p120mnf1",
+        "retrieved": false,
+        "note": "Catalogue entry only; no model file is stored or redistributed"
+      }
+    }
+  ],
+  "measurement_ids": [],
+  "market_reference_ids": []
+}
