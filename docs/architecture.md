@@ -129,3 +129,41 @@ are implemented (see `docs/dab-loss-screening.md`). ModelFitter, WaveformProcess
 MarketRepository and SPICE importers are contracts. No production solver, filtering,
 lifetime prediction or full module transient model is implied. Candidate records live in
 `data/candidates/` with `candidate_` IDs and never in the canonical corpus.
+
+## Data layers and evidence policy (overview)
+
+```mermaid
+flowchart LR
+    S[Manufacturers / laboratories / simulation models] --> I[Import adapters]
+    I --> R[Immutable raw evidence and artifacts]
+    R --> N[Unit and axis normalization]
+    N --> V[Schema and engineering validation]
+    V --> C[Canonical AIPE device records]
+    C --> DB[DeviceRepository]
+    DB --> P[Coverage / interpolation / thermal services]
+    P --> D[Derived records with input and recipe versions]
+    D --> A[Comparison / converter design / AI application views]
+    C --> E[PLECS / MATLAB / JSON exporters]
+```
+
+`PowerSemiconductorDevice` composes small mostly immutable domain models. PLECS is an adapter and an
+associated simulation model, not the database schema. Curves use generic named axes and SI values, including
+four-dimensional gate-resistance tables. External formulas and simulator bindings live only in model adapter
+metadata.
+
+| Layer | Location / meaning |
+| --- | --- |
+| Raw | `data/raw/`: unchanged evidence with SHA-256 inventory |
+| Canonical | `data/canonical/`: official schema 3.0.0 devices rebuilt from XML |
+| Derived | `data/derived/`: calculations with input IDs, versions and recipes |
+| Large artifacts | `ArtifactStore`: waveform URI, checksum, format and size |
+| Legacy | `legacy/v1/`, `legacy/v2/`: migration sources, never runtime databases |
+
+Small static curves belong in characteristic records. DPT waveform samples remain in artifacts; metadata
+describes test runs, instruments, protocols, events and derived metrics. Source and estimated records remain
+distinct. Repository updates cannot replace or remove manufacturer/measured evidence; append a new record.
+
+The initial corpus contains **163 Wolfspeed SiC devices: 119 discrete models and 44 module models**. All
+original XML and the manufacturer guide are preserved. The domain also supports Si MOSFET, IGBT and GaN
+identities, sample/lot distinctions, multiple package components, reliability records and separate market
+observations. The open path is Python; PLECS and MATLAB remain optional export integrations.
